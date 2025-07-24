@@ -27,7 +27,7 @@ public class Farmer : Hero
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, Mathf.Infinity) && hit.transform.gameObject == gameObject && ready_for_harvest)
             {
-                var exp = Instantiate(exp_prefab, transform.position - new Vector3(1, 0, 4), Quaternion.identity);
+                var exp = Instantiate(exp_prefab, transform.position - new Vector3(1, 0, 4), Quaternion.Euler(-15, 0, 0));
                 exp.GetComponent<ExpManager>().SetExpCount(exp_count);
                 exp.GetComponent<ExpManager>().SetYOffset(gameObject.transform.position.y);
                 ready_for_harvest = false;

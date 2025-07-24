@@ -225,7 +225,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 2252bc67a146eac44b8155edd042f3a3, type: 2}
   - {fileID: 2100000, guid: dd38687856a465b47869c09f478df821, type: 2}
   - {fileID: 2100000, guid: e812ae5cbdcab9145ada2d71576188e4, type: 2}
-  exp_prefab: {fileID: 1577860566532484183, guid: 5b2ebba24724aa74cbd1df3dbfc98fbd, type: 3}
+  exp_prefab: {fileID: 688594358630486879, guid: b275b87aad177284f9c6ddc1d2293643, type: 3}
   grow_time: 5
   exp_count: 10
   ready_for_harvest: 0

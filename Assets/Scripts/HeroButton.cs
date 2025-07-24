@@ -36,13 +36,21 @@ public class HeroButton : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
+
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, interactableLayer) && hit.transform.gameObject.tag == "Field")
             {
                 if (hit.transform.gameObject.GetComponent<FieldManager>().GetIsFree())
                 {
                     OnField = true;
                     field = hit.transform.gameObject;
-                    hero.transform.position = new Vector3(hit.transform.position.x + 1, hit.transform.position.y, -1);
+                    if (hero.TryGetComponent<Shooter>(out Shooter component_0))
+                    {
+                        hero.transform.position = new Vector3(hit.transform.position.x, hit.transform.position.y, -1);
+                    }
+                    if(hero.TryGetComponent<Farmer>(out Farmer component_1))
+                    {
+                        hero.transform.position = new Vector3(hit.transform.position.x + 1, hit.transform.position.y, -1);
+                    }
                     Debug.Log(hit.transform.name);
                 }
                 else
@@ -50,7 +58,15 @@ public class HeroButton : MonoBehaviour
                     OnField = false;
                     field = null;
                     var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    hero.transform.position = new Vector3(mousePos.x + 1, mousePos.y + 3, -1);
+                    if (hero.TryGetComponent<Shooter>(out Shooter component_0))
+                    {
+                        hero.transform.position = new Vector3(mousePos.x, mousePos.y + 3, -1);
+                    }
+                    if (hero.TryGetComponent<Farmer>(out Farmer component_1))
+                    {
+                        hero.transform.position = new Vector3(mousePos.x + 1, mousePos.y + 3, -1);
+                    }
+                    
                 }
             }
             else
@@ -58,7 +74,14 @@ public class HeroButton : MonoBehaviour
                 OnField = false;
                 field = null;
                 var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                hero.transform.position = new Vector3(mousePos.x + 1, mousePos.y + 3, -1);
+                if (hero.TryGetComponent<Shooter>(out Shooter component_0))
+                {
+                    hero.transform.position = new Vector3(mousePos.x, mousePos.y + 3, -1);
+                }
+                if (hero.TryGetComponent<Farmer>(out Farmer component_1))
+                {
+                    hero.transform.position = new Vector3(mousePos.x + 1, mousePos.y + 3, -1);
+                }
             }
                 
         }

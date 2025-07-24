@@ -30,4 +30,9 @@ public class FieldManager : MonoBehaviour
     {
         return isFree;
     }
+
+    public void RemovePlant()
+    {
+        Destroy(transform.GetChild(0).gameObject);
+    }
 }
