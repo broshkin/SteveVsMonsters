@@ -1,0 +1,2348 @@
+; FBX 7.3.0 project file
+; Created by the Blockbench FBX Exporter
+; ----------------------------------------------------
+; 
+
+FBXHeaderExtension:  {
+	FBXHeaderVersion: 1003
+	FBXVersion: 7300
+	EncryptionType: 0
+	CreationTimeStamp:  {
+		Version: 1000
+		Year: 2025
+		Month: 7
+		Day: 22
+		Hour: 19
+		Minute: 33
+		Second: 46
+		Millisecond: 539
+	}
+	Creator: "Blockbench 4.12.5"
+	SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
+		Type: "UserData"
+		Version: 100
+		MetaData:  {
+			Version: 100
+			Title: ""
+			Subject: ""
+			Author: ""
+			Keywords: ""
+			Revision: ""
+			Comment: ""
+		}
+		Properties70:  {
+			P: "DocumentUrl", "KString", "Url", "", "C:\Users\Blockbench\foobar.fbx"
+			P: "SrcDocumentUrl", "KString", "Url", "", "C:\Users\Blockbench\foobar.fbx"
+			P: "Original", "Compound", "", ""
+			P: "Original|ApplicationVendor", "KString", "", "", "Blockbench"
+			P: "Original|ApplicationName", "KString", "", "", "Blockbench FBX Exporter"
+			P: "Original|ApplicationVersion", "KString", "", "", "4.12.5"
+			P: "Original|DateTime_GMT", "DateTime", "", "", "01/01/1970 00:00:00.000"
+			P: "Original|FileName", "KString", "", "", "/foobar.fbx"
+			P: "LastSaved", "Compound", "", ""
+			P: "LastSaved|ApplicationVendor", "KString", "", "", "Blockbench"
+			P: "LastSaved|ApplicationName", "KString", "", "", "Blockbench FBX Exporter"
+			P: "LastSaved|ApplicationVersion", "KString", "", "", "4.12.5"
+			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "01/01/1970 00:00:00.000"
+			P: "Original|ApplicationNativeFile", "KString", "", "", ""
+		}
+	}
+}
+FileId: "iVFoobar"
+CreationTime: "2025-07-22 16:33:46:539"
+Creator: "Made with Blockbench"
+GlobalSettings:  {
+	Version: 1000
+	Properties70:  {
+		P: "UpAxis", "int", "Integer", "",1
+		P: "UpAxisSign", "int", "Integer", "",1
+		P: "FrontAxis", "int", "Integer", "",2
+		P: "FrontAxisSign", "int", "Integer", "",1
+		P: "CoordAxis", "int", "Integer", "",0
+		P: "CoordAxisSign", "int", "Integer", "",1
+		P: "OriginalUpAxis", "int", "Integer", "",-1
+		P: "OriginalUpAxisSign", "int", "Integer", "",1
+		P: "UnitScaleFactor", "double", "Number", "",1
+		P: "OriginalUnitScaleFactor", "double", "Number", "",1
+		P: "AmbientColor", "ColorRGB", "Color", "",0,0,0
+		P: "DefaultCamera", "KString", "", "", "Producer Perspective"
+		P: "TimeMode", "enum", "", "",0
+		P: "TimeSpanStart", "KTime", "Time", "",0
+		P: "TimeSpanStop", "KTime", "Time", "",46186158000
+		P: "CustomFrameRate", "double", "Number", "",24
+	}
+}
+
+; Documents Description
+;------------------------------------------------------------------
+
+Documents:  {
+	Count: 1
+	Document: 899672258 {
+		Scene: "Scene"
+		Properties70:  {
+			P: "SourceObject", "object", "", ""
+			P: "ActiveAnimStackName", "KString", "", "", ""
+		}
+		RootNode: 0
+	}
+}
+
+; Document References
+;------------------------------------------------------------------
+
+References: 
+
+; Object definitions
+;------------------------------------------------------------------
+
+Definitions:  {
+	Version: 100
+	Count: 132
+	ObjectType: "GlobalSettings" {
+		Count: 1
+	}
+	ObjectType: "Model" {
+		Count: 21
+		PropertyTemplate: "FbxNode" {
+			Properties70:  {
+				P: "QuaternionInterpolate", "enum", "", "",0
+				P: "RotationOffset", "Vector3D", "Vector", "",0,0,0
+				P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+				P: "ScalingOffset", "Vector3D", "Vector", "",0,0,0
+				P: "ScalingPivot", "Vector3D", "Vector", "",0,0,0
+				P: "TranslationActive", "bool", "", "",0
+				P: "TranslationMin", "Vector3D", "Vector", "",0,0,0
+				P: "TranslationMax", "Vector3D", "Vector", "",0,0,0
+				P: "TranslationMinX", "bool", "", "",0
+				P: "TranslationMinY", "bool", "", "",0
+				P: "TranslationMinZ", "bool", "", "",0
+				P: "TranslationMaxX", "bool", "", "",0
+				P: "TranslationMaxY", "bool", "", "",0
+				P: "TranslationMaxZ", "bool", "", "",0
+				P: "RotationOrder", "enum", "", "",5
+				P: "RotationSpaceForLimitOnly", "bool", "", "",0
+				P: "RotationStiffnessX", "double", "Number", "",0
+				P: "RotationStiffnessY", "double", "Number", "",0
+				P: "RotationStiffnessZ", "double", "Number", "",0
+				P: "AxisLen", "double", "Number", "",10
+				P: "PreRotation", "Vector3D", "Vector", "",0,0,0
+				P: "PostRotation", "Vector3D", "Vector", "",0,0,0
+				P: "RotationActive", "bool", "", "",0
+				P: "RotationMin", "Vector3D", "Vector", "",0,0,0
+				P: "RotationMax", "Vector3D", "Vector", "",0,0,0
+				P: "RotationMinX", "bool", "", "",0
+				P: "RotationMinY", "bool", "", "",0
+				P: "RotationMinZ", "bool", "", "",0
+				P: "RotationMaxX", "bool", "", "",0
+				P: "RotationMaxY", "bool", "", "",0
+				P: "RotationMaxZ", "bool", "", "",0
+				P: "InheritType", "enum", "", "",0
+				P: "ScalingActive", "bool", "", "",0
+				P: "ScalingMin", "Vector3D", "Vector", "",0,0,0
+				P: "ScalingMax", "Vector3D", "Vector", "",1,1,1
+				P: "ScalingMinX", "bool", "", "",0
+				P: "ScalingMinY", "bool", "", "",0
+				P: "ScalingMinZ", "bool", "", "",0
+				P: "ScalingMaxX", "bool", "", "",0
+				P: "ScalingMaxY", "bool", "", "",0
+				P: "ScalingMaxZ", "bool", "", "",0
+				P: "GeometricTranslation", "Vector3D", "Vector", "",0,0,0
+				P: "GeometricRotation", "Vector3D", "Vector", "",0,0,0
+				P: "GeometricScaling", "Vector3D", "Vector", "",1,1,1
+				P: "MinDampRangeX", "double", "Number", "",0
+				P: "MinDampRangeY", "double", "Number", "",0
+				P: "MinDampRangeZ", "double", "Number", "",0
+				P: "MaxDampRangeX", "double", "Number", "",0
+				P: "MaxDampRangeY", "double", "Number", "",0
+				P: "MaxDampRangeZ", "double", "Number", "",0
+				P: "MinDampStrengthX", "double", "Number", "",0
+				P: "MinDampStrengthY", "double", "Number", "",0
+				P: "MinDampStrengthZ", "double", "Number", "",0
+				P: "MaxDampStrengthX", "double", "Number", "",0
+				P: "MaxDampStrengthY", "double", "Number", "",0
+				P: "MaxDampStrengthZ", "double", "Number", "",0
+				P: "PreferedAngleX", "double", "Number", "",0
+				P: "PreferedAngleY", "double", "Number", "",0
+				P: "PreferedAngleZ", "double", "Number", "",0
+				P: "LookAtProperty", "object", "", ""
+				P: "UpVectorProperty", "object", "", ""
+				P: "Show", "bool", "", "",1
+				P: "NegativePercentShapeSupport", "bool", "", "",1
+				P: "DefaultAttributeIndex", "int", "Integer", "",-1
+				P: "Freeze", "bool", "", "",0
+				P: "LODBox", "bool", "", "",0
+				P: "Lcl Translation", "Lcl Translation", "", "A",0,0,0
+				P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+				P: "Lcl Scaling", "Lcl Scaling", "", "A",1,1,1
+				P: "Visibility", "Visibility", "", "A",1
+				P: "Visibility Inheritance", "Visibility Inheritance", "", "",1
+			}
+		}
+	}
+	ObjectType: "Geometry" {
+		Count: 11
+		PropertyTemplate: "FbxMesh" {
+			Properties70:  {
+				P: "Color", "ColorRGB", "Color", "",0.8,0.8,0.8
+				P: "BBoxMin", "Vector3D", "Vector", "",0,0,0
+				P: "BBoxMax", "Vector3D", "Vector", "",0,0,0
+				P: "Primary Visibility", "bool", "", "",1
+				P: "Casts Shadows", "bool", "", "",1
+				P: "Receive Shadows", "bool", "", "",1
+			}
+		}
+	}
+	ObjectType: "Material" {
+		Count: 33
+		PropertyTemplate: "FbxSurfaceLambert" {
+			Properties70:  {
+				P: "ShadingModel", "KString", "", "", "Lambert"
+				P: "MultiLayer", "bool", "", "",0
+				P: "EmissiveColor", "Color", "", "A",0,0,0
+				P: "EmissiveFactor", "Number", "", "A",1
+				P: "AmbientColor", "Color", "", "A",0.2,0.2,0.2
+				P: "AmbientFactor", "Number", "", "A",1
+				P: "DiffuseColor", "Color", "", "A",0.8,0.8,0.8
+				P: "DiffuseFactor", "Number", "", "A",1
+				P: "Bump", "Vector3D", "Vector", "",0,0,0
+				P: "NormalMap", "Vector3D", "Vector", "",0,0,0
+				P: "BumpFactor", "double", "Number", "",1
+				P: "TransparentColor", "Color", "", "A",0,0,0
+				P: "TransparencyFactor", "Number", "", "A",0
+				P: "DisplacementColor", "ColorRGB", "Color", "",0,0,0
+				P: "DisplacementFactor", "double", "Number", "",1
+				P: "VectorDisplacementColor", "ColorRGB", "Color", "",0,0,0
+				P: "VectorDisplacementFactor", "double", "Number", "",1
+			}
+		}
+	}
+	ObjectType: "Texture" {
+		Count: 33
+		PropertyTemplate: "FbxFileTexture" {
+			Properties70:  {
+				P: "TextureTypeUse", "enum", "", "",0
+				P: "Texture alpha", "Number", "", "A",1
+				P: "CurrentMappingType", "enum", "", "",0
+				P: "WrapModeU", "enum", "", "",0
+				P: "WrapModeV", "enum", "", "",0
+				P: "UVSwap", "bool", "", "",0
+				P: "PremultiplyAlpha", "bool", "", "",1
+				P: "Translation", "Vector", "", "A",0,0,0
+				P: "Rotation", "Vector", "", "A",0,0,0
+				P: "Scaling", "Vector", "", "A",1,1,1
+				P: "TextureRotationPivot", "Vector3D", "Vector", "",0,0,0
+				P: "TextureScalingPivot", "Vector3D", "Vector", "",0,0,0
+				P: "CurrentTextureBlendMode", "enum", "", "",1
+				P: "UVSet", "KString", "", "", "default"
+				P: "UseMaterial", "bool", "", "",0
+				P: "UseMipMap", "bool", "", "",0
+			}
+		}
+	}
+	ObjectType: "Video" {
+		Count: 33
+		PropertyTemplate: "FbxVideo" {
+			Properties70:  {
+				P: "ImageSequence", "bool", "", "",0
+				P: "ImageSequenceOffset", "int", "Integer", "",0
+				P: "FrameRate", "double", "Number", "",0
+				P: "LastFrame", "int", "Integer", "",0
+				P: "Width", "int", "Integer", "",0
+				P: "Height", "int", "Integer", "",0
+				P: "Path", "KString", "XRefUrl", "", ""
+				P: "StartFrame", "int", "Integer", "",0
+				P: "StopFrame", "int", "Integer", "",0
+				P: "PlaySpeed", "double", "Number", "",0
+				P: "Offset", "KTime", "Time", "",0
+				P: "InterlaceMode", "enum", "", "",0
+				P: "FreeRunning", "bool", "", "",0
+				P: "Loop", "bool", "", "",0
+				P: "AccessMode", "enum", "", "",0
+			}
+		}
+	}
+}
+
+; Object properties
+;------------------------------------------------------------------
+
+Objects:  {
+	Geometry: 762342, "Geometry::arms_2", "Mesh" {
+		Vertices: *24 {
+			a: 50,143.75,6.25,50,143.75,-18.75,50,93.75,6.25,50,93.75,-18.75,25,143.75,-18.75,25,143.75,6.25,25,93.75,-18.75,25,93.75,6.25
+		}
+		PolygonVertexIndex: *24 {
+			a: 3,6,4,-2,2,3,1,-1,7,2,0,-6,6,7,5,-5,5,0,1,-5,6,3,2,-8
+		}
+		GeometryVersion: 124
+		LayerElementNormal: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygon"
+			ReferenceInformationType: "Direct"
+			Normals: *18 {
+				a: 0,0,-1,1,0,0,0,0,1,-1,0,0,0,1,0,0,-1,0
+			}
+		}
+		LayerElementUV: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "Direct"
+			UV: *48 {
+				a: 0.75,0.46875,0.8125,0.46875,0.8125,0.59375,0.75,0.59375,0.6875,0.46875,0.75,0.46875,0.75,0.59375,0.6875,0.59375,0.875,0.46875,0.9375,0.46875,0.9375,0.59375,0.875,0.59375,0.8125,0.46875,0.875,0.46875,0.875,0.59375,0.8125,0.59375,0.8125,0.65625,0.75,0.65625,0.75,0.59375,0.8125,0.59375,0.875,0.59375,0.8125,0.59375,0.8125,0.65625,0.875,0.65625
+			}
+		}
+		LayerElementMaterial: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "AllSame"
+			ReferenceInformationType: "IndexToDirect"
+			Materials: *1 {
+				a: 0
+			}
+		}
+		Layer: 0 {
+			Version: 100
+			LayerElement:  {
+				Type: "LayerElementNormal"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementMaterial"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementUV"
+				TypedIndex: 0
+			}
+		}
+	}
+	Geometry: 15756189, "Geometry::nose_1", "Mesh" {
+		Vertices: *24 {
+			a: 6.25,168.75,-25,6.25,168.75,-37.5,6.25,143.75,-25,6.25,143.75,-37.5,-6.25,168.75,-37.5,-6.25,168.75,-25,-6.25,143.75,-37.5,-6.25,143.75,-25
+		}
+		PolygonVertexIndex: *24 {
+			a: 3,6,4,-2,2,3,1,-1,7,2,0,-6,6,7,5,-5,5,0,1,-5,6,3,2,-8
+		}
+		GeometryVersion: 124
+		LayerElementNormal: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygon"
+			ReferenceInformationType: "Direct"
+			Normals: *18 {
+				a: 0,0,-1,1,0,0,0,0,1,-1,0,0,0,1,0,0,-1,0
+			}
+		}
+		LayerElementUV: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "Direct"
+			UV: *48 {
+				a: 0.40625,0.90625,0.4375,0.90625,0.4375,0.96875,0.40625,0.96875,0.375,0.90625,0.40625,0.90625,0.40625,0.96875,0.375,0.96875,0.46875,0.90625,0.5,0.90625,0.5,0.96875,0.46875,0.96875,0.4375,0.90625,0.46875,0.90625,0.46875,0.96875,0.4375,0.96875,0.4375,1,0.40625,1,0.40625,0.96875,0.4375,0.96875,0.46875,0.96875,0.4375,0.96875,0.4375,1,0.46875,1
+			}
+		}
+		LayerElementMaterial: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "AllSame"
+			ReferenceInformationType: "IndexToDirect"
+			Materials: *1 {
+				a: 0
+			}
+		}
+		Layer: 0 {
+			Version: 100
+			LayerElement:  {
+				Type: "LayerElementNormal"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementMaterial"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementUV"
+				TypedIndex: 0
+			}
+		}
+	}
+	Geometry: 23229756, "Geometry::leg1_1", "Mesh" {
+		Vertices: *24 {
+			a: 0,75,12.5,0,75,-12.5,0,0,12.5,0,0,-12.5,-25,75,-12.5,-25,75,12.5,-25,0,-12.5,-25,0,12.5
+		}
+		PolygonVertexIndex: *24 {
+			a: 3,6,4,-2,2,3,1,-1,7,2,0,-6,6,7,5,-5,5,0,1,-5,6,3,2,-8
+		}
+		GeometryVersion: 124
+		LayerElementNormal: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygon"
+			ReferenceInformationType: "Direct"
+			Normals: *18 {
+				a: 0,0,-1,1,0,0,0,0,1,-1,0,0,0,1,0,0,-1,0
+			}
+		}
+		LayerElementUV: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "Direct"
+			UV: *48 {
+				a: 0.125,0.40625,0.0625,0.40625,0.0625,0.59375,0.125,0.59375,0.1875,0.40625,0.125,0.40625,0.125,0.59375,0.1875,0.59375,0.25,0.40625,0.1875,0.40625,0.1875,0.59375,0.25,0.59375,0.0625,0.40625,0,0.40625,0,0.59375,0.0625,0.59375,0.0625,0.65625,0.125,0.65625,0.125,0.59375,0.0625,0.59375,0.125,0.59375,0.1875,0.59375,0.1875,0.65625,0.125,0.65625
+			}
+		}
+		LayerElementMaterial: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "AllSame"
+			ReferenceInformationType: "IndexToDirect"
+			Materials: *1 {
+				a: 0
+			}
+		}
+		Layer: 0 {
+			Version: 100
+			LayerElement:  {
+				Type: "LayerElementNormal"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementMaterial"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementUV"
+				TypedIndex: 0
+			}
+		}
+	}
+	Geometry: 23330042, "Geometry::arms_1", "Mesh" {
+		Vertices: *24 {
+			a: 25,118.75,6.25,25,118.75,-18.75,25,93.75,6.25,25,93.75,-18.75,-25,118.75,-18.75,-25,118.75,6.25,-25,93.75,-18.75,-25,93.75,6.25
+		}
+		PolygonVertexIndex: *24 {
+			a: 3,6,4,-2,2,3,1,-1,7,2,0,-6,6,7,5,-5,5,0,1,-5,6,3,2,-8
+		}
+		GeometryVersion: 124
+		LayerElementNormal: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygon"
+			ReferenceInformationType: "Direct"
+			Normals: *18 {
+				a: 0,0,-1,1,0,0,0,0,1,-1,0,0,0,1,0,0,-1,0
+			}
+		}
+		LayerElementUV: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "Direct"
+			UV: *48 {
+				a: 0.6875,0.28125,0.8125,0.28125,0.8125,0.34375,0.6875,0.34375,0.625,0.28125,0.6875,0.28125,0.6875,0.34375,0.625,0.34375,0.875,0.28125,1,0.28125,1,0.34375,0.875,0.34375,0.8125,0.28125,0.875,0.28125,0.875,0.34375,0.8125,0.34375,0.8125,0.40625,0.6875,0.40625,0.6875,0.34375,0.8125,0.34375,0.9375,0.34375,0.8125,0.34375,0.8125,0.40625,0.9375,0.40625
+			}
+		}
+		LayerElementMaterial: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "AllSame"
+			ReferenceInformationType: "IndexToDirect"
+			Materials: *1 {
+				a: 0
+			}
+		}
+		Layer: 0 {
+			Version: 100
+			LayerElement:  {
+				Type: "LayerElementNormal"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementMaterial"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementUV"
+				TypedIndex: 0
+			}
+		}
+	}
+	Geometry: 29889099, "Geometry::head_1", "Mesh" {
+		Vertices: *24 {
+			a: 25,212.5,25,25,212.5,-25,25,150,25,25,150,-25,-25,212.5,-25,-25,212.5,25,-25,150,-25,-25,150,25
+		}
+		PolygonVertexIndex: *24 {
+			a: 3,6,4,-2,2,3,1,-1,7,2,0,-6,6,7,5,-5,5,0,1,-5,6,3,2,-8
+		}
+		GeometryVersion: 124
+		LayerElementNormal: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygon"
+			ReferenceInformationType: "Direct"
+			Normals: *18 {
+				a: 0,0,-1,1,0,0,0,0,1,-1,0,0,0,1,0,0,-1,0
+			}
+		}
+		LayerElementUV: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "Direct"
+			UV: *48 {
+				a: 0.125,0.71875,0.25,0.71875,0.25,0.875,0.125,0.875,0,0.71875,0.125,0.71875,0.125,0.875,0,0.875,0.375,0.71875,0.5,0.71875,0.5,0.875,0.375,0.875,0.25,0.71875,0.375,0.71875,0.375,0.875,0.25,0.875,0.25,1,0.125,1,0.125,0.875,0.25,0.875,0.375,0.875,0.25,0.875,0.25,1,0.375,1
+			}
+		}
+		LayerElementMaterial: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "AllSame"
+			ReferenceInformationType: "IndexToDirect"
+			Materials: *1 {
+				a: 0
+			}
+		}
+		Layer: 0 {
+			Version: 100
+			LayerElement:  {
+				Type: "LayerElementNormal"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementMaterial"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementUV"
+				TypedIndex: 0
+			}
+		}
+	}
+	Geometry: 37497316, "Geometry::leg0_1", "Mesh" {
+		Vertices: *24 {
+			a: 25,75,12.5,25,75,-12.5,25,0,12.5,25,0,-12.5,0,75,-12.5,0,75,12.5,0,0,-12.5,0,0,12.5
+		}
+		PolygonVertexIndex: *24 {
+			a: 3,6,4,-2,2,3,1,-1,7,2,0,-6,6,7,5,-5,5,0,1,-5,6,3,2,-8
+		}
+		GeometryVersion: 124
+		LayerElementNormal: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygon"
+			ReferenceInformationType: "Direct"
+			Normals: *18 {
+				a: 0,0,-1,1,0,0,0,0,1,-1,0,0,0,1,0,0,-1,0
+			}
+		}
+		LayerElementUV: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "Direct"
+			UV: *48 {
+				a: 0.0625,0.40625,0.125,0.40625,0.125,0.59375,0.0625,0.59375,0,0.40625,0.0625,0.40625,0.0625,0.59375,0,0.59375,0.1875,0.40625,0.25,0.40625,0.25,0.59375,0.1875,0.59375,0.125,0.40625,0.1875,0.40625,0.1875,0.59375,0.125,0.59375,0.125,0.65625,0.0625,0.65625,0.0625,0.59375,0.125,0.59375,0.1875,0.59375,0.125,0.59375,0.125,0.65625,0.1875,0.65625
+			}
+		}
+		LayerElementMaterial: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "AllSame"
+			ReferenceInformationType: "IndexToDirect"
+			Materials: *1 {
+				a: 0
+			}
+		}
+		Layer: 0 {
+			Version: 100
+			LayerElement:  {
+				Type: "LayerElementNormal"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementMaterial"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementUV"
+				TypedIndex: 0
+			}
+		}
+	}
+	Geometry: 50614621, "Geometry::arms_3", "Mesh" {
+		Vertices: *24 {
+			a: -25,143.75,6.25,-25,143.75,-18.75,-25,93.75,6.25,-25,93.75,-18.75,-50,143.75,-18.75,-50,143.75,6.25,-50,93.75,-18.75,-50,93.75,6.25
+		}
+		PolygonVertexIndex: *24 {
+			a: 3,6,4,-2,2,3,1,-1,7,2,0,-6,6,7,5,-5,5,0,1,-5,6,3,2,-8
+		}
+		GeometryVersion: 124
+		LayerElementNormal: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygon"
+			ReferenceInformationType: "Direct"
+			Normals: *18 {
+				a: 0,0,-1,1,0,0,0,0,1,-1,0,0,0,1,0,0,-1,0
+			}
+		}
+		LayerElementUV: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "Direct"
+			UV: *48 {
+				a: 0.8125,0.46875,0.75,0.46875,0.75,0.59375,0.8125,0.59375,0.875,0.46875,0.8125,0.46875,0.8125,0.59375,0.875,0.59375,0.9375,0.46875,0.875,0.46875,0.875,0.59375,0.9375,0.59375,0.75,0.46875,0.6875,0.46875,0.6875,0.59375,0.75,0.59375,0.75,0.65625,0.8125,0.65625,0.8125,0.59375,0.75,0.59375,0.8125,0.59375,0.875,0.59375,0.875,0.65625,0.8125,0.65625
+			}
+		}
+		LayerElementMaterial: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "AllSame"
+			ReferenceInformationType: "IndexToDirect"
+			Materials: *1 {
+				a: 0
+			}
+		}
+		Layer: 0 {
+			Version: 100
+			LayerElement:  {
+				Type: "LayerElementNormal"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementMaterial"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementUV"
+				TypedIndex: 0
+			}
+		}
+	}
+	Geometry: 58390090, "Geometry::body_2", "Mesh" {
+		Vertices: *24 {
+			a: 28.125,153.125,21.875,28.125,153.125,-21.875,28.125,34.375,21.875,28.125,34.375,-21.875,-28.125,153.125,-21.875,-28.125,153.125,21.875,-28.125,34.375,-21.875,-28.125,34.375,21.875
+		}
+		PolygonVertexIndex: *24 {
+			a: 3,6,4,-2,2,3,1,-1,7,2,0,-6,6,7,5,-5,5,0,1,-5,6,3,2,-8
+		}
+		GeometryVersion: 124
+		LayerElementNormal: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygon"
+			ReferenceInformationType: "Direct"
+			Normals: *18 {
+				a: 0,0,-1,1,0,0,0,0,1,-1,0,0,0,1,0,0,-1,0
+			}
+		}
+		LayerElementUV: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "Direct"
+			UV: *48 {
+				a: 0.09375,0.03125,0.21875,0.03125,0.21875,0.3125,0.09375,0.3125,0,0.03125,0.09375,0.03125,0.09375,0.3125,0,0.3125,0.3125,0.03125,0.4375,0.03125,0.4375,0.3125,0.3125,0.3125,0.21875,0.03125,0.3125,0.03125,0.3125,0.3125,0.21875,0.3125,0.21875,0.40625,0.09375,0.40625,0.09375,0.3125,0.21875,0.3125,0.34375,0.3125,0.21875,0.3125,0.21875,0.40625,0.34375,0.40625
+			}
+		}
+		LayerElementMaterial: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "AllSame"
+			ReferenceInformationType: "IndexToDirect"
+			Materials: *1 {
+				a: 0
+			}
+		}
+		Layer: 0 {
+			Version: 100
+			LayerElement:  {
+				Type: "LayerElementNormal"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementMaterial"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementUV"
+				TypedIndex: 0
+			}
+		}
+	}
+	Geometry: 60958306, "Geometry::body_1", "Mesh" {
+		Vertices: *24 {
+			a: 25,150,18.75,25,150,-18.75,25,75,18.75,25,75,-18.75,-25,150,-18.75,-25,150,18.75,-25,75,-18.75,-25,75,18.75
+		}
+		PolygonVertexIndex: *24 {
+			a: 3,6,4,-2,2,3,1,-1,7,2,0,-6,6,7,5,-5,5,0,1,-5,6,3,2,-8
+		}
+		GeometryVersion: 124
+		LayerElementNormal: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygon"
+			ReferenceInformationType: "Direct"
+			Normals: *18 {
+				a: 0,0,-1,1,0,0,0,0,1,-1,0,0,0,1,0,0,-1,0
+			}
+		}
+		LayerElementUV: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "Direct"
+			UV: *48 {
+				a: 0.34375,0.40625,0.46875,0.40625,0.46875,0.59375,0.34375,0.59375,0.25,0.40625,0.34375,0.40625,0.34375,0.59375,0.25,0.59375,0.5625,0.40625,0.6875,0.40625,0.6875,0.59375,0.5625,0.59375,0.46875,0.40625,0.5625,0.40625,0.5625,0.59375,0.46875,0.59375,0.46875,0.6875,0.34375,0.6875,0.34375,0.59375,0.46875,0.59375,0.59375,0.59375,0.46875,0.59375,0.46875,0.6875,0.59375,0.6875
+			}
+		}
+		LayerElementMaterial: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "AllSame"
+			ReferenceInformationType: "IndexToDirect"
+			Materials: *1 {
+				a: 0
+			}
+		}
+		Layer: 0 {
+			Version: 100
+			LayerElement:  {
+				Type: "LayerElementNormal"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementMaterial"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementUV"
+				TypedIndex: 0
+			}
+		}
+	}
+	Geometry: 71980900, "Geometry::helmet_1", "Mesh" {
+		Vertices: *24 {
+			a: 28.125,215.625,28.125,28.125,215.625,-28.125,28.125,146.875,28.125,28.125,146.875,-28.125,-28.125,215.625,-28.125,-28.125,215.625,28.125,-28.125,146.875,-28.125,-28.125,146.875,28.125
+		}
+		PolygonVertexIndex: *24 {
+			a: 3,6,4,-2,2,3,1,-1,7,2,0,-6,6,7,5,-5,5,0,1,-5,6,3,2,-8
+		}
+		GeometryVersion: 124
+		LayerElementNormal: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygon"
+			ReferenceInformationType: "Direct"
+			Normals: *18 {
+				a: 0,0,-1,1,0,0,0,0,1,-1,0,0,0,1,0,0,-1,0
+			}
+		}
+		LayerElementUV: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "Direct"
+			UV: *48 {
+				a: 0.625,0.71875,0.75,0.71875,0.75,0.875,0.625,0.875,0.5,0.71875,0.625,0.71875,0.625,0.875,0.5,0.875,0.875,0.71875,1,0.71875,1,0.875,0.875,0.875,0.75,0.71875,0.875,0.71875,0.875,0.875,0.75,0.875,0.75,1,0.625,1,0.625,0.875,0.75,0.875,0.875,0.875,0.75,0.875,0.75,1,0.875,1
+			}
+		}
+		LayerElementMaterial: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "AllSame"
+			ReferenceInformationType: "IndexToDirect"
+			Materials: *1 {
+				a: 0
+			}
+		}
+		Layer: 0 {
+			Version: 100
+			LayerElement:  {
+				Type: "LayerElementNormal"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementMaterial"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementUV"
+				TypedIndex: 0
+			}
+		}
+	}
+	Geometry: 90446305, "Geometry::brim_1", "Mesh" {
+		Vertices: *24 {
+			a: 50.625,200.625,-30.625,50.625,200.625,-38.125,50.625,99.375,-30.625,50.625,99.375,-38.125,-50.625,200.625,-38.125,-50.625,200.625,-30.625,-50.625,99.375,-38.125,-50.625,99.375,-30.625
+		}
+		PolygonVertexIndex: *24 {
+			a: 3,6,4,-2,2,3,1,-1,7,2,0,-6,6,7,5,-5,5,0,1,-5,6,3,2,-8
+		}
+		GeometryVersion: 124
+		LayerElementNormal: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygon"
+			ReferenceInformationType: "Direct"
+			Normals: *18 {
+				a: 0,0,-1,1,0,0,0,0,1,-1,0,0,0,1,0,0,-1,0
+			}
+		}
+		LayerElementUV: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "Direct"
+			UV: *48 {
+				a: 0.484375,0,0.734375,0,0.734375,0.25,0.484375,0.25,0.46875,0,0.484375,0,0.484375,0.25,0.46875,0.25,0.75,0,1,0,1,0.25,0.75,0.25,0.734375,0,0.75,0,0.75,0.25,0.734375,0.25,0.734375,0.265625,0.484375,0.265625,0.484375,0.25,0.734375,0.25,0.984375,0.25,0.734375,0.25,0.734375,0.265625,0.984375,0.265625
+			}
+		}
+		LayerElementMaterial: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "AllSame"
+			ReferenceInformationType: "IndexToDirect"
+			Materials: *1 {
+				a: 0
+			}
+		}
+		Layer: 0 {
+			Version: 100
+			LayerElement:  {
+				Type: "LayerElementNormal"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementMaterial"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementUV"
+				TypedIndex: 0
+			}
+		}
+	}
+	Model: 92378419, "Model::body", "Null" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,0,0
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "RotationOrder", "enum", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 1612957, "Model::head", "Null" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,150,0
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "RotationOrder", "enum", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 84313131, "Model::helmet", "Null" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,0,0
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "RotationOrder", "enum", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 76691567, "Model::brim", "Null" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,0,0
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",90,0,0
+			P: "RotationOrder", "enum", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 90088088, "Model::nose", "Null" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,12.5,0
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "RotationOrder", "enum", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 95131541, "Model::arms", "Null" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,131.25,-6.25
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",42.97,0,0
+			P: "RotationOrder", "enum", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 70269443, "Model::held_item", "Null" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,-137.5,0
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "RotationOrder", "enum", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 61756825, "Model::leg0", "Null" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",12.5,75,0
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "RotationOrder", "enum", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 92252131, "Model::leg1", "Null" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-12.5,75,0
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "RotationOrder", "enum", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 17876445, "Model::lead_hold", "Null" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,250,0
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "RotationOrder", "enum", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 12415696, "Model::body_1", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,0,0
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "RotationOrder", "enum", "", "",0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 47661258, "Model::body_2", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,0,0
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "RotationOrder", "enum", "", "",0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 14936350, "Model::head_1", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,-150,0
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "RotationOrder", "enum", "", "",0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 27521680, "Model::helmet_1", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,-150,0
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "RotationOrder", "enum", "", "",0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 93059655, "Model::brim_1", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,-150,0
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "RotationOrder", "enum", "", "",0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 36986375, "Model::nose_1", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,-162.5,0
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "RotationOrder", "enum", "", "",0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 461213, "Model::arms_1", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,-131.25,6.25
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "RotationOrder", "enum", "", "",0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 90689902, "Model::arms_2", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,-131.25,6.25
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "RotationOrder", "enum", "", "",0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 46560769, "Model::arms_3", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,-131.25,6.25
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "RotationOrder", "enum", "", "",0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 76921162, "Model::leg0_1", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-12.5,-75,0
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "RotationOrder", "enum", "", "",0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 68619378, "Model::leg1_1", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",12.5,-75,0
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "RotationOrder", "enum", "", "",0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Material: 7833231, "Material::villager_base.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 78681701, "Texture::villager_base.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_base.png"
+		Media: "Video::villager_base.png"
+		FileName: "C:\Users\user\Desktop\SVM_models\peaceful_entity\villager\villager_base.png"
+		RelativeFilename: "villager_base.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 60334300, "Video::villager_base.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\user\Desktop\SVM_models\peaceful_entity\villager\villager_base.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\user\Desktop\SVM_models\peaceful_entity\villager\villager_base.png"
+		RelativeFilename: "villager_base.png"
+		Content: "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"
+	}
+	Material: 43620512, "Material::villager", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 15994714, "Texture::villager", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager"
+		Media: "Video::villager"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 27816654, "Video::villager", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "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"
+	}
+	Material: 18877282, "Material::villager_1", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 59739646, "Texture::villager_1", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_1"
+		Media: "Video::villager_1"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 50803150, "Video::villager_1", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "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"
+	}
+	Material: 91546270, "Material::villager_2", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 73087662, "Texture::villager_2", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_2"
+		Media: "Video::villager_2"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 5619262, "Video::villager_2", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "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"
+	}
+	Material: 28734226, "Material::villager_3", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 83023402, "Texture::villager_3", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_3"
+		Media: "Video::villager_3"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 2960232, "Video::villager_3", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "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"
+	}
+	Material: 93248202, "Material::villager_4", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 30473295, "Texture::villager_4", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_4"
+		Media: "Video::villager_4"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 69355170, "Video::villager_4", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "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"
+	}
+	Material: 60214459, "Material::villager_5", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 71035489, "Texture::villager_5", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_5"
+		Media: "Video::villager_5"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 70368763, "Video::villager_5", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARVSURBVHhe7Zq9rtRWFIWHgkgUKaKQDglFREkTCaQUNKkiOhKJKkWUhjcA8QQ0SZeC7ja8AW9ABGUaaiQaGp4gBSiVk+Xos9as2bZn7h2ubUzxXZ+zf4732scztgc2TdMM8urJvebNn783f784ad69ftYhm3wZvzRKo4P4bABNyPilURodxGu3/zr5pUXC1QDZM35plEbHG/Dy5wvN8x8+aZuAPeOXRml0ECre3r/YomasqgFc7hUZvzRKoyOR/sUHq2lAdQukAR/EXUAigF1FnD7rIn1jfs0T93tMFnTetA86+0LRle+0ZEHnzYZ7+1RkQefN5A3Qs0Uf3HbHqHL3ZfP45sVmSvRgNURVtFPlHELbAF0KQ8fvvvqsJONOcxQqZKrjzmdibZTGNVEa10RpXBOlcU2UxjVRGo/BF99/3QxRPRRV5LrHpjQeg0q0U4mtyHWPzY7h0rXLzRAZ3wdC++yV2IrMT67+9E1z49dvWzQ+NH/HUIl2Mr6Pjw342IDzaYDWknCh8aG/N4wKHoMfSRIVj9hEvioHVHjmyCaf2xA+dAV4vBhswKfXr5R4TJKFUyhQJLivihf8ZOY52FwM/qM0ALGZMNYEigZOLGEUTYEayyYfcZ4LiqmQT6+w/ntA/jjCuqB45701gN30k3vxTx/e7sYeQx7rgOcK7MqREK2nBmiO8KoBiiN+tAGI5tLyJrhoRydxEd4EjRGguY7pJ6eyO/iJJUZr8jM9MRXk7DSAHU7xVROqRlSFeiHYGWdBfXnpyzz8NFhzxkK+KufMDfAmaEyRjp8QdAmmbd/cPshBdP6jDQ1w9mqAf6tWDXAkTFQnw9fndzzWxYFsrDPUBJAtzyF2GuC7KRCcwolLvJgsSvi88iUqMoW6LQWclfbPyd2bneC+K0Axj+7e+S/8/3ihsRcPCGQnfFc4iipXIofQOY9J+wcxwNztPn5w68tGaExhKcSFJ5V4FzkENRyLTsxpqYoEGuEcIrYiBZyV0jhn1AQ90OjI94Lbxvy53tZkCYwJHPPneluTJeBiBCKrBlT+XG9rsgT0HaJ3AL48JTBtQ/5cb2syRxDi6KVHR3bXbRXafR2f/fFjF4+tPOmcQIQjsbqj0ACNV9MAxOooMWqC2zJeIFbxaoLbypPOCUSAHqT0edaRBrgt48WiG/C+KY1rojSuidK4JkrjmiiNa6I0romN7p+ghwnnn98+L8k4X2OMLGBq2v8sOEQKqGIOIQuYmq0rAHKHj7HzkAVMTfebHi8WFekj2W1VPo+iIBu5c6F91h4SL+SvRGiMnRheUrAn5M6FTgRvUlXxEie/8GT5sNNE5hoDcXpZ8fw5sCUCwWmTCN60PJk4fzPzXIcYz58DW1dAX9Hy9+2e7KAG6Ojr4WOdzJ+adhezCRSNj3EmC4/XmCakTfl9a0xJ1wCa4MgmARpnoqMYUKwEO75m5k5NdyvTxJug+T7igTjW8zV9Pi+azb/5zOjvAwqQCQAAAABJRU5ErkJggg=="
+	}
+	Material: 16527420, "Material::villager_6", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 28551871, "Texture::villager_6", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_6"
+		Media: "Video::villager_6"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 3361209, "Video::villager_6", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAASHSURBVHhe5ZnPilxFGMVnJ5KtCAkJ/iWDJCIJonGRBBcuRCQLCYoBN8GVmwQh4saFCLp1I+YB3LiMZK8P4Iv4EldOhV9z7unv3u6emUzfoRa/qapTX9Wtc7q6e5I5GIaha0qxJ0qxJ0qxJ0qxJ0qxJ0qxJ0qxJ0qxJ0qxJ0qxJ0qxJ0qxJ0qxJ0qxJ0qxJ0qxJ0qxJ0qxJ0qxJ0rxJHj74suDmNJvHL42S657XpTiSXBmA7h8/qVhjqyf4rQC+Pfxe8PDuxeH//6+3bj5xvnG1POTNaEy7WT9FFMHQK9MO7luCgWAefHplUujELI+WRMq007WT3FaAbh53QQFAAoh65M1oTLtZP0UpxmA34Kv3n19FELWJ82wDoRBDgg5n2R9kg+sanbBX23M59uAeXSvyfOsAhD0bx6+0nCNfsLcFPnAqmYX3JTaP7+/tuqnaebUMpfnWTsQ5gkgcdPbBODXUNezqtmVn7652syo1Z5u1OeoFQpFLWeBMoD7t65NBrArCoD2JALQB5uM8EnPWHv7mHr6rCkDyFeyugVek3NT6IE6GIejX9Vuy8+/fLfaRzz564/RmBByHfrGANR3g8xlTWqJDsOr7kjjVhwVhSAzmPe2CuDBw3urdi0Amfj9y49aAX03xlxVo1Zm9EA3qzH91AkAzcmDTyEj2oPbQCDSNdac6thvNgCZUAdT9LXA59Ri2jXVcXgerpY+Y7WqEZXuazi419JHp97X5Vh17AU6szMaHAU25mEVmNhUV8Ea2nz+cTn48K1XB6FPfvjhzq2G+sx7nc8TgB80Neeo866liePQAuA6g8yplUE01alVrXShvh9sjjmTc1T1nOkkWN2Ao8Kh5swx51R1wHxVnwaOSykKfrNKnd+6Uj8t+DyZIsPLIHO/0cBZagCYAox5CPoWQKOGcHK/0cB5cO/yYm+AjHgIbpKvQPqp536jgXMW3gIyRxiMZRQqLfcbDZylBIBJx0PAPGbnajXmtjBXPlTMBaC3R+rPCw7rh+bV1NhfXUxmvev+dhHNqAypTeZugDO1viL32wQHBzecYzSnMo/eAvD/XXGk6d/QeSBpWZ9jBeJj13K/TXBgSLMykZozFQBz7QbkIcXUVZemuaz3fTIQ13K/fdMMcThaGaxefdCcvxW0xsOASsu99k0z4+jQIgsT6nK9IBxMq78p1H1RiselCmabUPdBKfZEKfZEKVZ88MkLg/j40ZvD/afXG+pnnaBum9p9sybkocWNL841CEF9atR3c7lWUKe11C2F8pV1A27+10fXG1rIOuZZzxrVPf3x/dayVi0PXgrNSJrQxGcXXhy+fufcoFaf4hhypAHr1Vc9X4XeLvGboP1ws0xo/M+3h03XWKb0nS6DfL/zF1qhQPyPk1kjnb2XRPuRZoXC+O3zC6MAZMIN8soyFh4KaC37Lo32I82iAZpfbRlTX1SmuQ1LNi/aj8rsFB6CTBICpglA82cmgF3g11yM563APHO5fmmU4iYUAkFkIJinJtcujVLcFgxiVkEQis8vmVLclQziLBh/xnDwPwQxyi3EMABEAAAAAElFTkSuQmCC"
+	}
+	Material: 95525228, "Material::villager_7", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 96374410, "Texture::villager_7", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_7"
+		Media: "Video::villager_7"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 48653044, "Video::villager_7", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAASsSURBVHhe5ZhBi5tVFIbzI1y4EynSMqhgS0sLlYEquomuigsFYVwJs3JVcOkfmJ/86RN4Pt6cnCRTJ/VLvIuHe+97zrn3vMckU1xN0zQ0rTgSrTgSrTgSrTgSrTgSrTgSrTgSrTgSrTgSrTgSrTgSrTgSrTgSrTgSrTgSrTgSrTgSrTgSrTgSrXgKbr559c+yP/by8af3otaemlY8BRc7gNdXj6bk0ccfbVHz9/FfDeCPtz9Mye/r7zb8/ObrzVrzKzvCpQ8A4+uXz8YegOaHHYDm2df8yur5Z59MyU+vn02/vnkxU+MZg++/utrCPIbHWh80VuuE98U3UsNYNZsDOBRnX/s5yQDyE5NGWKnxMfZoXZ3U9xMHgDG+5/ld16h7dND8vQdQHz0WrwYcgHGHAKnXOjGeg8i9xjDDADSeJs3JAajvHQCPdwYzZpyGbMq4ZJ78+OKLrdr71FHjO+zVNa+hNA8aNydjnNsBZBM+JDVuQzaYzSfGuYM9mnvPHeT4BmvuiaW5NMiemF+LfUPYGQAG/D5mAz6Iljnq5mTzQp5GyaXWjz816L5X68jJ2nrWlAbTnHol89oBgAZ9VIwdilcTkAbynAPIWs+ZYz17NPYacq1DqMYzzv5fD8C8Gs+YuWDDgO5Zc7VOrMn63OcAqsm/fvtljqWuedgZQPdfIFE3j2aSfQPIO+pAugF0dR3VwENZXV9fT7DPoLp5Nzc3W6QRTaSR/Pi63mcA5JKX9VANPJTVer2ezcHt7e10d3c3/fnu3WafMXLREpp3SLmvjQOaK2bNtRaIU5e1ea4GHspmAAmmNA81Xj8BdQBppMPBvG+dVAMPpRWBH46qyaHYh8YfNeBvfp6h/vjxg5h6vW/rkFBUNTkU+9D46w/5j540mTlPr57M+//FAHhbQzkAyJjkAKDet3VIznkA4gBS06ifhm+ffrn1yaj3bR0SLquaHIqdGkwmmtGse/Uun7g5aHluHwUSqiaHYqfmmKH8BGiw5gs5dWgrPiJAMkFWz7UZIa/WiM0kPgj1rmPk3d7PP3n9Z2/VunzyQPNCbH6AoGCOIHptiDgPkZM1+WDFx6DedwzvFY0C99mrWs3P9zm7nweQJjTCSgIXsmYzajXXei7NByredS6saBQjiUaIaVgD7h2A+axdXqU2sDSbAfh9dq3Np0FjrFnDmnX1DqkNLM38gyac0yg4APbqrF2tNUneVRtYms33WgPs33cA1rNC1klqtYGl2fwZtHkN1SHkABJ0Y3JxA0jDaejYADI/scYV0NVqA0sz/xmkuTTlWQN1ALUmV81mrlptYGnmT0BnKA3kAMwz10+MqznmW4tWG1iazW+AJnIIaaAOQDPq1nKXdZzNI+6dtYGlmX8EXR1Cmu0GgKaed1zcAGjO5nMINq+ZV58/2dFqHWg098TJZ18bWJrNj2A2bbOahToAtRwYXPwAQDPuWTHTDSBzU7NG3UGxrw0szc6fQRpVA0zXARgz19qs1zDw/+U81waWZjMAm3bvWUOYTxM1z3PqYD21fArOcgA2a/P5vbZ5kx3CvtzEXI179q5zYTZl00DT7mtBl5O1YK45nnN/HkyrvwFEKt3/bGZRxAAAAABJRU5ErkJggg=="
+	}
+	Material: 12240914, "Material::villager_8", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 20949134, "Texture::villager_8", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_8"
+		Media: "Video::villager_8"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 71096036, "Video::villager_8", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVKSURBVHhe5ZlNixxlFIXrD6gIQSIiQxhEGYggmlEhuDCB6EJxEQMiCCN+QHClggmKSFYBlZDsXLsIZC9uggu34sr/4V8o55Q87anTt6Z7psuugVo8qfe9H1X3nKqubjJN27azpgzOiTI4J8rgnCiDc6IMzokyOCfK4Jwog1Pz7Vc7h4c6N8RJekQZnBIJuf7Rk+1xBJ2kB8rgtnn/3ScOD/+uJUL74xqQPX7OoyiD2+TNS4+3Q0iE0N2FjLGv+kXWe48oh9omm9w9x3uqcw5RBreJhtRdWWfYdTnOOcvgthlTPKx7zjI4J8rgnCiDc6IMzokyOCfK4BgcXHq1/eXrTzt+vfV5B3vlXnn23FrkecemDI4BBvx2+7MeMuJUG3Bxb7d1ds+e6ZH1Q0ikxLpwDBnTgPeeOt8+2NtboL24/NhOR9YnS4ExDUC8M/YT8N3Of+KF9m5C1idLgbEN8KdAjP0OqAwAmZD1yVJgTAN46WECH4MxDZBIF58mZH3S3Ln5SQs//3iz4+H9uwu095rkygt7PS48s9Px9v759trFF3tPgMQrJrIPyIsPXt/v8BgiK2SGi68oDXDhlQGQ4oWG9iemEiIThNaIyj7wmkQ5F+nitSeno0O91oMGuOg/Ht7vwACOKV6kAAzwoQVPBPHsA++r1nqxuSgX5/AtQD2UBlTiMcBBtD8RetxdAB8BBkaADGCt46o+DPNegTgdJdyfAkS6eCC3ZIDffRePAW4Eot0AH97JO44IHUXVI1SDaDeAcyFEcPfzYyBObABHJw1wUgB3FKEuyNdpHH1ukta5R0zefRgygL6NDXATtB4SkgK4g5UB9AivqfoRIhBdPQnUuQFiyQAXjNCMVXnItzkvQQZOAYjLPqDH+32NEIlDuIt3EzDqSAN0JyUEkf5EeFxrngBnyAAGFm4A+3X6KlLApjT3Dt5pfzp4efFIIxgUU041qtWPGa2F1i4EES4k7z4x76sMUK3q0rwUsCkNgnTkV5v2HPn5So1M+OLyuQ6tNbx/llnn4EIxjhJLLb1CefV5r+9TwKY0iDkpaYALqcCY4/ZBCtiUMih4kWScF07GtwUvvSF46enPYqx1ZJ/n620cnawSOmTMtsi3uvbCTdCM+tOY1tRof2wDxLrxbaFrpwmIVI4bJMFaE8eQPF9v43CyjE/9BOjaIHGYwV7zCf1pzGPaV3p6G4cTrRv/v0CkI2H6TCOQfdaR8zxPC/3lRYVEqiDjik1pgK5fPd7MW9WLQQP0j5o5Qe79ZMLzQjGv9x72HkuBq6APdB03wPfEHF17SLzo/Z+aICEylnsu4HG/EDmtIQWuwnuFzsfnWXtdg31ei3xlALmGoJp9YBfhkPM+ekWV4zw6psCp6QwQGhAhLhIU8ziiXDz5zLEXOcDUdI8Yohiau+aCHMRQq7XXEvfz0JMDTE33tmd4BDCscDEJNS7Sc4pdebT/ROQAU7P4XteQ65iAMHJaZ732Eg5ekwNMzdLXIMP60A5xzKpyIg3A2BxgahZfMy4kxVx7+vmO/d1HFsIRlKgmxSsmtM4Bpqb5/Yf9Fv568NoSf/95o0dV4+e4dfXMkeQAU9Pozrx14ewC7lbGV+VW5YnnAFPTXH3juVb4kAw9lCOeOe+t6kQOMDWdARrMh1fs+scv9QQSzxz5qj/rRA4wNQ1D+tDOUI74UH6oJgeYms4ABvNBXQB7j3lOvVWN71mr9jTRM0AwvA8NVc77vMZ7WAvqTwvN93e+OTz2g1/e+LCL6ag8NdpnzMk6QXyoZ2rKIHdq1TE5ad+UlME5UQbnQ9v8A4foF7kPq81qAAAAAElFTkSuQmCC"
+	}
+	Material: 59009061, "Material::villager_9", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 32424801, "Texture::villager_9", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_9"
+		Media: "Video::villager_9"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 26420540, "Video::villager_9", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVySURBVHhe5Zkxj9xUFIWnpEJJEwTbBG3FpgSlSEMBiHIlSoTgB6RfCdHBD0gTUkQ0SBRI9IiWkpqCH8APMRxLn3V8fO0dzwzjJ6b48t47977ne649zmh213Vd0/z5x8+d+PuvX0egZ/5aSrElMO9NcC3z11KKLYHR3397PWoCZP5aSrEl3Gz1FGT+WkqxJSrz/jRk/lpKsSUw7XgzMn8tpdgSmHXTIC3z11KKLSGTbt4b8r9ogD7P+YbXHC11Yr4HzeNzMT9LelnUObm9u+vEly++6/F1pXs8Y6llPPM0L4s6J1nQ3Jo7x92b2+Oa63Prsqhz8sHnX3Q/ff91p1FQmB5PtOrR9bjm7NPaz6tirBUrizonfmeFisKom/UmOB4jnxhnsEbzeVnUVujuyIDGjO3DfftlmLnyNE6StoS7QnFrOWR/KW4FxR/agEP2l+IlUYqXRCleEqV4SZTiKdAXjdRAsfc+ud2L3HtqSvEU6FtXaqBYZbYi956aifDwwYPOef+dN7vrh28MY+bPca4G6Cy+3wut/fzMTyZCNsDNa8z8OZYacMqPgM7yBmjtTcj8ZCJkAw59ApbeAX6H7iP3JlUDYOkmwETIBhz6BCw1QLHKbEXuTWTSzWcTMj+ZGF5Ldt7X1R2QVuUurZ05XbBviaxn0oC3Hj3qrq6uejTPODnEsoBcexO4W1Xe0tqpGpgxjQ75mlMLjBrg5ueagHliXggX8jVzX6e+Bn0s3BS65m7aP0auLzYA09fX1z2sPccbILKIXDP3deZVzMUxp9FzOJN4cm8DMCXjNzc3oyYolnneAArxOeu5uef63HOqNUZE7tOc2OoGVOaEm88czbkoxQDFenGMIvew9pxqjRliiWIiG8C+sgH67+32ydvd3Uc3A189fbfXGJXjTaAxXFCoKEaK9UI9nnt8XxXX6EaEnyt8TR57YNIAGUxkGNNVXNAkLuJFMn/y6WdDoVp7rnj87ONh7vsy5mvleS5g3pvAXvaISQPyLusLj0OcnESHqjiK4kJcXDGKdJ197PV9rmduGjiWXRrm4yCqhiQUtgSmq9ha0sCx7GQSZNofb28EcXI0qgG+/xykgWMZGuDmqsc981hzZ6rHmvlcPDUnnxjWaeBYSlHoJ+ZX3z7/dzrWpSmW+rngfSL4Cdw1mqo6gWaLPG+0cJZMbtkADAoaIM2boP8FpMm8/kqkkebkeaOFo7+ypAZbPwE0QXUI7jDmNaox/KnM9TxvtHBabgDQAMxr9O8BMq+4RvQ8b7RwlkwuNefUyFSCOQzSkLlcj+upEMTKiwo6l7q0LRugornD/sdQtCofXaO/E0Rv1M3SVR3OBSgm9dyTcXL8TM7alzTEo+zXQhOZj3mBefShARgBrTFB0alpJN/jFXN79oHiwc36ufc1QC9KHn9/ac5+1qVzATeHnk0T5JDnc+VrzD1bMxh1kWIZxT5G3Ljv0x7IPVvT/0OxiG485wJT5LNHuptnr4++pwWGiRcNvnYjmMwxteocrtcKpSj0sqBocCOYrJrga9+vN3BeZ2tKMaEZmNPcjVdrcskXeW4LlGKFNwHDvk7dNcgzW6AUl8hGaHSjuSZfY57VAv0PIvzAofGbDx8Po/jlx9c9P7x80aOYPsuYrUbQWsaF9jT5DvCCKdY1dP92JSPken5155lrj/ZmAVvTP9IqHDDCHJN8pWSkCZgkN/eRR/OygK3pv2t74Wleo36Lk3HM0wBvwlxDyNMe7c8CtmYncypQBbt5RsWUyN1jRJdJSOPoyvsvftA8Bf0/FOt3HhOeXOGN4ByNoDW5LTJMKNaNM+6DG/Yx81pjtKBw1/YFsxqPOefclOIxeCPQWqYUL4du9w8b6MORTdaqiAAAAABJRU5ErkJggg=="
+	}
+	Material: 76105034, "Material::villager_10", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 27496513, "Texture::villager_10", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_10"
+		Media: "Video::villager_10"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 36823443, "Video::villager_10", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "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"
+	}
+	Material: 31163485, "Material::villager_11", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 4214075, "Texture::villager_11", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_11"
+		Media: "Video::villager_11"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 19723554, "Video::villager_11", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAQNSURBVHja7Zs/ixNBGMbzEU6QU0ghIYgklUL0/FcIhwgWV5laTrCzPMROsBMbwcZC0MLOxs9wln4JwQ8y8iw84dk378yum71kkkzxMv+XfX4z8+78SQYhhME22/nP9+Hrx7PKEGea8ab2g20HALFdygqAXQGQGuZ7PwWKD9h3H7AXIyAlci9GwKpWABQABUABUAAUAAVAPgsZpn98eRv6eGbqOaiXBQC+JEKmNT9mrGfF6jPsc7UewjIFCoALevDp8b2QKrt7Y9TKCoB1A3g4HQe18dXLNcsNwO9f3wLs75/zyl4cH1U2P5pUthcAKB72en5cg7DzAFQ8YAAADRD2AoCOgg+nj2sQGgFcOjgIq9jt69dcm9+/GZ4/urP0AsiDpdqljEKxsKF4Ow10RNg6jQCuHB6G4XBYGeKeaOSzrEmIQkCc+V0BqCiCUABazjKFlQSg4mMQKJ5lXYV0bQfHhiUsxCDEMFehWsa6MADwltY1ABQ9Ho8rYzoGAIaXhq9YFwA4NghBCPGY80gjpPeneAJg6DnFge19CJ9OpzUIOgrsKFn3CKBIAiAEOj+7DqAxv5cpoGVthNDx9TUFtPetxQCwXRQA5g1DzCXN8+qknCCmBIW/evpgYQqB00ZDbcd6aFfLk97UnrcjgfUshCUAuD2haP7QAGn+yMB6U81H/MmtaU0E0jAV7hnbWVNYXlx7U7/3diTEpsMSAAxlCEEIYdYJ8pcW6hS1jRWiALyhz7xYO/Y6e96me98MdVkHqKkQiqCQlKUApKx3APyseV8BBaFgWAYA+gnUeBsA1m9sFEBsDRCDwLQFoM4sZV3bre1AxFs2tim7aFPH5xmdnjpAXTv0AmCVI+tVzXp1uyjiF4F5+sX4LwApkZsEoL1sQVC8B4L5OwFAhzthMO2tBTSvFwDr9AE6f73hTvEKJFbX+gTkZe8EPUG67o+t/iwA6xSZP9C9sl4pcU/ddAjJ+mxrDybsIcWqAOzGJ7YZUgDeF2EBwB4x2SOl1CGkJ9YTnXreqgDsPqAtgMUUsMdHqZf2yptE27LsrsZ4YKgQrAB7CaGjRc/mYqNJn5cdAM5f9rSmeb6mALScgngNzTz6BZYrpOwA6J26vTuPfR4Jxatj7+S13iaX0I17gU0ubrK+Hmev2XCnAahYeySmfsADYn1GLrvIpBOkKM7hyWQSZrNZFb57cxa+f/5UhTAtUxgKRC8obH52ACCEoqwh/+Wzk1o8VbeNbSUA9DzCNgDGo1HSsgOAl1IICO1/8GBYRto8bdNGfJYAKAgCGVIs186Ic03NfNZXOJomRIXZ5hcbGwGgQr1Lh9TZmwJpE88OgN0heYcIujPzTmS83VYsniWAmMUapdo0WfmlaAFQAGRl/wA8Eqn8BlVX+wAAAABJRU5ErkJggg=="
+	}
+	Material: 33287210, "Material::villager_12", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 49610856, "Texture::villager_12", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_12"
+		Media: "Video::villager_12"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 3631478, "Video::villager_12", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "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"
+	}
+	Material: 48774526, "Material::villager_13", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 38379642, "Texture::villager_13", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_13"
+		Media: "Video::villager_13"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 26252537, "Video::villager_13", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAEBElEQVR4Xu2aX0hTURzHf/elEAKfNMzNlVBbZLNmf0YI0SxSSiIQSoJQsBcfgvaU1ENUVhDYmw++OOrBXqxAQ190BBHLcuny4a6HZO5fuF6EQOjlxO+ss7a7s9tmenfWPffB+2e/c8/v9/l9f79zJlPA5Idi8vhBApAKMDkBWQImF4BsgrIEZAmUmcDD9jaCLtird2Q8Ca/9oNfZz/Tc1NqzezZG+252j3ZlL4GbJ0+Q6qoqWFtfB3ZGx/GaF0A2CAwAx2Xbs3seMHwnBj/3LZX5uOwAjBLgi0sXqNIQGkLA88D0jGIqAJj5R2/eKVh2qBS8Ng2AQkqTAIyqQVHnkQoQNTNG+SUVYBRpUeeRChA1M0b5JRVgFGlR55EKEDUzRvklFWAUaVHnkQoQNTNG+SUVYBRpUeeRChA1M0b5JRVgFGlR55EK0MvMba+X3B8ayoF0y3uDDA49+W/A6QbCC5YHRVR5F+PXXwB4yaBUQK7cTaaA/Ho3FQBesKYCMOYbJd09vTl9gvdM22z443yku6dHuNVD16GwGiJ2hzPH5osaIvs0z7QANjqumK692TZbAoAHqRhwmx1cMe8rCAD3AB2d56H1VFuOzVv/DJmeeA3aDVL2ZGjDG6d9VoyDW21TEADWscvdkplfob+nIoA/tHk24tMFMObLr/fnPh+5XCk9ALPf5GyGFreLAthlaQRCCCTiyxRDMBCEz6EQaDdJjNZGm+dWZ5v3fq4CcKlr7zwHtXU1NPjsIx77CqlkCqYmJqHQdwIegIpSADpbb7PAzrraTPYRgqIoUAwAbQ+4c8VF7GeuQ8UsgxgABlyDCqjfQwNnBwMQi0ShUE3zAJzue5zXUMshee2ceSWADcxqs1I7bHnY/KKRKL232Cz0Hg/2jJdVBoBg48AfJ4bD8D0ZFxMArs/oZbrHA6wmVyEWiUFnVxcNdOHDe2g+cgyS8WVYTabg0NHjaTiE0GdsbJrsn5UCQe21N9HgZ2dnoc3TSi20G6tyq0DBhoVOLIVCNLv05vdfDKjJ6aSrwXwgCEuhxRx/0/bpEXh9wHkw8w5LgwUzDn6/H1RVBed+O0QjK6DdWpcdgNYBbIAYlNXWQD/C7C9+nKPnyfFxcLld8CkQzCDSa2yqqhKHw6EMDw+T/v5+4b4HMM3mMEAAh90u2vwwcAYBg0cFDNy9l9kTBAPzuhnFHoAlkEgkwOPxVA4A3AHW1e/WVSf2hthKTMilrZSyystKeg9gpe2MLYPaF+KOEDdDekthKU6U0zYPwIOzHtLYfRUWRkegufcabJ96BT87LsK2qZfcs4j7+1KA5gFIfw9w0iaIXRvLAfsBOzD7T0dG6eqAK0el/4tcyMZUSgb/1db0AH4Be8rmUTW5vvMAAAAASUVORK5CYII="
+	}
+	Material: 8815596, "Material::villager_14", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 3150475, "Texture::villager_14", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_14"
+		Media: "Video::villager_14"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 78020996, "Video::villager_14", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAC1ElEQVR4Xu2XQUhVQRSG5xHhxozKjUIKRujCIATNRQhRi2hTaKJguRQSW1WugmzTonLjIqhFQeDKjRG0UgI3FQ9EsaAeKahUG2khbQxi4h84cJ/NTO++OzB33py3uXDnzdw5//n+f+4tiMh/hcjrFywAExC5AmyByAHgEGQLsAUiV4AtEDkAYZ4CcueyRON+r34UdefXM1GcabIPevYWT8jnh9bE2rtv4sbBIXFqfDlTDZkm+xAAz4QIpS+H1eOjFICEhxDRWSBJHbKg0PgqE8WZJvuygMvnsgAu1QxxLSYgxK653DMT4FLNENdiAkLsmss9MwEu1QxxLSYgxK653DMT4FLNENdiAkLsmss9MwEu1QxxLSbA1LX7fW3y3tKGViDbWGgUGAm4daZVTn/Y1I7bxliAwBRgAjgDDArYgu7ZldNybH6lJk4QYxHVClDtPF/RkVoAdP/Hz12R9ojEPBSZN3JSCzA7N6cKGRkcTPWOsDR+Qc3re7KQK+sYN6PzOYo//vapovV1/Vnx6OFU2Xwb/jUhwJ3JKXmyNC9ggV+9o6kECM4C6LKOAoiAsTTdJ9usFD/9M89X+NFzrX7UBR4wx+T9IWjDn6yjs02uBdBRgEKbjjaUpfn/Po5ATf37l1rb5F4AnQhJP1PxUn6V29slVU9Ly6Uysky28V08nl/xkUTo7+79UftubzqiwpCssLX1RhaLy2psYOBu2br4esR909elTyEqFiC5SRTUUHdAJK1AAvT3DwuQkKTAlBs+C68oBG0bpK523X4skO43J3oECOju7lJXoiBJTs0QQMIg3fFGSMGI+xdnHigBiIQX1ybU302vzr4pqMoCyU1Twp/rbFO3P3/fEceuX1UkUPHIjTx2P1UI2joFAkgAEgFXhGSei3cqAAKxo7lREUA/21ejb/Qzh6DpVAil804FwGJ0KtDCefX8fvIyh2BeUK52H9EL8BfNyH1Qj86JlQAAAABJRU5ErkJggg=="
+	}
+	Material: 17101023, "Material::villager_15", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 79200065, "Texture::villager_15", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_15"
+		Media: "Video::villager_15"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 33035131, "Video::villager_15", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADyklEQVR4Xu1azWsTQRSfmhpCwVqChfiB1rSIEFtQQYsUevAkglrEk6CHHEQ9FfSgf4AeKvSkXsxBwZOIHyCePBSKiKBCa0CkTav4EaiEWqGE2LjyG3xldjuzJduFt3FnL8lu5s2+93u/9+Zl3rSImF8tMbdfWAAsA2KOgA2BmBPAJkEbAjYEYo6ADYGYE8CuAjYEuENg+MyA49Uh17skhHDEznRCHM6/9HXSi8IhZ6byR05RnGw1mpPr/S3nwzVTqYvi5Hr5nZ0BFw8MOeXFikvxTFtatCfb5LOeE9Mif+mVVs/CjX5n6nG3HLdQWxTqPJgD9+pcXnQgww7AyT2DDimrKrirY5u8rWY/idF741o9wZ5UaYcc93H+ywrvY15cBGYkAeAOQXYGWACYEbAMYHYA++stA9hdwKyAZQCzA9hfbxnA7gJmBSwDmB3A/nrLAHYXMCtgGcDsAPbXWwawu4BZAcsAkwNow/H6+H0XSFcGTjt+G5XMDm349UYGAIDPbxPi4fsx1xjs4m7fVzfu1DasAbOAEYDCSL8z9aRb6BjQc3xa5C/r9+qZ7Wn49RYAmwMMCMQmB+h6c2hLIdOj7WRaBfCbrh2FBEm/UXsL42hOU5ur4eANScC35wbFdauAnzHEHOinAoD7KK4eRgCwBJLS1IAEK9TnOm+qDUuvk6JYP2gBQFhAeW/bmgyiruvN149WyKNQotDwMgD33pAKicmBp9ECACPQO9eBoLacdcYQADB2Q3qjnONX5afMF00FABQnELzwUr/dBADGk/EkCxBwNQUDrh274JDCXhDUwwZ+DICx+7M5afSbUlF+Ng0DAICqtMoAim8Yd/Xprf8zB6wVAALMmwybJgRoFZhdKEtbutoz8lO9RyiYQgDxTwwiMMAYhFXkcsCdkYOuY2pd6XXGJWX233E0dQw9IyEcP+uc79MCMNcxEbm/0dplcK0hQAxQ64DIMkDnbgKgulQTfZuyriETP0oi1ZqUGV6XBLFhotYAqjDCwltaB65gQhI0VoK03MFgNQcQIFgedZUgAKAlkPIAwKLvTQEA6vnah87lUpiqPyqNcZ/cPaeNZ1SCagWoFkWRTII6JtH5XYDgPWUJz+899U2etTX9GYLc1sxm19Rfy9+NoIXE5kDT+G6K4oDxuwdblo2BEUPnyuLZWML3+Crknt9Nuf4O468wrqbYDyAowQQyBs/OD9d8jVfljg7Wxe3RpHx05GzVyJhAbgtRaNXGCECAMbj8PO/VieRQJ5jCJUQ7Ak+1KgCYmXJCo/QNKhfYmgCCfwG0VRJLJCiE+wAAAABJRU5ErkJggg=="
+	}
+	Material: 91354546, "Material::villager_16", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 91990031, "Texture::villager_16", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_16"
+		Media: "Video::villager_16"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 20059887, "Video::villager_16", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAEuklEQVR4Xu1bTW8bVRS9buz4M3Yc48TQJs2HA1GrqohWBMGCdoEACSGEWCLYdlcJ+AewQgiJH8ACxBJVLJCQYEFYIBrUIlBU1BInAUzAxLUTO/6Ok0HnmjdMktp1eqdyeJm3efLMu89zzj33vhnpXhcd8vHpe2eNeNxHvoEC1TYj5ozHzmZr9MpbP7kkEETGkj/u1vabj2aNnb4NXj6UGKN85neeN1aLfO3p1+dFGETG3YKQrPv6k0cMBT7gd/NWlWqT51oxTbMv3xRhEBlLgHVrO39lxvCFRwng3d6HqVn/hU3zf6/wfCQIYAWMTDBgkFDc+PloKQDg4fHhsWcZPNRwZBSw+O3zBsBaFWANgyMRAncCr3LI9FNfiPKYyLjbRNZpnTrncabjvMfYe+Y/lBwyQwDexymAYxDX/0zl970bqH2wZ65Yplg4uO8R1PVDQQCeDg+tSMA8Olmn9LLXnNX96UeHafHHtbb31ToAtA6QoEBb554T8O6b40a22U9xd4MmH4zQfLpKLzwWpc9/WDevLf9VoEjQTTNTMZOkm0s5ShWOUTKywx5Wawrl1jsCBvZlct0NtlcDa/Abc88JeHF2jF904kG/+YADfs8u7w0GvPw75O0zr5fq27RRqd8xujarW7uuZ8vV/0gp1VqkhFrh1nMC7Mgjkj0cAiTs6WDrKEAHL0owOAqQsKeDraMAHbwoweAoQMKeDraOAnTwogSDowAJezrYOgrQwYsSDI4CJOzpYOsoQAcvSjA4CpCwp4OtowAdvCjB4ChAwp4Oto4CdPCiBIOjAAl7Otg6CtDBixIMjgIk7Olg6yjgMHgRtYKxRKt46dj2IM8og0epPGZVS4iy+VzGJ+4RsGLuuQIUeH+oj4o5D0WirfrAdkWTihBpo4QioacE7AXvdfuoUGjQyImqSYIqmrR2i0AJF1+9Zcuz27LJvYYRmiHg+XphgLeoN2vk8dZY5qriU+2NEEF4oIy2UjFsC4WeEwBQ3sgmVUvbDBAez+R3l7kmhoJMCDxvXW+HCmwn4I1nnjDOTQ2z464vrdH7X11t+x9Icgp8bWeHymuBfeCVAhQJWA/FQAnSUnns7XrtzDiXqmI8kEiYao7+W7q6bikzbSf125mMeWt6aoImEy1JL2c2aXGp1dqixscLv5qEIAeEo0QjJ4e5+nvhVq5jNIEEFFFjICdIG6aYgHuN33Z2UMCNiTN8+/TKQkcFYM2XH541wrEt9qoWBLz90kUjGnLTeqnJ3rd6fC9p6nwfPB7uSgHnH+/nXIG2ue/m3HTpHVmzxH1TgAqfuxGAB0BLDJoeENvXvm/cNQTQL4DeQSTDQxkCBwkpHIMAgs6PXPY3+iPl6ZgETyS3WAHq6PzfE4BTAPLHQCcYlNDpGIRK/KHjtnWN3pcQkCggFj/JSkBCrLjyFDCGeI6GPQwco1pa5ft29A33nAAkQcQ0RnjwFM9oikInGHJDailFyakkuVx+KlfwsrRKIEkpxY7vAduPwYMoAGtBwrkLF7ghMhgYoOSTV1wr1y6b7ybbjTT19Y/SxPkPXFc/O2XY6f2eK0CRhWQ4Onma0ss3aHzmObo+N0fq8xi/AR6kYFafyAclut36fwDH1E69qHJmoAAAAABJRU5ErkJggg=="
+	}
+	Material: 19805223, "Material::villager_17", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 80975233, "Texture::villager_17", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_17"
+		Media: "Video::villager_17"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 94913907, "Video::villager_17", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAFRUlEQVR4Xu1ba2hURxQ+6zNrou76ihsStRYf6P6oCqam/imhFAv1RVvQtIivP4K/RFFofYNi8WdBqFQC1tKHSCuFQskvY6KhJmKjtYZGJMa4iCRq1o0vrnyTnuvsZO69W9l07s3e+XP3zpk7d8433zlz5u6cCHmUfZ8utNCkIjEyq2VH1zNxv+dkc8SrDz/LPQcPAKA8FK5eEKUbd5+L31xXEABAcRQoP3vqCBuEgmDAN9srLZ59mcrMhCHPgPqj71g88zIL+PeGLy96mlGgfQAAUBVgQOpaMkPfCeoAACBQHo6wIBnAysM3BN4HwMkxxeHh2bZx5XunOp1PcLJ3jhtYznGFaQZFdIEOr/OqMrp6OSZwC5h0wPjBhCKb30sOcHKmvHZ56Si6nXpKuDKYHHfIbFSXYzU2AbCok00V/aLwO7gP40vY8sppYgImF/cHWyhjo9lhd2zMaFFfMnq43ab3yQvqefxEO1ePMv1hOpd76cyr37194vfkkiJxNQ6AKbb5hgEhAIYRCE3A8AQYf33IAONTYHgAIQMMT4Dx14cM8JqCRWXjrJ7MU4pFRxGu/3T3DSnQPJV5M15ksfK4Xrrz0PMZL1D9JPdUJmRAoTPAT3QdjLF4msBgvNRPfYYA+Gk2TIwlZIAJ1P30TsEArPXl8WKaMzVujy31KEM96T6KFReJ6+3u9JALgsRH0XWL3xjwWRwKo0DpZPlE7YSVjo0SQKptuhloM4qsmJ+w5FlGvC+XZFlcsACFgZHlP1/tCjYAiPVlhRDvwxyYASogKh2CvjmKwP5ZKSiO2WZ6y6aANgwMM6b1Tnfgd4c2ALJyOrrDH8gg8H3Qd4eO9rujep51pO6aVu4m89MSl8tYQgCcUAoZEJpA6AMKwwnC1p38gNsq4OZhg7R6RHTOjkHxAkCV5/KcU5+5LFmD0UYLADZIiAbdANBthACA2wYJ/fpt8yR2g+qgeIfoNFgneS7PBQIA3iG6AYB9groTBAC6eqYu+vXb7lFsh9VBoQ6DdhqskzyX50IANN8P+LSq01lAZhAOaaPk83TpAAbsP/yF1XLpsnhRqvM+NTQ0ZO0X3OSvywAAoB7TVT2+LM8rAKs+/tA68+NZW0n5vqqqylIBcJMzOHJ/siKQ7955YMAGjE+kcxKGbrnj05+QLd12Pm9foSJQctbzLvudbSMShHssg/WZGC2N9mSNh+uw3HFbbvBwelKwRu5PfhhyHTiclKEeqFaBYBDyCgDTVoc6fwtUZbpvg7kGKTonaBQAzgni4+s8C80tXVRcs5HiiVKaUndC6Ic2vRWfUEnHDzT+7Y/owYWf7CvkqGs98x3FF9eINmjb3fSt/ayTAzMOgDx745edpKtXmuj647+E8l+t30rVmz+jfXPbRbPmkattAGbOnCXqWk4dElcAgNLZOcwG4M+zJ7JOf+scmG8AwOzjWHn63ZVCeS7XG5qoJnZDHEFPzVgpqqH8L0f3C1YsWLtL1OEeJblqjQABJRAAqM7n73kf2Mqnbt6itsY/aO+ycTYAoD6eWb5tt80Avm9vbxOmgQITCAQAjZfTgqbJDd+LgZ++UCuu9adO06ZNn1PHr4doyVv9/xUw1WHrYMuWIwftemYB+wrYPydAuKXIGF0GkTIjZ2ncr1hDk0rL6Pjxg/R+oj9BAeDIucPy7DPtuQ/QH4UBkrM/UK/zAUYDIU6Z4YFikFeokiakztnKZ03xvze62Qf9UX47VmunpqhpMLosM6OhsAoA59bISsvgoF7Nv2G5zCSnfvyWZve/J019/Xtr3sJYHTP/a91Ln1Kd5RqicrgAAAAASUVORK5CYII="
+	}
+	Material: 96100344, "Material::villager_18", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 38179062, "Texture::villager_18", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_18"
+		Media: "Video::villager_18"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 81882263, "Video::villager_18", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADoklEQVR4Xu2a30tUQRTHzyVobU1XN4M1rJY2WX0QgkBR6sk2glDqD8j0IVq2lyIowodegjAJ6sU2CtR6DSojCDZ9CRQFIRDUbdncyl9grr9SNIiJM8vcvSveO3fJhtGdedkfd+758TnfOTMPowFnNAVOEDYlP89Bv66ub+hvvYh81ng2ZH7ODZ4BYMnnLABMfCsIOaeAPMdeWN/4rS8DBSAXe4CxD+SEAtjaR/njyMklcMBVkLGbzS+t0N87XgHGfd5qvzYDkM0eL+ockUwm6dmlp6cHmpubLbd67WJtpX7QMUumYL+DboGbl8DKr/SBiAcCbRgHe/f1wBj3LMKzbXw+NTVFIpEI/auxsRHcbve/A0BjDAJrgNkkb5XAdgIYHR0lQ0NDUF1dDS6XC1pbW6Grq8sawKnKo1wFYALHyooz8vg6uZBNYUznVh33mD4rKkr3nfsvP2YkcufSGT3uxcVUP8Ix+3MZ7j1/Be3t7bBvfowbo2YXAFo6WOSkBucW17iG7U5gNs3me0oK6SOEwSBg8ixpTHjzcPlrYCk6aCuEbV1/tjxKNkkBkKwgwsNRChCOXDKHSgGSFUR4OEoBwpFL5lApQLKCCA9HKUA4cskcKgVIVhDh4SgFCEcumUOlAMkKIjwcpQDhyCVzqBQgWUGEh6MUIBy5ZA6VAiQriPBwlAKEI5fMoVKAZAURHo5SgHDkkjlUCpCsIMLDUQqwQp5IJIjX69XYp/DyCHBoqQBMfHp6moZRV1e3K9VimVR/fz/51N0Cpy937l4AN2tSFyUfDn7bEkbbVT+5/TTKrT6z09DWDeXl5fD+2vkMAUdnUhcrzfwIUPuWLrSWKg9xO9P3eAsde/SJpe5CGIjPQq3PAz+qGuj/h0fewUwyfTlxeeOPPt95tgmCwSDEYjH48ug6+G88homJCRh5cheSa6l7xZ0js1yYImFQAHYckpPn6DRt+IPp9LILV6C+vp4qAC8sBwIBCIfDMPnmmf6OdAB4yVccySfj31ctq8ZUhArw+XwQj8cpiN7eXvobr6zjEkEV7DgAdnsAg+AvLYaKQyU617fDMWnlTxVtpQBCCHkQrIBb4XHQNI27drHK2EOwd7CBPUTGtc/i4wKIRqPQ19cHoVAoawDYLLFJytb5jUXnJtXR0UHsJI9GjQ0VdxZZO39WAHhN0vgcAXiLnfoSQAUkFtaka3zCAODhR8bO/18BoPTZYQrXf04B2NwHZO7+TAV/AYmVa+5Rmtj7AAAAAElFTkSuQmCC"
+	}
+	Material: 3546301, "Material::villager_19", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 42361772, "Texture::villager_19", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_19"
+		Media: "Video::villager_19"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 17564770, "Video::villager_19", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADOUlEQVR4Xu2Yz2sTQRTHJ/SgEpHYViFgD5ZKRQqBUsQexGJzqzehIIRc/AP8AwTBg3+AB0FEQUJAKPQgtLe0VDxUpBQCRSyWeqgQ0LYGMaiHsvIdeMvs7O82upPOm0ubyWZ33ud9v+/NbE5YPnKWxy8YACvAcgJsAcsFwEWQLcAWsJwAW8ByAXAXYAuwBSwnwBawXADcBdgCbAHLCbAFLBcAdwG2AFvAcgJsAcsFwF2ALcAWsJwAW8ByAXAXCLXAvfJlB+r4st/xiORCf15+ftz4mIl9bo8PObQGWh991tcapO759R3PukODmB4ddMaGBiUA+hE9fGNnVyxt7hoLQAWiw0oFoJA/5QZPNAGh3fnVMwDGR4ri6/4PuXw1mRRPpAJ6FQCCpoHgz/efkR/Xt1q+hBoPAIrTvZy2BkRd37MA1KySzMOK4KEAUBfQqz3mg7ykZkmv1GH+S7IHCVIASbxYyIvFtS0xMzEiWu2OlHjQOBSA188eOs3mZ7G3+c5teQj+5uwdgfkHT15GdgEVQhywKBBhABA8RnO7JUrDxe4CwENLk9OiVLooNhqLbhWF7A7OXZHztafPfQUlSUZNuyYwi5Q9IqsuGuRB/ShZNQlCLICgxaYFAKD6BsQUCJEAIHnyGi0YxQa9NY0C7l6/5Lx4+ymTnWMc6FAA+KFaPdUbUbtJmtVqterUajUzAVDBQ7XH+PnnQP4dLp4VY+UZWQTVQXPbre9y+vSJPjEwek12C3XQfWgO12FkdYgKU0KOADRXl3zXoBPo80nmopSTVDVx0u3W9z5Z4hRIN8dZoJA/6XlWu/Nb4DBEI8mpsF6vO5VKxUwL6CRp44HAIVvactKJCtdjLk0hNLoG6ABIAcg+tpxqF0AHwEDweCeAkUQB3ZLrv7hPoAXwIoQyTw8lEDqEYwcAFlAzj4D1vQCg0OHDtKKWViU+BTyaveoWQbS8vbUVGSwGQAxMTMnWiP8xf3/uvZHFLSkI3+LpGEyFjqygnr7oOxP7etLA6bpAABQ0FLA898rTCbDp6fv2wS2Gpm1sjgwg7LUzbX/j3rKmXUDW10duhG6Ub4k3jQXPGvW5Y9cFss7I/37+X+mq4dSjlXMZAAAAAElFTkSuQmCC"
+	}
+	Material: 8103921, "Material::villager_20", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 85613016, "Texture::villager_20", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_20"
+		Media: "Video::villager_20"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 57912994, "Video::villager_20", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADt0lEQVR4Xu1bTWgTQRSeFdpDj5qDjWITAt700h7UWrDQk4gVJSiIoiAeRE9aKx4UvdXqSfEggqIISvCgiHgoVGirgi2I4kUISSUGD4nHFFow8g2+ZXYym0nc1N2dzl72572dne973/tJoQ6L+HEvk6mLWywtLXl2fL1cdoJACPRykA+3+m756yUPAfTexxef+OXo5TeBMAR6uVUQQfxkBchqMF4BlgCpBlgFCAygIBqfArYI+qQAtcPYKwBFbt/LLHu1P+dpFqpnfvNA/9nt7PmND573D13cwRbufNY2oNDboI6A2WqVnXp2l02dvMDBjDy4ybb1rWNfFn97ziqksg/u7x8+w12xJq5DJ+BKMllHBOVo0bNircY3fGR5mZ+fdnc3YEW0VQqQn9E6pd5eBmJxhE6AVqN/HV739PCJcG+tFmjPUNzpfN5dI9BirW6+E34gICh41T5iQ0AnSLQEKBiIhQKmKys8/4cTXXy/8n0QdcSCgCAAde9aAnQMmW63CjA9wjp8VgE6hky3WwWYHmEdPqsAHUOm260CTI+wDp9VgI4h0+1WAaZHWIfPKkDHkOl2qwDTI6zDZxWgY0i2/yzn+Z+oNyYzRpDXNghLgFWATQFbA9ZsEczlHtaHBofcxlAofmelH4v8vlgs8POxo8f5OS5doq0uIBIA8LNzb9nY2DW+Bmw4E0FGEvD+3XQ9ndrCZPAkCZCweVMfg49xBBA4gIXss9kTDeoBQbBBBSBp567hthTW7lDWCf+WNkjyRnRbIYD8jCKApE2Fb35+gU1M3HYJHB8/Vz8wepAThNqwe3CPGQqQixsRgKpfqfzyqBAEIP9n5mbcrkBFshNyXY01mqYA5TRFHxsAOLHtEQmJxHoedRBAfiAptgQAPOU7tTY5+gCdSqVdQkAAjjiR0KAA+rVHYOXoi9IfGOhnsCPncYAM0V9WTBTV4JwfSde/VVfc9Nq6oUuZavAhm3itcm623q2pQkudZzXyXbWmMzl51f2vLJIzHMVI0uCDfCfZy10B9+JYLKvBb3j6X0D9vuNQoaNZ3k/GZBcLnVjsKP9BAlokDkoR8eNRmw0cynkVQ2LRg10GT1GVbY+fPHJbpKgY+EWOAJrvZQJE8FCF3AmoFaKw0RBE1R82FQl4rhqhw0wDR5zxqe2JfZ5SAtKmNIBdruggAc9pGMK1qm1GrRPw6EGm1MZk8BQdAt8MAJFARNC7RB6KqDg+hxl5+rZnlvfb0L9sWuwuKsVEATz2EKmeHAYpa56AP29NNAreqdoeAAAAAElFTkSuQmCC"
+	}
+	Material: 96525567, "Material::villager_21", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 17127959, "Texture::villager_21", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_21"
+		Media: "Video::villager_21"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 68223121, "Video::villager_21", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADl0lEQVR4Xu1ZMWsUQRSeLZLgGcKBCClEsLNPGyubFEIaK8HOytqfYW2VLmBlE0iRJpW29naCiASCcoTzJElx4Vv8jm+fs9ndu0VmdmabZGdmZ/d97/vevPeucIlfReL2uwxAZkDiCGQJJE6AHASzBLIEEkcgSyBxAuRTIEsgSyBxBLIEEidAPgWyBLIEIkfg+eu9uZpwfXVd3l7OrtzGaN0dHZzeyvLoJWABmE5+u+nFzG1ujdIFAAyA93ElyQAaDxmcvP84LAnsv3o6X1tfK70LusNY3mMMMaBuHnOWEdHFAAAAz0LnuKh1/A/DNQiW8+O7ixg5CAD2Xjwpoz48//Ns4u5tj/9hAADiRQBgvE8S0TEAAKjG1cOUhQZBK4/oJaAAkPbUPqUBWdSB8OHdScXp0TEAMUATHethpT9loIEyegDIAGZ6ygKVgI8BgwmC8Cg9zXgAJtwZbbiLyXSRBluJ+BKj6CTQd+mSAegb0dj2ywyo8xjLTHts1I3/L89r+Xv27dxtP7xfeTVTYa0HkCxxvHUiFCoATIXLI+9v3c+c39YBdo2vQVIrgVABwHehCrTGEQTOkRYKEsZseRwlADQOEkDaq/UAAWB+wIKJ2WN0AOw+26n0/FD9McHRfgDpD4P10moRazDPuIH74BngA4ABjiWulrw+AAgInrOgFbapqOghtTx8e1QB6eWb/fmf2eXSQd+eKk0bWQDgPXwXLqS99CjHvn75XtkS622nWAEpYJA+AeO4GcZ9AHA9gdD1mKsb9+3XFYBHjx8sHsF7eBQ2AQDvYy0lwdZZBQDfhwNlnp0oRbfGm5Vvvs1YCybuuzKgCaBV53sDAB9imUA2cDxYAOgpeJuNRS0vlQEMQDAKz2nmRUPPf/wqe3ZgizIkWACs4WoUoibPTjYjNArzfFWDbaTVrk1wEsApwIDAD6dR1JcCwDFtTGJM204WQObiACI4ANhnp0E0nikk/n46/lwehTiSkHnZ9JKg6HlskxXeBwsAvcjOKozmGawAYJ3OsQOLcXqa/TrGE+3fNf1Wt2pU7/p8QQbwQfV4m83ICgXQJxP28Zp+q2vzzj7XFCwvfZRv8yKVBZIMbUvbOIH9ggSAXocxpHsb47mGUqEcNEZoBzdIANToZQFQIAACvKzSwDxBCY4BqxqtTNGgqaxYlWFd2Nh1bempZWhf9yK7X9/7dzWwaX3uCjchNPT5zIChe7jJvuQZcAMpgsBTWQ1iIgAAAABJRU5ErkJggg=="
+	}
+	Material: 68311940, "Material::villager_22", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 43356428, "Texture::villager_22", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_22"
+		Media: "Video::villager_22"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 16903772, "Video::villager_22", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAEhElEQVR4Xu1bQWgTQRSdgBdtg1RLm6KipoUiWkGi0KsFbwX15EEQvIqgeBAR9KKIJ8GD1wqC4FGhN0GvBS2CVaTQRkWlsVSDJDUXYeVN+9af6cymoRPMNLuXbLKzf/9/783/f8NMRjU4rpwYjTCkXFlWhaGcHj09V1I92S59fu/5VKaRjXa+3tB5AkAQGDiD6ggAerq26niLpSWVz/XGhJaXa5tfAbdOHV+ZAss1VRjsU+VqTRW/VxRBufH0ZUMVBT0FCABBYOAMquMAyPdnVbn6Jya1YwDgFNBVYH6x86ZAT/cWzTw+9XRYVUHwCpBlDoGZc5xadwFgJjgoxXWgl9DPWO0h2qGPyJgAuECQAMgcIINNCp7jAELbAyCDkopAgKZC1hN0HUgGADZVmAriM/ks87tNcbRrXvv5u6Z2bFvpa3BYFZAkYbMTbLbGmwpwOWpOFbbiUB8aMulHko2gAYjzz2rOaAY8FzFrFNAsg5ttfNBtrA8yUgB8oBiyjVQBIbPnw/dUAT5QDNlGqoCQ2fPhe6oAHyiGbCNVQMjs+fA9VYAPFEO2kSogZPZ8+J4qwAeKIdtIFRAyez58TxXgA8WQbaQKcLH37dOraNe+Y1aAkq6FpganAjoegOnpF1GhMGYFKOlaqoDAEHBOgSSW0xyQkCADE4DKgE04XfpR0b7ndmb1J767cgDvsd2H37b39qlfS4sxFvK7q7L8L+AyNqnjNwBhAwHX6KwJEO9DwDgAgnne3b23rXoPpzPV6ueILJI1BDg8PKgDczGJ+2xsEozgAACDdBrSJ6OuQAicTQUAJigAyCSdluy6AmF+kPNegtF2OcCVfGzBrgcAmQcge+QR5BMCEhwAcr5LebsUQACarSy+qsDJw0MR1gFyGR1XluETK8SevZ2ry3uJ7wIma5A3GEUidAEwOfkoGhjYrVl/8+6D4jnLrKu0+gAAwR/N74lNYWGlXFqHBZavi1/qQEjsBM1SCHYXFr6qI4cOOKsAAIAHCBxj5Tl+axUAMvik1asmCE4AyCSCGB8/p8fJ4FyBYO0xdpbgwLL6sUsX6silLR+MSxvnR0cibOexLadF0BIUqOLh1IyOKYMbaUguP13PelzeJ5eqwol8bqWbLJYqelmrPPhg3wAAeAbqWt8sQeBmL90JUupwiue2lliOtY3D/Y+vXVfv94/o+A5+nFFn796ps9mqKkAiQWISAAQpBoClzda2IojZ2fl43rITdLEHGxOXr+pNFVzUfPvJRFwCZVPVCgVgO4/c0IVnyBXuPJe73TJJnZut5WU3SMAkcHjgzdNnYgYg/4sP7sd9AK63qhOU+x4aKQB+xTlAtrfs/Vn+XC9DbGzIogSD5c6cTq1uhDAFXDlMJkGcrwGAtR1y58sOOzhzzpqtruvNDwDIa/ie9Iq90SnBMtioBOI5shfQ/wdIAGTyw2DbK6+NXYAnlWEDs5UAwCfZC3BzF3KC3Oq3phHi+72sBGQj6U9RyZhZRch2MzY3qgDeDxAG+/9t75V2Zf3n723154QvEJqx0/EA/AWvjT+9rp5EOAAAAABJRU5ErkJggg=="
+	}
+	Material: 70165404, "Material::villager_23", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 47028932, "Texture::villager_23", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_23"
+		Media: "Video::villager_23"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 13405485, "Video::villager_23", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADf0lEQVR4Xu1aPWwTMRR2UBtSCKGMyYiUIiFSlVRULEWiMwsUIcTCSAExsDIxsTIgoIxI/CyMzEWiCypKqBqERCMxJmPaEKkhrQj6XF704tohZw7k3tnLufZ7rr/P33vv6l5CxLwlYo5feAK8AmLOgA+BmAvAJ0EfAj4EYs6AD4GYC8BXAR8CPgRizoAPgZgLwFcBHwI+BCLCwPLym+63tXVx/fa9QKoOZOwyV88fP+gWz02KQuFCIEyBjF0mAHurVN52Y0sAQmB8PBVPBZD8oQJVAVAFxsvv17T5ITIhYFIACNjYaIvZ2ctarJEhACo4PjmxB+ifqkNkCIDMQYJaBnVjPJl7Alwvbf96f5FSgA1ZngAb1qLk4xUQpdO0weIVYGLt7MyZ7oeVj1qCBs3ZnEJQn3w+L9/v0Vqtlkin07JfrVblfrPZbG+er12v1/fgMSpgPxNABHFyOEFDvQl6AvZxCEABuVxO1Go1gSeUgFYqleIRAmpOGZQzIpkDQiHg5sKN7qdyWaiVALnhdLEoni4+05I3VTglM/Bq5XPfvGk8aAWAPU40k8lI12azKdDHk6pAKAQAKBbSEaAbp1/6PwiYnp6We0P543Gui3EizFQ2jSFgC8TWz0YJYfh4Akws2p6krV8Yp2mzhlYBuEd7uPhKrnd34VrfdTIBVMcH5QC+npocbTYdpk8Ct6ZYEP9XQ8PNKtqdW/fl89GT3SfmMaeO8znYcOJoLT7uHAHI9j93tkVne6dHbGpsTLS3tuTPw/RhlxwdEQdGRgWtZfJzngACwmXGyeDjnLhh/Ux/YYYp6yBrJWaKU11++gBCbf7KVXE0kxGbzaZ4/fJF37pkx31JCWSozmHcSQWojOFkIeeLl+bFZqMhp5feLYnCwbao/EjJn8lmGLZhS22lvOrUJUyC3vgIFJ44OcQwGgc9d35OEoGGsIANBwfSqPFxGsO8kyFAoLmsAe5Y5oj2gBvN770kST4cPMjhoUTrOxkCyAF8g7Lf6YhkMtlTgcoCAJINnwNointTjnAuB9CLTS9xdTqyCwLUzE6yBkgQQHbkawLNSXKWAALUA5NM7gL8Xd8pR9AJq/bpw4f6hKKrAE6GwMkTE9obVPV0OToVvDZRGAa/fF13qwrQJyT4ioJed7F36uO7GzTMoz/Ijs+ZbIN+xhaEXBtbp07DBsDf+sSegF9mxW1fTFE1xgAAAABJRU5ErkJggg=="
+	}
+	Material: 90102481, "Material::villager_24", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 28981938, "Texture::villager_24", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_24"
+		Media: "Video::villager_24"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 81862641, "Video::villager_24", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAEgElEQVR4Xu1YTW8bVRQ9Axk7sWOT0KZyasVVWyWkgiYLJEtVUkBBols2IASrlgU/gG6RWLFnj1SJBRJS1wghiEAkCvIGJS12ZFDSxLh1adokHn/UH+Shc8djxfa4aoQQ08x7m7Fm3hvPPfecc+97Bnw+DJ/HDw2AZoDPEdAS8DkBtAlqCWgJ+BwBLQGfE0BXAS0BLQGfI6Al4HMC6CqgJaAl4HMEtAR8TgBdBbQEtAR8joCWgM8JoKuAloCWgM8R0BLwOQF0FegrgfkLZxSgsJTZ7pgzN51QpWoDq1v3joV8+gZxNnZSRQIDWNsudMwhMPndMjYLO8cfgGjQ7Mn0TCKmrHrTHwBEgibWuqg+e2ZcFWsNnwDgIgEbADLggT8lQACsWhMbxx0Auj17hOX1ziowP51Q1hOqAJ9zods6vm+p633/dx/yxDJYrNQRDZmshmDHwMhYAiOhAJYyW65r5y8kFOd3B0pgnhkASPNIyMTExSRyt1JtABhYYjaJ7bUUipVGj0EywH79gwBDBnT1FZ5kwExiXDHz0+fGsLdfwd/KwPOGfD9GXghhfXMHVqXu2gz1y/QzBQAZMDxkYvxEuJ2gwyAUHlVQLNd6miRhQB+qCzOU8r4HMPvkfDQUQKwFALPOQTZwEAAyQCnl2ik6gX75xefiB7LjUMBW/j4++fQzT5XPjo9xqE+Xp+HFTw0jfiraIdP8X0XkH5TEEQlSsdrpBU4V+Oj6dWzlCiACBhEwgEwmi6++vuktAJygnUQxIEmYUjAMAzTDSDgoIFilGlgZeF8coQUCDDsmsoLS4fMr736A9HrWST729/dkzjfffu8tAKh3OxYF9viRgIl3rl3FzRs35J4MQ3IowwHG+S3Bt8DiPbbJnO00Sm9dmpCX/LH5WNjgtU2UwV2fw/G5hTexvLiIuYUFLC/+AO4GJdutAAUQw0Cp1pRgOLjmpcnzQvF0Jovcakp+R0JBhAcHZE6p2kSpUpP7niuD1Gx+zza3px3x0ZCYGr3i4txruPPriixNzCSxvZrCcCiIoUETJ0aG2q+kgd57WO7pEJ/2P/+recKA6dOjyO+UED853L6u392V/+SzeMw2wnyhCN6nTFrKEACmJs8JU9LpbLtxIj+i4h0GiuXHjlK8BwBNkIFb1RoiQ8H2lYBY9QYuvf4Gdn9flYBHJ2ex8tOPIAPYCVq1Bnhm4FYOnYy9d+Ws2vjTQuo3bx6gGARgamIEhUdlxF4Mt6/Z3B6iYVNAOTwIlJhdpWG3yLZH9j0iu/r2lMrfr+K7lZyn3N+JqQcABp585TRSt+/CAeYwAASJg4ARAJZFju6jM2fNxx9eVrfSd7wLgH32ZwrdhdrlhmSewwm224DYGdLUCALn2wC4H5ISgJ9/yXhXAu8vXFYr6UyPyb56fkw2Pv2GAPCwbDPAMFx3hlybfNkus571ACdAHnYeDNh6f65ZhzKDqCtgLHgAq8IzAJodnX1QGh+a5MFAoI3P7Q3384G+CHrkQYcxHW6KjvJ9XuvujvLtnnTmowTwb+f+Ay9ZNl9FvKgMAAAAAElFTkSuQmCC"
+	}
+	Material: 26813176, "Material::villager_25", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 50314573, "Texture::villager_25", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_25"
+		Media: "Video::villager_25"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 30320431, "Video::villager_25", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAhElEQVR4Xu3VAREAMAwCseLfdIV85qAcGbv4W/z+E4AGxBNAIF4AnyACCMQTQCBeACuAAALxBBCIF8AKIIBAPAEE4gWwAgggEE8AgXgBrAACCMQTQCBeACuAAALxBBCIF8AKIIBAPAEE4gWwAgggEE8AgXgBrAACCMQTQCBeACuAQJ3AA2jYAEGs/2CBAAAAAElFTkSuQmCC"
+	}
+	Material: 61081887, "Material::villager_26", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 62397964, "Texture::villager_26", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_26"
+		Media: "Video::villager_26"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 11558186, "Video::villager_26", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "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"
+	}
+	Material: 44539159, "Material::villager_27", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 19849137, "Texture::villager_27", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_27"
+		Media: "Video::villager_27"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 87262505, "Video::villager_27", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADHSURBVHhe5c+xDQIxEEXB64eQlgnpg4AeaICEGAkZXz4uwHrBSKv3oz3GGGmMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCuv8R2332ee3nfEuHI+f30/5+l9R4wr5/OXx32e3nfEWMJYwljCWMJYwljC2DGOP+qN1Dfu22NgAAAAAElFTkSuQmCC"
+	}
+	Material: 27848991, "Material::villager_28", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 60596672, "Texture::villager_28", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_28"
+		Media: "Video::villager_28"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 95970763, "Video::villager_28", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAhklEQVR42u3UMRGAMBQFwbiICUxgJVpQQ4MSFDBRQEnNPHzwtzgDW1xL0irXAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAswJU7x3umLMD6bOlz1AXoc6TtSzwAAAAAAAAA+EUfFinRRoswk58AAAAASUVORK5CYII="
+	}
+	Material: 13411882, "Material::villager_29", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 86214925, "Texture::villager_29", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_29"
+		Media: "Video::villager_29"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 74835424, "Video::villager_29", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADESURBVHhe5c+xDQJBEATBT4LYyIS8SIYccDDw0fLv1wVwaqOkVY+1x8ykMZYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCWMJYwljCufec3j/PUtifGlev5z+t+nt53xLhyPf9+3s7T+44YSxhLGEsYSxhLGEsYO+b4A2rT1Icf5ZDNAAAAAElFTkSuQmCC"
+	}
+	Material: 90194330, "Material::villager_30", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 20371576, "Texture::villager_30", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_30"
+		Media: "Video::villager_30"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 867048, "Video::villager_30", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADKSURBVHhe5c+xDcJAEEVBd0sTUAUBGaFTOkCiC4qgh+Ocjws4vWCk1fvRbmOMNMYSxhLGEsYSxhLGEsYSxhLGEsYSxhLGEsYSxhLGEsYSxhLGEsYSxhLGEsYSxhLGEsYSxhLGEsYSxhLGEsYSxhLGEsYSxhLGEsYSxhLGEsYSxhLGEsYSxhLGEsYSxhLGEsYSxhLGEsYSxhLGM7/PPr6v+zy9r4jxzPH8+3Gdp/cVMZ45nn/eLvP0viLGEsYSxhLGEsYSxhLGjrH9Abro0nm1ZydBAAAAAElFTkSuQmCC"
+	}
+	Material: 70938371, "Material::villager_31", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 36711602, "Texture::villager_31", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::villager_31"
+		Media: "Video::villager_31"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 33695892, "Video::villager_31", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "villager"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAATUlEQVR42u3SQQ2AQBAEwfO2SsYGCQ8UkQsClx8i2CoHPZm1AAAAAAAAAAAAAAAAABgqSSfpsfHPvvs6j5kjJPniq2rmC6pqbjwAP/QCF28aJUIjE8AAAAAASUVORK5CYII="
+	}
+}
+
+; Object connections
+;------------------------------------------------------------------
+
+Connections:  {
+	C: "OO",92378419,0
+	C: "OO",1612957,92378419
+	C: "OO",84313131,1612957
+	C: "OO",76691567,1612957
+	C: "OO",90088088,1612957
+	C: "OO",95131541,92378419
+	C: "OO",70269443,95131541
+	C: "OO",61756825,92378419
+	C: "OO",92252131,92378419
+	C: "OO",17876445,92378419
+	C: "OO",12415696,92378419
+	C: "OO",60958306,12415696
+	C: "OO",7833231,12415696
+	C: "OO",47661258,92378419
+	C: "OO",58390090,47661258
+	C: "OO",7833231,47661258
+	C: "OO",14936350,1612957
+	C: "OO",29889099,14936350
+	C: "OO",7833231,14936350
+	C: "OO",27521680,84313131
+	C: "OO",71980900,27521680
+	C: "OO",7833231,27521680
+	C: "OO",93059655,76691567
+	C: "OO",90446305,93059655
+	C: "OO",7833231,93059655
+	C: "OO",36986375,90088088
+	C: "OO",15756189,36986375
+	C: "OO",7833231,36986375
+	C: "OO",461213,95131541
+	C: "OO",23330042,461213
+	C: "OO",7833231,461213
+	C: "OO",90689902,95131541
+	C: "OO",762342,90689902
+	C: "OO",7833231,90689902
+	C: "OO",46560769,95131541
+	C: "OO",50614621,46560769
+	C: "OO",7833231,46560769
+	C: "OO",76921162,61756825
+	C: "OO",37497316,76921162
+	C: "OO",7833231,76921162
+	C: "OO",68619378,92252131
+	C: "OO",23229756,68619378
+	C: "OO",7833231,68619378
+	C: "OP",78681701,7833231, "DiffuseColor"
+	C: "OO",60334300,78681701
+	C: "OP",15994714,43620512, "DiffuseColor"
+	C: "OO",27816654,15994714
+	C: "OP",59739646,18877282, "DiffuseColor"
+	C: "OO",50803150,59739646
+	C: "OP",73087662,91546270, "DiffuseColor"
+	C: "OO",5619262,73087662
+	C: "OP",83023402,28734226, "DiffuseColor"
+	C: "OO",2960232,83023402
+	C: "OP",30473295,93248202, "DiffuseColor"
+	C: "OO",69355170,30473295
+	C: "OP",71035489,60214459, "DiffuseColor"
+	C: "OO",70368763,71035489
+	C: "OP",28551871,16527420, "DiffuseColor"
+	C: "OO",3361209,28551871
+	C: "OP",96374410,95525228, "DiffuseColor"
+	C: "OO",48653044,96374410
+	C: "OP",20949134,12240914, "DiffuseColor"
+	C: "OO",71096036,20949134
+	C: "OP",32424801,59009061, "DiffuseColor"
+	C: "OO",26420540,32424801
+	C: "OP",27496513,76105034, "DiffuseColor"
+	C: "OO",36823443,27496513
+	C: "OP",4214075,31163485, "DiffuseColor"
+	C: "OO",19723554,4214075
+	C: "OP",49610856,33287210, "DiffuseColor"
+	C: "OO",3631478,49610856
+	C: "OP",38379642,48774526, "DiffuseColor"
+	C: "OO",26252537,38379642
+	C: "OP",3150475,8815596, "DiffuseColor"
+	C: "OO",78020996,3150475
+	C: "OP",79200065,17101023, "DiffuseColor"
+	C: "OO",33035131,79200065
+	C: "OP",91990031,91354546, "DiffuseColor"
+	C: "OO",20059887,91990031
+	C: "OP",80975233,19805223, "DiffuseColor"
+	C: "OO",94913907,80975233
+	C: "OP",38179062,96100344, "DiffuseColor"
+	C: "OO",81882263,38179062
+	C: "OP",42361772,3546301, "DiffuseColor"
+	C: "OO",17564770,42361772
+	C: "OP",85613016,8103921, "DiffuseColor"
+	C: "OO",57912994,85613016
+	C: "OP",17127959,96525567, "DiffuseColor"
+	C: "OO",68223121,17127959
+	C: "OP",43356428,68311940, "DiffuseColor"
+	C: "OO",16903772,43356428
+	C: "OP",47028932,70165404, "DiffuseColor"
+	C: "OO",13405485,47028932
+	C: "OP",28981938,90102481, "DiffuseColor"
+	C: "OO",81862641,28981938
+	C: "OP",50314573,26813176, "DiffuseColor"
+	C: "OO",30320431,50314573
+	C: "OP",62397964,61081887, "DiffuseColor"
+	C: "OO",11558186,62397964
+	C: "OP",19849137,44539159, "DiffuseColor"
+	C: "OO",87262505,19849137
+	C: "OP",60596672,27848991, "DiffuseColor"
+	C: "OO",95970763,60596672
+	C: "OP",86214925,13411882, "DiffuseColor"
+	C: "OO",74835424,86214925
+	C: "OP",20371576,90194330, "DiffuseColor"
+	C: "OO",867048,20371576
+	C: "OP",36711602,70938371, "DiffuseColor"
+	C: "OO",33695892,36711602
+}
+
+; Takes section
+;------------------------------------------------------------------
+
+Takes:  {
+	Current: ""
+}
