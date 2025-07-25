@@ -112,8 +112,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   spawnDelay: 1
-  health: 10
+  hp: 15
   prefabBody: {fileID: 1564442774104014253}
   prefabBullet: {fileID: 3051356614478462700, guid: 06ee8a994f6e05b4580bff1204de7954, type: 3}
   speedOfBullet: 5
   delayOfBullet: 1
+  damage: 5

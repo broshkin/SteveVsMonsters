@@ -34,6 +34,11 @@ public class Farmer : Hero
                 StartCoroutine(Grow());
             }
         }
+
+        if (hp <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
     
     IEnumerator Grow()

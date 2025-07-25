@@ -8,7 +8,7 @@ public class Hero : MonoBehaviour
     [Header("Параметры героя")]
     public int cost;
     public float spawnDelay;
-    public float health;
+    public float hp;
 
     [Header("Префабы героя и снаряда")]
     public GameObject prefabBody;
@@ -22,6 +22,11 @@ public class Hero : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+     
+    }
+
+    public void GetDamage(float num)
+    {
+        hp -= num;
     }
 }

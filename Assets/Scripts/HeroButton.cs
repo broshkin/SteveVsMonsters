@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class HeroButton : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class HeroButton : MonoBehaviour
     private GameObject field;
     [SerializeField]
     private bool OnField = false;
+
+    private float initialSpeed = 100f;
+    private float smoothTime = 0.1f;
+    private Vector3 velocity = Vector3.zero;
 
     [SerializeField] private LayerMask interactableLayer;
     // Start is called before the first frame update
@@ -45,11 +50,23 @@ public class HeroButton : MonoBehaviour
                     field = hit.transform.gameObject;
                     if (hero.TryGetComponent<Shooter>(out Shooter component_0))
                     {
-                        hero.transform.position = new Vector3(hit.transform.position.x, hit.transform.position.y, -1);
+                        hero.transform.position = Vector3.SmoothDamp(
+                            hero.transform.position,
+                            new Vector3(hit.transform.position.x, hit.transform.position.y, -1),
+                            ref velocity,
+                            smoothTime,
+                            initialSpeed
+                        );
                     }
                     if(hero.TryGetComponent<Farmer>(out Farmer component_1))
                     {
-                        hero.transform.position = new Vector3(hit.transform.position.x + 1, hit.transform.position.y, -1);
+                        hero.transform.position = Vector3.SmoothDamp(
+                            hero.transform.position,
+                            new Vector3(hit.transform.position.x + 1, hit.transform.position.y, -1),
+                            ref velocity,
+                            smoothTime,
+                            initialSpeed
+                        );
                     }
                     Debug.Log(hit.transform.name);
                 }

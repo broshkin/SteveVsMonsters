@@ -217,7 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   spawnDelay: 0
-  health: 0
+  hp: 10
   prefabBody: {fileID: 5394360180369924705}
   prefabBullet: {fileID: 0}
   materials:
