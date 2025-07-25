@@ -926,6 +926,8 @@ MonoBehaviour:
   hp: 50
   damage: 2
   damage_speed: 1
+  walk: {fileID: 9100000, guid: 027e60e597e2fa3418a566296a742708, type: 2}
+  eat: {fileID: 9100000, guid: 8a1a7b110b3e6c043acd4ba55b2192b0, type: 2}
   interactableLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -967,6 +969,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8234438736702723301}
+  - component: {fileID: 4728302020405684749}
   m_Layer: 0
   m_Name: zombie
   m_TagString: Enemy
@@ -990,3 +993,24 @@ Transform:
   m_Father: {fileID: 8198678316964010438}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -15, y: 45, z: -15}
+--- !u!95 &4728302020405684749
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8722710291899584095}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 027e60e597e2fa3418a566296a742708, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

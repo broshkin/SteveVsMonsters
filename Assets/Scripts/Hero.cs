@@ -29,4 +29,9 @@ public class Hero : MonoBehaviour
     {
         hp -= num;
     }
+
+    public float GetHp()
+    {
+        return hp;
+    }
 }

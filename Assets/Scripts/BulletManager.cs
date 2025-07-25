@@ -14,7 +14,7 @@ public class BulletManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.Translate(Vector3.right * bulletSpeed * Time.deltaTime);
+        transform.position += new Vector3(bulletSpeed * Time.deltaTime, 0, 0);
         if (transform.position.x > 13)
         {
             Destroy(gameObject);

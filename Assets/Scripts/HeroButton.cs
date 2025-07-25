@@ -52,7 +52,7 @@ public class HeroButton : MonoBehaviour
                     {
                         hero.transform.position = Vector3.SmoothDamp(
                             hero.transform.position,
-                            new Vector3(hit.transform.position.x, hit.transform.position.y, -1),
+                            new Vector3(hit.transform.position.x, hit.transform.position.y - 1, -1.5f),
                             ref velocity,
                             smoothTime,
                             initialSpeed
@@ -62,7 +62,7 @@ public class HeroButton : MonoBehaviour
                     {
                         hero.transform.position = Vector3.SmoothDamp(
                             hero.transform.position,
-                            new Vector3(hit.transform.position.x + 1, hit.transform.position.y, -1),
+                            new Vector3(hit.transform.position.x + 1, hit.transform.position.y - 0.95f, -1),
                             ref velocity,
                             smoothTime,
                             initialSpeed
@@ -110,16 +110,21 @@ public class HeroButton : MonoBehaviour
 
                 if (heroOnField.TryGetComponent<Shooter>(out Shooter component_0))
                 {
-                    heroOnField.transform.position = new Vector3(field.transform.position.x, field.transform.position.y, -1);
+                    heroOnField.transform.position = new Vector3(field.transform.position.x, field.transform.position.y - 1, -1.5f);
                     heroOnField.transform.localScale /= 2;
                     component_0.enabled = true;
                 }
-                
+
                 if (heroOnField.TryGetComponent<Farmer>(out Farmer component_1))
                 {
-                    heroOnField.transform.position = new Vector3(field.transform.position.x + 1, field.transform.position.y, -1);
+                    heroOnField.transform.position = new Vector3(field.transform.position.x + 1, field.transform.position.y - 0.95f, -1);
                     heroOnField.transform.localScale /= 2;
                     component_1.enabled = true;
+                }
+
+                if (heroOnField.TryGetComponent<Animator>(out Animator component_2))
+                {
+                    component_2.enabled = true;
                 }
 
                 MoneySystem.RemoveMoney(heroOnField.GetComponent<Hero>().cost);

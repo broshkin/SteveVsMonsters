@@ -6,13 +6,14 @@ public class Shooter : Hero
 {
     [Header("Параметры снаряда")]
     public float speedOfBullet;
+    public float firstDelayOfBullet;
     public float delayOfBullet;
     public float damage;
     
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Shoot", delayOfBullet, delayOfBullet);
+        InvokeRepeating("Shoot", firstDelayOfBullet, delayOfBullet);
     }
 
     // Update is called once per frame
@@ -26,7 +27,7 @@ public class Shooter : Hero
 
     void Shoot()
     {
-        var bullet = Instantiate(prefabBullet, prefabBody.transform.position, Quaternion.identity);
+        var bullet = Instantiate(prefabBullet, prefabBody.transform.position + new Vector3(0.5f, 0.6f, -3f), prefabBullet.transform.rotation);
         bullet.GetComponent<BulletManager>().SetSpeed(speedOfBullet);
         bullet.GetComponent<BulletManager>().SetDamage(damage);
     }

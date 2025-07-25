@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 965185499802450021}
   - component: {fileID: 445530588508938968}
+  - component: {fileID: -5064032415380321138}
   m_Layer: 0
   m_Name: villager (3) 1
   m_TagString: Untagged
@@ -24,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445530588508938975}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0.105618335, y: -0.45299742, z: 0.043006245, w: 0.8841881}
   m_LocalPosition: {x: -22.768917, y: 2.24, z: 3.0804932}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
@@ -41,7 +42,7 @@ Transform:
   - {fileID: 4504342216010560880}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: -8.5, y: -55, z: 10}
 --- !u!95 &445530588508938968
 Animator:
   serializedVersion: 5
@@ -50,7 +51,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445530588508938975}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 87f034d95315f8e40a44028b4d92f82d, type: 2}
   m_CullingMode: 0
@@ -63,6 +64,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-5064032415380321138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445530588508938975}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1b5f09dc8d699841bd8c87ea9f4c3e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 10
+  spawnDelay: 1
+  hp: 50
+  prefabBody: {fileID: 445530588508938975}
+  prefabBullet: {fileID: 8339426707827479247, guid: 4bdcd0418f05042419ec28dbea6fad47, type: 3}
+  speedOfBullet: 5
+  firstDelayOfBullet: 0.42375
+  delayOfBullet: 1.017
+  damage: 5
 --- !u!1 &788057797199115993
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +272,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: d2b8f74ab2bef144ab958d9753148bca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

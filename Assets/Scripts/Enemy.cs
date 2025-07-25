@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -12,12 +13,13 @@ public class Enemy : MonoBehaviour
 
     private GameObject field;
     private bool isCoroutineRunning = false;
+    private Animator anim;
 
     [SerializeField] private LayerMask interactableLayer;
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -36,10 +38,10 @@ public class Enemy : MonoBehaviour
             {
                 transform.Translate(Vector3.left * speed * Time.deltaTime);
             }
-            else
+            else if (!isCoroutineRunning)
             {
                 field = hit.transform.gameObject;
-                if (!isCoroutineRunning)
+                if (!isCoroutineRunning && field.transform.childCount > 0)
                 {
                     StartCoroutine(Eat());
                 }
@@ -49,6 +51,8 @@ public class Enemy : MonoBehaviour
         {
             transform.Translate(Vector3.left * speed * Time.deltaTime);
         }
+
+        anim.SetBool("isEating", isCoroutineRunning && field.transform.childCount > 0);
     }
     IEnumerator Eat()
     {
