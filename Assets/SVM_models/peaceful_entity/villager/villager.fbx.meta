@@ -3,7 +3,12 @@ guid: 5d9b841dccc6c8c4c808f466ec4968fe
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: villager_base.png
+    second: {fileID: 2100000, guid: 2033426edb1c8e446bd8a94ef7caa6ee, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
