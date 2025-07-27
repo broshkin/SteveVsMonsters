@@ -28,8 +28,7 @@ public class ShovelManager : MonoBehaviour
         if (Input.GetMouseButton(0) && on_hold)
         {
             var mousePos = Input.mousePosition;
-            Cursor.visible = false;
-            gameObject.GetComponent<RectTransform>().position = mousePos;
+            gameObject.GetComponent<RectTransform>().position = mousePos + new Vector3(40, 35, 0);
 
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -59,7 +58,6 @@ public class ShovelManager : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0))
         {
-            Cursor.visible = true;
             on_hold = false;
             gameObject.GetComponent<RectTransform>().position = start_pos;
         }

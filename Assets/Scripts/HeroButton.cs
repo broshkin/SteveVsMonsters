@@ -34,13 +34,11 @@ public class HeroButton : MonoBehaviour
         {
             var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             hero = Instantiate(heroPrefab, new Vector3(mousePos.x + 1, mousePos.y + 3, -1), heroPrefab.transform.rotation);
-
         }
         if (Input.GetMouseButton(0) && hero && MoneySystem.money >= hero.GetComponent<Hero>().cost)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, interactableLayer) && hit.transform.gameObject.tag == "Field")
             {
@@ -48,21 +46,21 @@ public class HeroButton : MonoBehaviour
                 {
                     OnField = true;
                     field = hit.transform.gameObject;
-                    if (hero.TryGetComponent<Shooter>(out Shooter component_0))
+                    if (hero.TryGetComponent<Shooter>(out Shooter component_3))
                     {
                         hero.transform.position = Vector3.SmoothDamp(
                             hero.transform.position,
-                            new Vector3(hit.transform.position.x, hit.transform.position.y - 1, -1.5f),
+                            new Vector3(field.transform.position.x, field.transform.position.y - 0.5f, field.transform.position.z + field.transform.localPosition.y - 5),
                             ref velocity,
                             smoothTime,
                             initialSpeed
                         );
                     }
-                    if(hero.TryGetComponent<Farmer>(out Farmer component_1))
+                    if (hero.TryGetComponent<Farmer>(out Farmer component_4))
                     {
                         hero.transform.position = Vector3.SmoothDamp(
                             hero.transform.position,
-                            new Vector3(hit.transform.position.x + 1, hit.transform.position.y - 0.95f, -1),
+                            new Vector3(field.transform.position.x + 0.5f, field.transform.position.y - 0.1f, field.transform.position.z + field.transform.localPosition.y - 5),
                             ref velocity,
                             smoothTime,
                             initialSpeed
@@ -77,13 +75,12 @@ public class HeroButton : MonoBehaviour
                     var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     if (hero.TryGetComponent<Shooter>(out Shooter component_0))
                     {
-                        hero.transform.position = new Vector3(mousePos.x, mousePos.y + 3, -1);
+                        hero.transform.position = new Vector3(mousePos.x, mousePos.y - 0.5f, -10);
                     }
                     if (hero.TryGetComponent<Farmer>(out Farmer component_1))
                     {
-                        hero.transform.position = new Vector3(mousePos.x + 1, mousePos.y + 3, -1);
+                        hero.transform.position = new Vector3(mousePos.x + 0.5f, mousePos.y, -10);
                     }
-                    
                 }
             }
             else
@@ -93,11 +90,11 @@ public class HeroButton : MonoBehaviour
                 var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 if (hero.TryGetComponent<Shooter>(out Shooter component_0))
                 {
-                    hero.transform.position = new Vector3(mousePos.x, mousePos.y + 3, -1);
+                    hero.transform.position = new Vector3(mousePos.x, mousePos.y - 0.5f, -10);
                 }
                 if (hero.TryGetComponent<Farmer>(out Farmer component_1))
                 {
-                    hero.transform.position = new Vector3(mousePos.x + 1, mousePos.y + 3, -1);
+                    hero.transform.position = new Vector3(mousePos.x + 0.5f, mousePos.y, -10);
                 }
             }
                 
@@ -110,15 +107,13 @@ public class HeroButton : MonoBehaviour
 
                 if (heroOnField.TryGetComponent<Shooter>(out Shooter component_0))
                 {
-                    heroOnField.transform.position = new Vector3(field.transform.position.x, field.transform.position.y - 1, -1.5f);
-                    heroOnField.transform.localScale /= 2;
+                    heroOnField.transform.localPosition = new Vector3(0, -0.5f, 0);
                     component_0.enabled = true;
                 }
 
                 if (heroOnField.TryGetComponent<Farmer>(out Farmer component_1))
                 {
-                    heroOnField.transform.position = new Vector3(field.transform.position.x + 1, field.transform.position.y - 0.95f, -1);
-                    heroOnField.transform.localScale /= 2;
+                    heroOnField.transform.localPosition = new Vector3(0.5f, -0.1f, 0);
                     component_1.enabled = true;
                 }
 

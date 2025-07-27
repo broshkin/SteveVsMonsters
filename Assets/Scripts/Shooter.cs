@@ -27,7 +27,7 @@ public class Shooter : Hero
 
     void Shoot()
     {
-        var bullet = Instantiate(prefabBullet, prefabBody.transform.position + new Vector3(0.5f, 0.6f, -3f), prefabBullet.transform.rotation);
+        var bullet = Instantiate(prefabBullet, prefabBody.transform.position + new Vector3(0.5f, 0.75f, -5f), prefabBullet.transform.rotation);
         bullet.GetComponent<BulletManager>().SetSpeed(speedOfBullet);
         bullet.GetComponent<BulletManager>().SetDamage(damage);
     }

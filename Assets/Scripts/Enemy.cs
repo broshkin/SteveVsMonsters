@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour
     private bool isCoroutineRunning = false;
     private Animator anim;
 
+    private int line;
+
     [SerializeField] private LayerMask interactableLayer;
     // Start is called before the first frame update
     void Start()
@@ -68,5 +70,10 @@ public class Enemy : MonoBehaviour
     public void GetDamage(float num)
     {
         hp -= num;
+    }
+
+    public void SetLine(int num)
+    {
+        line = num;
     }
 }
