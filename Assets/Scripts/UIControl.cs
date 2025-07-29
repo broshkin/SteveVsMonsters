@@ -2,9 +2,8 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
-using System.Collections.Generic;
-using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class UIControl : MonoBehaviour
 {
@@ -24,7 +23,19 @@ public class UIControl : MonoBehaviour
     public Button shopButton;
     public Button settingsButton;
     public Button languageButton;
-    public Button marcoButton;  // Кнопка для перехода на телеграм
+    public Button marcoButton;
+
+    [Header("Audio Clips")]
+    public AudioClip coffinRaiseClip;
+    public AudioClip buttonClickClip;
+
+    [Header("Audio Sources")]
+    public AudioSource coffinAudioSource;
+    public AudioSource uiAudioSource;
+    public AudioSource menuMelody;
+
+    [Header("UI Elements")]
+    public Slider buttonVolumeSlider;
 
     private string currentPanel = "menu";
 
@@ -34,26 +45,26 @@ public class UIControl : MonoBehaviour
 
     private Vector3 loadingBarOriginalScale;
 
+    private bool isSliderBeingDragged = false;
+
     private void Awake()
     {
         coffinStartPos = coffin.position;
         coffinHiddenPos = coffinStartPos + Vector3.down * 120f;
         coffin.position = coffinHiddenPos;
 
-        // Навешиваем методы на кнопки программно
-        playButton.onClick.AddListener(OnPlayPressed);
-        shopButton.onClick.AddListener(() => OpenPanel("shop"));
-        settingsButton.onClick.AddListener(() => OpenPanel("settings"));
-        languageButton.onClick.AddListener(ToggleLanguage);
-        marcoButton.onClick.AddListener(OpenMarcoLink);
+        // Подписываем кнопки на методы с воспроизведением звука клика
+        playButton.onClick.AddListener(() => { PlayButtonSound(); OnPlayPressed(); });
+        shopButton.onClick.AddListener(() => { PlayButtonSound(); OpenPanel("shop"); });
+        settingsButton.onClick.AddListener(() => { PlayButtonSound(); OpenPanel("settings"); });
+        languageButton.onClick.AddListener(() => { PlayButtonSound(); ToggleLanguage(); });
+        marcoButton.onClick.AddListener(() => { PlayButtonSound(); OpenMarcoLink(); });
 
-        // Изначально показываем меню, скрываем остальные
         menuPanel.SetActive(true);
         settingsPanel.SetActive(false);
         shopPanel.SetActive(false);
         loadingPanel.SetActive(false);
 
-        // Запоминаем масштаб полосы загрузки и обнуляем ее
         Transform top = loadingPanel.transform.Find("top");
         if (top != null)
         {
@@ -62,6 +73,28 @@ public class UIControl : MonoBehaviour
         }
 
         coffinIsHidden = true;
+
+        // Настройка слайдера громкости и подписка на события нажатия/отпускания
+        if (buttonVolumeSlider != null && uiAudioSource != null)
+        {
+            buttonVolumeSlider.value = uiAudioSource.volume;
+            buttonVolumeSlider.onValueChanged.AddListener(SetUIVolume);
+
+            // Для звука при начале и конце взаимодействия нужно добавить EventTrigger компоненты
+            EventTrigger trigger = buttonVolumeSlider.gameObject.GetComponent<EventTrigger>();
+            if (trigger == null)
+                trigger = buttonVolumeSlider.gameObject.AddComponent<EventTrigger>();
+
+            // Нажатие (начало перетаскивания)
+            var pointerDown = new EventTrigger.Entry { eventID = EventTriggerType.PointerDown };
+            pointerDown.callback.AddListener((data) => { OnSliderPointerDown(); });
+            trigger.triggers.Add(pointerDown);
+
+            // Отпускание (конец перетаскивания)
+            var pointerUp = new EventTrigger.Entry { eventID = EventTriggerType.PointerUp };
+            pointerUp.callback.AddListener((data) => { OnSliderPointerUp(); });
+            trigger.triggers.Add(pointerUp);
+        }
     }
 
     private void Update()
@@ -70,13 +103,14 @@ public class UIControl : MonoBehaviour
         {
             if (currentPanel != "menu")
                 CloseCurrentPanel();
+            // НЕ вызываем звук при нажатии ESC
         }
     }
 
     void OnPlayPressed()
     {
+        // При нажатии Play гроб и звук НЕ показываем/не играем
         ShowFakeLoading(() => SceneManager.LoadScene("MainScene"));
-        coffinIsHidden = false;
     }
 
     void ShowFakeLoading(System.Action onComplete)
@@ -122,6 +156,11 @@ public class UIControl : MonoBehaviour
 
         background.DOShakePosition(0.6f, 25f, 50, 90, false, true);
         coffin.DOMove(coffinStartPos, 1.2f).SetEase(Ease.InOutSine);
+
+        // Звук поднятия гроба при открытии панели настроек или магазина
+        coffinAudioSource.Stop();
+        coffinAudioSource.PlayOneShot(coffinRaiseClip);
+
         logo.DOAnchorPosY(500f, 1.2f).SetEase(Ease.OutCubic);
 
         coffinIsHidden = false;
@@ -133,6 +172,11 @@ public class UIControl : MonoBehaviour
         if (currentPanel == "shop") FadeOutPanel(shopPanel);
 
         coffin.DOMove(coffinHiddenPos, 1.2f).SetEase(Ease.InOutSine);
+
+        // Звук опускания гроба
+        coffinAudioSource.Stop();
+        coffinAudioSource.PlayOneShot(coffinRaiseClip);
+
         logo.DOAnchorPosY(0f, 1.2f).SetEase(Ease.OutCubic);
 
         menuPanel.SetActive(true);
@@ -169,5 +213,41 @@ public class UIControl : MonoBehaviour
     void OpenMarcoLink()
     {
         Application.OpenURL("https://t.me/marcostudio");
+    }
+
+    void PlayButtonSound()
+    {
+        if (uiAudioSource != null && buttonClickClip != null)
+        {
+            uiAudioSource.PlayOneShot(buttonClickClip);
+        }
+    }
+
+    void SetUIVolume(float volume)
+    {
+        if (uiAudioSource != null)
+            uiAudioSource.volume = volume;
+            coffinAudioSource.volume = volume;
+        menuMelody.volume = volume;
+    }
+
+    // Вызывается при начале взаимодействия с слайдером
+    void OnSliderPointerDown()
+    {
+        if (uiAudioSource != null && buttonClickClip != null)
+        {
+            uiAudioSource.PlayOneShot(buttonClickClip);
+        }
+        isSliderBeingDragged = true;
+    }
+
+    // Вызывается при окончании взаимодействия с слайдером
+    void OnSliderPointerUp()
+    {
+        if (isSliderBeingDragged && uiAudioSource != null && buttonClickClip != null)
+        {
+            uiAudioSource.PlayOneShot(buttonClickClip);
+        }
+        isSliderBeingDragged = false;
     }
 }
