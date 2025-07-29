@@ -13,6 +13,9 @@ public class Hero : MonoBehaviour
     [Header("Префабы героя и снаряда")]
     public GameObject prefabBody;
     public GameObject prefabBullet;
+
+    public Line line;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,5 +36,9 @@ public class Hero : MonoBehaviour
     public float GetHp()
     {
         return hp;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        
     }
 }

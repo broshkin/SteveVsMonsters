@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    private Vector3[] spawnPositions = {new Vector3(7, 2.75f, -2f), new Vector3(7, 1.75f, -3f), new Vector3(7, 0.75f, -4f), new Vector3(17, -0.25f, -5f), new Vector3(7, -1.25f, -6f) };
+    private Vector3[] spawnPositions = {new Vector3(7, 2.05f, -2f), new Vector3(7, 0.75f, -3f), new Vector3(7, -0.55f, -4f), new Vector3(17, -1.85f, -5f), new Vector3(7, -3.15f, -6f) };
 
     public float spawnRate;
 
@@ -23,8 +23,6 @@ public class SpawnManager : MonoBehaviour
     
     public void SpawnEnemy()
     {
-        int spawnPosIndex = Random.Range(0, 5);
-        var enemy = Instantiate(enemyPrefab, spawnPositions[spawnPosIndex], enemyPrefab.transform.rotation);
-        enemy.GetComponent<Enemy>().SetLine(spawnPosIndex);
+        Instantiate(enemyPrefab, spawnPositions[Random.Range(0, 5)], enemyPrefab.transform.rotation);
     }
 }

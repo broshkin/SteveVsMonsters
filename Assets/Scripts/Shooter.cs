@@ -9,9 +9,9 @@ public class Shooter : Hero
     public float firstDelayOfBullet;
     public float delayOfBullet;
     public float damage;
-    
+
     // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
         InvokeRepeating("Shoot", firstDelayOfBullet, delayOfBullet);
     }
@@ -31,5 +31,9 @@ public class Shooter : Hero
         bullet.GetComponent<BulletManager>().SetSpeed(speedOfBullet);
         bullet.GetComponent<BulletManager>().SetDamage(damage);
     }
-
+    private void OnDisable()
+    {
+        // Останавливаем все вызовы этого скрипта при отключении
+        CancelInvoke();
+    }
 }

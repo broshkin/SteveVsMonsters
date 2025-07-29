@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6146397915537633575}
   - component: {fileID: 8505419610671026386}
   - component: {fileID: 3816536037815045245}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 2086266334156479388}
   - component: {fileID: 6506118619431192588}
   - component: {fileID: 5081640074907992133}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cube_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,8 @@ GameObject:
   - component: {fileID: 6957533153169258082}
   - component: {fileID: 3066749976217457486}
   - component: {fileID: 4104988968013324189}
-  m_Layer: 0
+  - component: {fileID: 1753684659949691994}
+  m_Layer: 8
   m_Name: based_carrot_stage_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,6 +222,7 @@ MonoBehaviour:
   hp: 10
   prefabBody: {fileID: 5394360180369924705}
   prefabBullet: {fileID: 0}
+  line: {fileID: 0}
   materials:
   - {fileID: 2100000, guid: cae6ab9290d836e4484490299a3f66fb, type: 2}
   - {fileID: 2100000, guid: 2252bc67a146eac44b8155edd042f3a3, type: 2}
@@ -230,6 +232,9 @@ MonoBehaviour:
   grow_time: 5
   exp_count: 10
   ready_for_harvest: 0
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!65 &3066749976217457486
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -255,6 +260,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96a568b12169224e9e77c6eb0930ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1753684659949691994
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5394360180369924705}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &6160801471183798530
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,7 +287,7 @@ GameObject:
   - component: {fileID: 2128824216448817360}
   - component: {fileID: 7479166245188698185}
   - component: {fileID: 7305633593958672622}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cube_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +370,7 @@ GameObject:
   - component: {fileID: 3779316318270273431}
   - component: {fileID: 9048479316522511935}
   - component: {fileID: 8628249875691076241}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cube_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

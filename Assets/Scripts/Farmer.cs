@@ -13,6 +13,8 @@ public class Farmer : Hero
     public int exp_count;
     [SerializeField]
     private bool ready_for_harvest = false;
+    [SerializeField]
+    private LayerMask interactableLayer;
     void Start()
     {
         StartCoroutine(Grow());
@@ -25,9 +27,9 @@ public class Farmer : Hero
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity) && hit.transform.gameObject == gameObject && ready_for_harvest)
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, interactableLayer) && hit.transform.gameObject == gameObject && ready_for_harvest)
             {
-                var exp = Instantiate(exp_prefab, transform.position - new Vector3(1, 0, 4), Quaternion.Euler(-15, 0, 0));
+                var exp = Instantiate(exp_prefab, transform.position - new Vector3(0.5f, 0, 4), Quaternion.identity);
                 exp.GetComponent<ExpManager>().SetExpCount(exp_count);
                 exp.GetComponent<ExpManager>().SetYOffset(gameObject.transform.position.y);
                 ready_for_harvest = false;

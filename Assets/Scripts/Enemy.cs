@@ -15,9 +15,9 @@ public class Enemy : MonoBehaviour
     private bool isCoroutineRunning = false;
     private Animator anim;
 
-    private int line;
-
     [SerializeField] private LayerMask interactableLayer;
+
+    public Line line;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +29,7 @@ public class Enemy : MonoBehaviour
     {
         if (hp <= 0)
         {
+            line.MinusEnemy();
             Destroy(gameObject);
         }
 
@@ -70,10 +71,5 @@ public class Enemy : MonoBehaviour
     public void GetDamage(float num)
     {
         hp -= num;
-    }
-
-    public void SetLine(int num)
-    {
-        line = num;
     }
 }

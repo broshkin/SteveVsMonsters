@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using static UnityEngine.GraphicsBuffer;
 
 public class HeroButton : MonoBehaviour
@@ -21,24 +23,19 @@ public class HeroButton : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
 
     [SerializeField] private LayerMask interactableLayer;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    [SerializeField] private LayerMask UILayer;
     void Update()
-    {   
-        if (RectTransformUtility.RectangleContainsScreenPoint(GetComponent<RectTransform>(), Input.mousePosition, null) && Input.GetMouseButtonDown(0))
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, UILayer) && hit.transform.gameObject == gameObject && Input.GetMouseButtonDown(0))
         {
             var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             hero = Instantiate(heroPrefab, new Vector3(mousePos.x + 1, mousePos.y + 3, -1), heroPrefab.transform.rotation);
         }
         if (Input.GetMouseButton(0) && hero && MoneySystem.money >= hero.GetComponent<Hero>().cost)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, interactableLayer) && hit.transform.gameObject.tag == "Field")
             {
@@ -50,7 +47,7 @@ public class HeroButton : MonoBehaviour
                     {
                         hero.transform.position = Vector3.SmoothDamp(
                             hero.transform.position,
-                            new Vector3(field.transform.position.x, field.transform.position.y - 0.5f, field.transform.position.z + field.transform.localPosition.y - 5),
+                            new Vector3(field.transform.position.x, field.transform.position.y - 0.45f, field.transform.position.z + field.transform.localPosition.y - 5),
                             ref velocity,
                             smoothTime,
                             initialSpeed
@@ -97,18 +94,19 @@ public class HeroButton : MonoBehaviour
                     hero.transform.position = new Vector3(mousePos.x + 0.5f, mousePos.y, -10);
                 }
             }
-                
+
         }
         if (Input.GetMouseButtonUp(0) && hero && OnField)
         {
             if (field.GetComponent<FieldManager>().GetIsFree())
             {
                 var heroOnField = Instantiate(heroPrefab, field.transform);
+                heroOnField.transform.localScale = new Vector3(heroOnField.transform.localScale.x / field.transform.lossyScale.x,
+                    heroOnField.transform.localScale.y / field.transform.lossyScale.y, heroOnField.transform.localScale.z / field.transform.lossyScale.z);
 
                 if (heroOnField.TryGetComponent<Shooter>(out Shooter component_0))
                 {
-                    heroOnField.transform.localPosition = new Vector3(0, -0.5f, 0);
-                    component_0.enabled = true;
+                    heroOnField.transform.localPosition = new Vector3(0, -0.45f, 0);
                 }
 
                 if (heroOnField.TryGetComponent<Farmer>(out Farmer component_1))
@@ -117,14 +115,9 @@ public class HeroButton : MonoBehaviour
                     component_1.enabled = true;
                 }
 
-                if (heroOnField.TryGetComponent<Animator>(out Animator component_2))
-                {
-                    component_2.enabled = true;
-                }
-
                 MoneySystem.RemoveMoney(heroOnField.GetComponent<Hero>().cost);
             }
-            
+
             Destroy(hero);
         }
         else if (Input.GetMouseButtonUp(0) && hero)
