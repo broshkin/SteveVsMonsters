@@ -7,6 +7,7 @@ TagManager:
   - Field
   - Farmer
   - Enemy
+  - Grave
   layers:
   - Default
   - TransparentFX
