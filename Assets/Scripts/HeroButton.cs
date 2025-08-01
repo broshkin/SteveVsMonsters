@@ -53,7 +53,7 @@ public class HeroButton : MonoBehaviour
                             initialSpeed
                         );
                     }
-                    if (hero.TryGetComponent<Farmer>(out Farmer component_4))
+                    else if (hero.TryGetComponent<Farmer>(out Farmer component_4))
                     {
                         hero.transform.position = Vector3.SmoothDamp(
                             hero.transform.position,
@@ -63,7 +63,17 @@ public class HeroButton : MonoBehaviour
                             initialSpeed
                         );
                     }
-                    Debug.Log(hit.transform.name);
+                    else
+                    {
+                        hero.transform.position = Vector3.SmoothDamp(
+                           hero.transform.position,
+                           new Vector3(field.transform.position.x, field.transform.position.y + 0.2f, field.transform.position.z + field.transform.localPosition.y - 5),
+                           ref velocity,
+                           smoothTime,
+                           initialSpeed
+                       );
+                    }
+                        Debug.Log(hit.transform.name);
                 }
                 else
                 {
@@ -74,9 +84,13 @@ public class HeroButton : MonoBehaviour
                     {
                         hero.transform.position = new Vector3(mousePos.x, mousePos.y - 0.5f, -10);
                     }
-                    if (hero.TryGetComponent<Farmer>(out Farmer component_1))
+                    else if (hero.TryGetComponent<Farmer>(out Farmer component_1))
                     {
                         hero.transform.position = new Vector3(mousePos.x + 0.5f, mousePos.y, -10);
+                    }
+                    else
+                    {
+                        hero.transform.position = new Vector3(mousePos.x, mousePos.y, -10);
                     }
                 }
             }
@@ -89,9 +103,13 @@ public class HeroButton : MonoBehaviour
                 {
                     hero.transform.position = new Vector3(mousePos.x, mousePos.y - 0.5f, -10);
                 }
-                if (hero.TryGetComponent<Farmer>(out Farmer component_1))
+                else if (hero.TryGetComponent<Farmer>(out Farmer component_1))
                 {
                     hero.transform.position = new Vector3(mousePos.x + 0.5f, mousePos.y, -10);
+                }
+                else
+                {
+                    hero.transform.position = new Vector3(mousePos.x, mousePos.y, -10);
                 }
             }
 

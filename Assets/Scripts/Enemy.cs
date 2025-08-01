@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
+        anim.speed = speed / 1.25f;
     }
 
     // Update is called once per frame
