@@ -10,7 +10,9 @@ public class UIControl : MonoBehaviour
     [Header("UI Panels")]
     public GameObject menuPanel;
     public GameObject settingsPanel;
+    public GameObject settingsEyes;
     public GameObject shopPanel;
+    public GameObject shopEyes;
     public GameObject loadingPanel;
 
     [Header("UI Elements")]
@@ -62,7 +64,9 @@ public class UIControl : MonoBehaviour
 
         menuPanel.SetActive(true);
         settingsPanel.SetActive(false);
+        settingsEyes.SetActive(false);
         shopPanel.SetActive(false);
+        shopEyes.SetActive(false);
         loadingPanel.SetActive(false);
 
         Transform top = loadingPanel.transform.Find("top");
@@ -146,12 +150,16 @@ public class UIControl : MonoBehaviour
         if (name == "settings")
         {
             settingsPanel.SetActive(true);
+            settingsEyes.SetActive(true);
             FadePanel(settingsPanel, 2f);
+            FadePanel(settingsEyes, 2f);
         }
         else if (name == "shop")
         {
             shopPanel.SetActive(true);
+            shopEyes.SetActive(true);
             FadePanel(shopPanel, 2f);
+            FadePanel(shopEyes, 2f);
         }
 
         background.DOShakePosition(0.6f, 25f, 50, 90, false, true);
@@ -168,8 +176,8 @@ public class UIControl : MonoBehaviour
 
     void CloseCurrentPanel()
     {
-        if (currentPanel == "settings") FadeOutPanel(settingsPanel);
-        if (currentPanel == "shop") FadeOutPanel(shopPanel);
+        if (currentPanel == "settings") FadeOutPanel(settingsPanel); FadeOutPanel(settingsEyes);
+        if (currentPanel == "shop") FadeOutPanel(shopPanel); FadeOutPanel(shopEyes);
 
         coffin.DOMove(coffinHiddenPos, 1.2f).SetEase(Ease.InOutSine);
 
