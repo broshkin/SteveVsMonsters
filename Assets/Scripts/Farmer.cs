@@ -32,6 +32,7 @@ public class Farmer : Hero
                 var exp = Instantiate(exp_prefab, transform.position - new Vector3(0.5f, 0, 4), Quaternion.identity);
                 exp.GetComponent<ExpManager>().SetExpCount(exp_count);
                 exp.GetComponent<ExpManager>().SetYOffset(gameObject.transform.position.y);
+                exp.GetComponent<ExpManager>().ShootUp();
                 ready_for_harvest = false;
                 StartCoroutine(Grow());
             }

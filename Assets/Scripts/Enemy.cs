@@ -57,6 +57,11 @@ public class Enemy : MonoBehaviour
         }
 
         anim.SetBool("isEating", isCoroutineRunning && field.transform.childCount > 0);
+
+        if (transform.position.x < -4.75f)
+        {
+            GameLoopManager.lose = true;
+        }
     }
     IEnumerator Eat()
     {

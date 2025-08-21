@@ -26,17 +26,15 @@ public class HeroButton : MonoBehaviour
     [SerializeField] private LayerMask UILayer;
     void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, UILayer) && hit.transform.gameObject == gameObject && Input.GetMouseButtonDown(0))
+        if (RectTransformUtility.RectangleContainsScreenPoint(GetComponent<RectTransform>(), Input.mousePosition, null) && Input.GetMouseButtonDown(0) && MoneySystem.money >= heroPrefab.GetComponent<Hero>().cost)
         {
             var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             hero = Instantiate(heroPrefab, new Vector3(mousePos.x + 1, mousePos.y + 3, -1), heroPrefab.transform.rotation);
         }
         if (Input.GetMouseButton(0) && hero && MoneySystem.money >= hero.GetComponent<Hero>().cost)
         {
-
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, interactableLayer) && hit.transform.gameObject.tag == "Field")
             {
                 if (hit.transform.gameObject.GetComponent<FieldManager>().GetIsFree())

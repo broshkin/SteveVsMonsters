@@ -3,7 +3,12 @@ guid: 359e6a9a5fd9c1145a8aa303567057dc
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: oak_planks.png
+    second: {fileID: 2100000, guid: 0acc6cbdaf01e1f40b7819d15cb171c6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -21,10 +21,7 @@ public class ShovelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, UILayer) && hit.transform.gameObject == gameObject && Input.GetMouseButtonDown(0))
+        if (RectTransformUtility.RectangleContainsScreenPoint(GetComponent<RectTransform>(), Input.mousePosition, null) && Input.GetMouseButtonDown(0))
         {
             var mousePos = Input.mousePosition;
             on_hold = true;
@@ -32,8 +29,10 @@ public class ShovelManager : MonoBehaviour
         if (Input.GetMouseButton(0) && on_hold)
         {
             var mousePos = Input.mousePosition;
-            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
-            gameObject.transform.position = worldPosition + new Vector3(0, 0, -20);
+            gameObject.GetComponent<RectTransform>().position = mousePos + new Vector3(35, 25, 0);
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, interactableLayer))
             {

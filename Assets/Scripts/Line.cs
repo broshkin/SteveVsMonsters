@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Line : MonoBehaviour
 {
-    [SerializeField] private bool is_free = true;
+    public bool is_free = true;
     [SerializeField] private int enemy_count = 0;
     void Start()
     {

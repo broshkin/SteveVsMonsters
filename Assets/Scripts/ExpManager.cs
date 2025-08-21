@@ -11,7 +11,7 @@ public class ExpManager : MonoBehaviour
     [SerializeField] private LayerMask interactableLayer;
     void Start()
     {
-        GetComponent<Rigidbody>().AddForce(Vector3.up * 7 + Vector3.right * Random.Range(0.8f, 1.2f) * plus_minus[Random.Range(0, 2)], ForceMode.Impulse);
+        
     }
 
     // Update is called once per frame
@@ -39,4 +39,9 @@ public class ExpManager : MonoBehaviour
         { exp_count = num; }
     public void SetYOffset(float num)
         { y_offset = num; }
+
+    public void ShootUp()
+    {
+        GetComponent<Rigidbody>().AddForce(Vector3.up * 7 + Vector3.right * Random.Range(0.8f, 1.2f) * plus_minus[Random.Range(0, 2)], ForceMode.Impulse);
+    }
 }
