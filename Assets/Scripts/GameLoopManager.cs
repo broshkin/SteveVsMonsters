@@ -17,7 +17,6 @@ public class GameLoopManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(lose);
         if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0 && spawnManager.isAllEnemies)
         {
             win = true;

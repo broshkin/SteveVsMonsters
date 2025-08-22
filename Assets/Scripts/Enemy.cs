@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     private GameObject field;
     private bool isCoroutineRunning = false;
     private Animator anim;
+    private bool isDie = false;
 
     [SerializeField] private LayerMask interactableLayer;
 
@@ -28,15 +29,19 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hp <= 0)
+        if (hp <= 0 && !isDie)
         {
+            isDie = true;
             line.MinusEnemy();
-            Destroy(gameObject);
+            GetComponent<BoxCollider>().enabled = false;
+            anim.speed = 1;
+            anim.SetBool("isDie", true);
+            StartCoroutine(Dying());
         }
 
         Ray ray = new Ray(transform.position, Vector3.forward);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 10, interactableLayer))
+        if (Physics.Raycast(ray, out hit, 10, interactableLayer) && !isDie)
         {
             if (hit.transform.gameObject.GetComponent<FieldManager>().GetIsFree())
             {
@@ -51,14 +56,14 @@ public class Enemy : MonoBehaviour
                 }
             }
         }
-        else if (Physics.Raycast(ray, out hit, 10) && hit.transform.gameObject.tag == "Field")
+        else if (Physics.Raycast(ray, out hit, 10) && hit.transform.gameObject.tag == "Field" && !isDie)
         {
             transform.Translate(Vector3.left * speed * Time.deltaTime);
         }
 
         anim.SetBool("isEating", isCoroutineRunning && field.transform.childCount > 0);
 
-        if (transform.position.x < -4.75f)
+        if (transform.position.x < -4.75f && !isDie)
         {
             GameLoopManager.lose = true;
         }
@@ -72,6 +77,13 @@ public class Enemy : MonoBehaviour
             field.transform.GetChild(0).gameObject.GetComponent<Hero>().GetDamage(damage);
         }
         isCoroutineRunning = false;
+    }
+
+    IEnumerator Dying()
+    {
+        print(123123123);
+        yield return new WaitForSeconds(4f);
+        Destroy(gameObject);
     }
 
     public void GetDamage(float num)
