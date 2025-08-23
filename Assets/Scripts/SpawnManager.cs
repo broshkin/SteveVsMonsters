@@ -41,7 +41,7 @@ public class SpawnManager : MonoBehaviour
         loseWindow.SetActive(false);
         GameLoopManager.win = false;
         GameLoopManager.lose = false;
-        Debug.Log(123);
+        //Debug.Log(123);
         levelId = DataStorage.level;
         string contents = File.ReadAllText($"Assets/TextAssets/level{levelId[0]}_{levelId[1]}.txt");
         ParseFile(contents);

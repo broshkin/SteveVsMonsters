@@ -8,6 +8,7 @@ TagManager:
   - Farmer
   - Enemy
   - Grave
+  - TNT
   layers:
   - Default
   - TransparentFX

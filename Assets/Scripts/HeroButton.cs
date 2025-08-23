@@ -61,6 +61,26 @@ public class HeroButton : MonoBehaviour
                             initialSpeed
                         );
                     }
+                    else if (hero.TryGetComponent<Runner>(out Runner component_5))
+                    {
+                        hero.transform.position = Vector3.SmoothDamp(
+                            hero.transform.position,
+                            new Vector3(field.transform.position.x - 0.4f, field.transform.position.y - 0.45f, field.transform.position.z + field.transform.localPosition.y - 5),
+                            ref velocity,
+                            smoothTime,
+                            initialSpeed
+                        );
+                    }
+                    else if (hero.TryGetComponent<TNT>(out TNT component_6))
+                    {
+                        hero.transform.position = Vector3.SmoothDamp(
+                            hero.transform.position,
+                            new Vector3(field.transform.position.x - 0.2f, field.transform.position.y - 0.2f, field.transform.position.z + field.transform.localPosition.y - 5),
+                            ref velocity,
+                            smoothTime,
+                            initialSpeed
+                        );
+                    }
                     else
                     {
                         hero.transform.position = Vector3.SmoothDamp(
@@ -86,6 +106,14 @@ public class HeroButton : MonoBehaviour
                     {
                         hero.transform.position = new Vector3(mousePos.x + 0.5f, mousePos.y, -10);
                     }
+                    else if (hero.TryGetComponent<Runner>(out Runner component_2))
+                    {
+                        hero.transform.position = new Vector3(mousePos.x, mousePos.y - 0.5f, -10);
+                    }
+                    else if (hero.TryGetComponent<TNT>(out TNT component_3))
+                    {
+                        hero.transform.position = new Vector3(mousePos.x - 0.2f, mousePos.y, -10);
+                    }
                     else
                     {
                         hero.transform.position = new Vector3(mousePos.x, mousePos.y, -10);
@@ -104,6 +132,14 @@ public class HeroButton : MonoBehaviour
                 else if (hero.TryGetComponent<Farmer>(out Farmer component_1))
                 {
                     hero.transform.position = new Vector3(mousePos.x + 0.5f, mousePos.y, -10);
+                }
+                else if (hero.TryGetComponent<Runner>(out Runner component_2))
+                {
+                    hero.transform.position = new Vector3(mousePos.x, mousePos.y - 0.5f, -10);
+                }
+                else if (hero.TryGetComponent<TNT>(out TNT component_3))
+                {
+                    hero.transform.position = new Vector3(mousePos.x - 0.2f, mousePos.y, -10);
                 }
                 else
                 {
@@ -129,6 +165,19 @@ public class HeroButton : MonoBehaviour
                 {
                     heroOnField.transform.localPosition = new Vector3(0.5f, -0.1f, 0);
                     component_1.enabled = true;
+                }
+                if (heroOnField.TryGetComponent<Runner>(out Runner component_2))
+                {
+                    heroOnField.transform.localPosition = new Vector3(0, -0.45f, -7.5f);
+                    heroOnField.transform.parent = null;
+                    heroOnField.GetComponent<BoxCollider>().enabled = true;
+                }
+                if (heroOnField.TryGetComponent<TNT>(out TNT copmonent_3))
+                {
+                    heroOnField.transform.localPosition = new Vector3(-0.2f, -0.2f, -7.5f);
+                    heroOnField.transform.parent = null;
+                    copmonent_3.enabled = true;
+                    heroOnField.GetComponentInChildren<Animator>().enabled = true;
                 }
 
                 MoneySystem.RemoveMoney(heroOnField.GetComponent<Hero>().cost);

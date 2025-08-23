@@ -81,7 +81,7 @@ public class Enemy : MonoBehaviour
 
     IEnumerator Dying()
     {
-        print(123123123);
+        //print(123123123);
         yield return new WaitForSeconds(4f);
         Destroy(gameObject);
     }
@@ -89,5 +89,12 @@ public class Enemy : MonoBehaviour
     public void GetDamage(float num)
     {
         hp -= num;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "TNT")
+        {
+            GetDamage(200);
+        }
     }
 }
