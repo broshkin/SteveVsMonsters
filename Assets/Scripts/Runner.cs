@@ -24,7 +24,10 @@ public class Runner : Hero
     {
         if (other.tag == "Enemy")
         {
-            other.gameObject.GetComponent<Enemy>().hp -= 1000;
+            if (other.GetComponent<Enemy>().hp > 0)
+            {
+                other.gameObject.GetComponent<Enemy>().hp -= 1000;
+            }
         }
     }
 }

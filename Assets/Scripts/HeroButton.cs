@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -18,80 +19,129 @@ public class HeroButton : MonoBehaviour
     [SerializeField]
     private bool OnField = false;
 
+    
     private float initialSpeed = 100f;
     private float smoothTime = 0.1f;
     private Vector3 velocity = Vector3.zero;
 
     [SerializeField] private LayerMask interactableLayer;
     [SerializeField] private LayerMask UILayer;
+
+    [Header("Õ≈ “–Œ√¿“‹!")]
+    public ChooseHeroButton ChooseHeroButton;
+    public int currentPosId;
+
     void Update()
     {
-        if (RectTransformUtility.RectangleContainsScreenPoint(GetComponent<RectTransform>(), Input.mousePosition, null) && Input.GetMouseButtonDown(0) && MoneySystem.money >= heroPrefab.GetComponent<Hero>().cost)
+        if (StartLevelButton.isStart)
         {
-            var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            hero = Instantiate(heroPrefab, new Vector3(mousePos.x + 1, mousePos.y + 3, -1), heroPrefab.transform.rotation);
-        }
-        if (Input.GetMouseButton(0) && hero && MoneySystem.money >= hero.GetComponent<Hero>().cost)
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, interactableLayer) && hit.transform.gameObject.tag == "Field")
+            if (RectTransformUtility.RectangleContainsScreenPoint(GetComponent<RectTransform>(), Input.mousePosition, null) && Input.GetMouseButtonDown(0) && MoneySystem.money >= heroPrefab.GetComponent<Hero>().cost)
             {
-                if (hit.transform.gameObject.GetComponent<FieldManager>().GetIsFree())
+                var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                hero = Instantiate(heroPrefab, new Vector3(mousePos.x + 1, mousePos.y + 3, -1), heroPrefab.transform.rotation);
+            }
+            if (Input.GetMouseButton(0) && hero && MoneySystem.money >= hero.GetComponent<Hero>().cost)
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity, interactableLayer) && hit.transform.gameObject.tag == "Field")
                 {
-                    OnField = true;
-                    field = hit.transform.gameObject;
-                    if (hero.TryGetComponent<Shooter>(out Shooter component_3))
+                    if (hit.transform.gameObject.GetComponent<FieldManager>().GetIsFree())
                     {
-                        hero.transform.position = Vector3.SmoothDamp(
-                            hero.transform.position,
-                            new Vector3(field.transform.position.x, field.transform.position.y - 0.45f, field.transform.position.z + field.transform.localPosition.y - 5),
-                            ref velocity,
-                            smoothTime,
-                            initialSpeed
-                        );
-                    }
-                    else if (hero.TryGetComponent<Farmer>(out Farmer component_4))
-                    {
-                        hero.transform.position = Vector3.SmoothDamp(
-                            hero.transform.position,
-                            new Vector3(field.transform.position.x + 0.5f, field.transform.position.y - 0.1f, field.transform.position.z + field.transform.localPosition.y - 5),
-                            ref velocity,
-                            smoothTime,
-                            initialSpeed
-                        );
-                    }
-                    else if (hero.TryGetComponent<Runner>(out Runner component_5))
-                    {
-                        hero.transform.position = Vector3.SmoothDamp(
-                            hero.transform.position,
-                            new Vector3(field.transform.position.x - 0.4f, field.transform.position.y - 0.45f, field.transform.position.z + field.transform.localPosition.y - 5),
-                            ref velocity,
-                            smoothTime,
-                            initialSpeed
-                        );
-                    }
-                    else if (hero.TryGetComponent<TNT>(out TNT component_6))
-                    {
-                        hero.transform.position = Vector3.SmoothDamp(
-                            hero.transform.position,
-                            new Vector3(field.transform.position.x - 0.2f, field.transform.position.y - 0.2f, field.transform.position.z + field.transform.localPosition.y - 5),
-                            ref velocity,
-                            smoothTime,
-                            initialSpeed
-                        );
+                        OnField = true;
+                        field = hit.transform.gameObject;
+                        if (hero.TryGetComponent<Shooter>(out Shooter component_3))
+                        {
+                            hero.transform.position = Vector3.SmoothDamp(
+                                hero.transform.position,
+                                new Vector3(field.transform.position.x, field.transform.position.y - 0.45f, field.transform.position.z + field.transform.localPosition.y - 5),
+                                ref velocity,
+                                smoothTime,
+                                initialSpeed
+                            );
+                        }
+                        else if (hero.TryGetComponent<Farmer>(out Farmer component_4))
+                        {
+                            hero.transform.position = Vector3.SmoothDamp(
+                                hero.transform.position,
+                                new Vector3(field.transform.position.x + 0.5f, field.transform.position.y - 0.1f, field.transform.position.z + field.transform.localPosition.y - 5),
+                                ref velocity,
+                                smoothTime,
+                                initialSpeed
+                            );
+                        }
+                        else if (hero.TryGetComponent<Runner>(out Runner component_5))
+                        {
+                            hero.transform.position = Vector3.SmoothDamp(
+                                hero.transform.position,
+                                new Vector3(field.transform.position.x - 0.4f, field.transform.position.y - 0.45f, field.transform.position.z + field.transform.localPosition.y - 5),
+                                ref velocity,
+                                smoothTime,
+                                initialSpeed
+                            );
+                        }
+                        else if (hero.TryGetComponent<TNT>(out TNT component_6))
+                        {
+                            hero.transform.position = Vector3.SmoothDamp(
+                                hero.transform.position,
+                                new Vector3(field.transform.position.x - 0.2f, field.transform.position.y - 0.2f, field.transform.position.z + field.transform.localPosition.y - 5),
+                                ref velocity,
+                                smoothTime,
+                                initialSpeed
+                            );
+                        }
+                        else if (hero.TryGetComponent<Eater>(out Eater component_7))
+                        {
+                            hero.transform.position = Vector3.SmoothDamp(
+                                hero.transform.position,
+                                new Vector3(field.transform.position.x + 0.1f, field.transform.position.y - 0.2f, field.transform.position.z + field.transform.localPosition.y - 5),
+                                ref velocity,
+                                smoothTime,
+                                initialSpeed
+                            );
+                        }
+                        else
+                        {
+                            hero.transform.position = Vector3.SmoothDamp(
+                               hero.transform.position,
+                               new Vector3(field.transform.position.x, field.transform.position.y + 0.2f, field.transform.position.z + field.transform.localPosition.y - 5),
+                               ref velocity,
+                               smoothTime,
+                               initialSpeed
+                           );
+                        }
+                        Debug.Log(hit.transform.name);
                     }
                     else
                     {
-                        hero.transform.position = Vector3.SmoothDamp(
-                           hero.transform.position,
-                           new Vector3(field.transform.position.x, field.transform.position.y + 0.2f, field.transform.position.z + field.transform.localPosition.y - 5),
-                           ref velocity,
-                           smoothTime,
-                           initialSpeed
-                       );
+                        OnField = false;
+                        field = null;
+                        var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                        if (hero.TryGetComponent<Shooter>(out Shooter component_0))
+                        {
+                            hero.transform.position = new Vector3(mousePos.x, mousePos.y - 0.5f, -10);
+                        }
+                        else if (hero.TryGetComponent<Farmer>(out Farmer component_1))
+                        {
+                            hero.transform.position = new Vector3(mousePos.x + 0.5f, mousePos.y, -10);
+                        }
+                        else if (hero.TryGetComponent<Runner>(out Runner component_2))
+                        {
+                            hero.transform.position = new Vector3(mousePos.x, mousePos.y - 0.5f, -10);
+                        }
+                        else if (hero.TryGetComponent<TNT>(out TNT component_3))
+                        {
+                            hero.transform.position = new Vector3(mousePos.x - 0.2f, mousePos.y, -10);
+                        }
+                        else if (hero.TryGetComponent<Eater>(out Eater component_4))
+                        {
+                            hero.transform.position = new Vector3(mousePos.x, mousePos.y - 0.2f, -10);
+                        }
+                        else
+                        {
+                            hero.transform.position = new Vector3(mousePos.x, mousePos.y, -10);
+                        }
                     }
-                        Debug.Log(hit.transform.name);
                 }
                 else
                 {
@@ -114,82 +164,82 @@ public class HeroButton : MonoBehaviour
                     {
                         hero.transform.position = new Vector3(mousePos.x - 0.2f, mousePos.y, -10);
                     }
+                    else if (hero.TryGetComponent<Eater>(out Eater component_4))
+                    {
+                        hero.transform.position = new Vector3(mousePos.x, mousePos.y - 0.2f, -10);
+                    }
                     else
                     {
                         hero.transform.position = new Vector3(mousePos.x, mousePos.y, -10);
                     }
                 }
+
             }
-            else
+            if (Input.GetMouseButtonUp(0) && hero && OnField)
             {
-                OnField = false;
-                field = null;
-                var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                if (hero.TryGetComponent<Shooter>(out Shooter component_0))
+                if (field.GetComponent<FieldManager>().GetIsFree())
                 {
-                    hero.transform.position = new Vector3(mousePos.x, mousePos.y - 0.5f, -10);
-                }
-                else if (hero.TryGetComponent<Farmer>(out Farmer component_1))
-                {
-                    hero.transform.position = new Vector3(mousePos.x + 0.5f, mousePos.y, -10);
-                }
-                else if (hero.TryGetComponent<Runner>(out Runner component_2))
-                {
-                    hero.transform.position = new Vector3(mousePos.x, mousePos.y - 0.5f, -10);
-                }
-                else if (hero.TryGetComponent<TNT>(out TNT component_3))
-                {
-                    hero.transform.position = new Vector3(mousePos.x - 0.2f, mousePos.y, -10);
-                }
-                else
-                {
-                    hero.transform.position = new Vector3(mousePos.x, mousePos.y, -10);
-                }
-            }
+                    var heroOnField = Instantiate(heroPrefab, field.transform);
+                    heroOnField.transform.localScale = new Vector3(heroOnField.transform.localScale.x / field.transform.lossyScale.x,
+                        heroOnField.transform.localScale.y / field.transform.lossyScale.y, heroOnField.transform.localScale.z / field.transform.lossyScale.z);
 
-        }
-        if (Input.GetMouseButtonUp(0) && hero && OnField)
-        {
-            if (field.GetComponent<FieldManager>().GetIsFree())
+                    if (heroOnField.TryGetComponent<Shooter>(out Shooter component_0))
+                    {
+                        heroOnField.transform.localPosition = new Vector3(0, -0.45f, 0);
+                    }
+
+                    if (heroOnField.TryGetComponent<Farmer>(out Farmer component_1))
+                    {
+                        heroOnField.transform.localPosition = new Vector3(0.5f, -0.1f, 0);
+                        component_1.enabled = true;
+                    }
+                    if (heroOnField.TryGetComponent<Runner>(out Runner component_2))
+                    {
+                        heroOnField.transform.localPosition = new Vector3(0, -0.45f, -7.5f);
+                        heroOnField.transform.parent = null;
+                        heroOnField.GetComponent<BoxCollider>().enabled = true;
+                    }
+                    if (heroOnField.TryGetComponent<TNT>(out TNT copmonent_3))
+                    {
+                        heroOnField.transform.localPosition = new Vector3(-0.2f, -0.2f, -7.5f);
+                        heroOnField.transform.parent = null;
+                        copmonent_3.enabled = true;
+                        heroOnField.GetComponentInChildren<Animator>().enabled = true;
+                    }
+                    if (heroOnField.TryGetComponent<Eater>(out Eater copmonent_4))
+                    {
+                        copmonent_4.enabled = true;
+                    }
+
+                    MoneySystem.RemoveMoney(heroOnField.GetComponent<Hero>().cost);
+                }
+
+                Destroy(hero);
+            }
+            else if (Input.GetMouseButtonUp(0) && hero)
             {
-                var heroOnField = Instantiate(heroPrefab, field.transform);
-                heroOnField.transform.localScale = new Vector3(heroOnField.transform.localScale.x / field.transform.lossyScale.x,
-                    heroOnField.transform.localScale.y / field.transform.lossyScale.y, heroOnField.transform.localScale.z / field.transform.lossyScale.z);
-
-                if (heroOnField.TryGetComponent<Shooter>(out Shooter component_0))
-                {
-                    heroOnField.transform.localPosition = new Vector3(0, -0.45f, 0);
-                }
-
-                if (heroOnField.TryGetComponent<Farmer>(out Farmer component_1))
-                {
-                    heroOnField.transform.localPosition = new Vector3(0.5f, -0.1f, 0);
-                    component_1.enabled = true;
-                }
-                if (heroOnField.TryGetComponent<Runner>(out Runner component_2))
-                {
-                    heroOnField.transform.localPosition = new Vector3(0, -0.45f, -7.5f);
-                    heroOnField.transform.parent = null;
-                    heroOnField.GetComponent<BoxCollider>().enabled = true;
-                }
-                if (heroOnField.TryGetComponent<TNT>(out TNT copmonent_3))
-                {
-                    heroOnField.transform.localPosition = new Vector3(-0.2f, -0.2f, -7.5f);
-                    heroOnField.transform.parent = null;
-                    copmonent_3.enabled = true;
-                    heroOnField.GetComponentInChildren<Animator>().enabled = true;
-                }
-
-                MoneySystem.RemoveMoney(heroOnField.GetComponent<Hero>().cost);
+                Destroy(hero);
             }
 
-            Destroy(hero);
+            text.text = heroPrefab.GetComponent<Hero>().cost.ToString();
         }
-        else if (Input.GetMouseButtonUp(0) && hero)
+        else
         {
-            Destroy(hero);
+            if (ChooseHeroButton.isChoose)
+            {
+                if (RectTransformUtility.RectangleContainsScreenPoint(GetComponent<RectTransform>(), Input.mousePosition, null) && Input.GetMouseButtonDown(0))
+                {
+                    transform.parent.GetComponent<ActiveHeroesPanel>().freeWindows[currentPosId] = true;
+                    transform.parent.GetComponent<ActiveHeroesPanel>().countOfHeroes--;
+                    transform.parent = ChooseHeroButton.transform;
+                    transform.localPosition = Vector3.zero;
+                    transform.rotation = Quaternion.identity;
+                    transform.localScale = new Vector3(1.36f, 1.36f, 1.36f);
+                    currentPosId = -1;
+                    ChooseHeroButton.isChoose = false;
+                }
+            }
         }
-
-        text.text = heroPrefab.GetComponent<Hero>().cost.ToString();
     }
+      
 } 

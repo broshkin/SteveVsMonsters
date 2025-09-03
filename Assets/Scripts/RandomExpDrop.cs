@@ -8,7 +8,7 @@ public class RandomExpDrop : MonoBehaviour
     // Start is called before the first frame update
     private void OnEnable()
     {
-        InvokeRepeating("GenerateExp", 5f, 10f);
+        StartCoroutine(Waiter());
     }
     // Update is called once per frame
     void Update()
@@ -22,5 +22,11 @@ public class RandomExpDrop : MonoBehaviour
         a.GetComponent<ExpManager>().SetYOffset(Random.Range(-3f, 2.5f));
         a.GetComponent<ExpManager>().SetExpCount(25);
         a.GetComponent<Rigidbody>().mass = 0.01f;
+    }
+
+    IEnumerator Waiter()
+    {
+        yield return new WaitUntil(() => StartLevelButton.isStart);
+        InvokeRepeating("GenerateExp", 5f, 10f);
     }
 }

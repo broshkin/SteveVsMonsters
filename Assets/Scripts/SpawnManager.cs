@@ -81,6 +81,7 @@ public class SpawnManager : MonoBehaviour
 
     IEnumerator Spawner()
     {
+        yield return new WaitUntil(() => StartLevelButton.isStart);
         for (int i = 0; i < spawns.Count; i++)
         {
             yield return new WaitForSeconds(spawns[i].spawnTime - Time.timeSinceLevelLoad);

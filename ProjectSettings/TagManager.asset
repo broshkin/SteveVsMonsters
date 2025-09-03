@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Grave
   - TNT
+  - Eater
   layers:
   - Default
   - TransparentFX

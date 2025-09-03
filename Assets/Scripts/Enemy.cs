@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.Animations;
 using UnityEngine;
 
@@ -15,7 +16,14 @@ public class Enemy : MonoBehaviour
     private bool isCoroutineRunning = false;
     private Animator anim;
     private bool isDie = false;
+    private bool specialForEater = true;
+    public enum EnemyType
+    {
+        ZOMBIE, // = 0 (по умолчанию нумерация с нуля)
+        CREEPER, // = 1 
+    }
 
+    public EnemyType enemyType;
     [SerializeField] private LayerMask interactableLayer;
 
     public Line line;
@@ -32,8 +40,8 @@ public class Enemy : MonoBehaviour
         if (hp <= 0 && !isDie)
         {
             isDie = true;
-            line.MinusEnemy();
             GetComponent<BoxCollider>().enabled = false;
+            line.MinusEnemy();
             anim.speed = 1;
             anim.SetBool("isDie", true);
             StartCoroutine(Dying());
@@ -52,7 +60,15 @@ public class Enemy : MonoBehaviour
                 field = hit.transform.gameObject;
                 if (!isCoroutineRunning && field.transform.childCount > 0)
                 {
-                    StartCoroutine(Eat());
+                    if (enemyType == EnemyType.ZOMBIE)
+                    {
+                        StartCoroutine(Eat());
+                    }
+                    
+                    if (enemyType == EnemyType.CREEPER)
+                    {
+
+                    }
                 }
             }
         }
@@ -61,7 +77,15 @@ public class Enemy : MonoBehaviour
             transform.Translate(Vector3.left * speed * Time.deltaTime);
         }
 
-        anim.SetBool("isEating", isCoroutineRunning && field.transform.childCount > 0);
+        if (enemyType == EnemyType.ZOMBIE)
+        {
+            anim.SetBool("isEating", isCoroutineRunning && field.transform.childCount > 0);
+        }
+
+        if (enemyType == EnemyType.CREEPER)
+        {
+
+        }
 
         if (transform.position.x < -4.75f && !isDie)
         {
@@ -92,9 +116,42 @@ public class Enemy : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "TNT")
+        if (other.tag == "TNT" && !isDie)
         {
             GetDamage(200);
         }
+        if (other.tag == "Eater")
+        {
+            if (!other.GetComponent<Eater>().GetIsEating())
+            {
+                StartCoroutine(WaitForEating(0.25f, other.gameObject));
+                StartCoroutine(DyingNotFast(1));
+            }
+        }
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Eater")
+        {
+            if (!other.GetComponent<Eater>().GetIsEating() && specialForEater)
+            {
+                specialForEater = false;
+                StartCoroutine(WaitForEating(0.25f, other.gameObject));
+                StartCoroutine(DyingNotFast(1));
+            }
+        }
+    }
+
+    IEnumerator DyingNotFast(float time)
+    {
+        yield return new WaitForSeconds(time);
+        Destroy(gameObject);
+    }
+    IEnumerator WaitForEating(float time, GameObject other)
+    {
+        yield return new WaitForSeconds(time);
+        other.GetComponent<Eater>().SetIsEating(true);
+    }
+    
 }
