@@ -1,11 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Enemy;
 
 public class BulletManager : MonoBehaviour
 {
     private float bulletSpeed;
     private float damage;
+
+    public enum EffectType
+    {
+        DEFAULT,
+        FREEZED,
+        BURNED,
+        SLOWED,
+    }
+
+    public EffectType effectType = EffectType.DEFAULT;
     void Start()
     {
 
@@ -31,6 +42,34 @@ public class BulletManager : MonoBehaviour
         if (other.tag == "Enemy")
         {
             other.GetComponent<Enemy>().GetDamage(damage);
+            if (effectType == EffectType.SLOWED)
+            {
+                other.GetComponent<Enemy>().StopSlowMoving();
+                other.GetComponent<Enemy>().StartSlowMoving();
+            }
+            if (effectType == EffectType.FREEZED)
+            {
+                other.GetComponent<Enemy>().StopStopMoving();
+                other.GetComponent<Enemy>().StartStopMoving();
+            }
+            Destroy(gameObject);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Enemy")
+        {
+            other.GetComponent<Enemy>().GetDamage(damage);
+            if (effectType == EffectType.SLOWED)
+            {
+                other.GetComponent<Enemy>().StopSlowMoving();
+                other.GetComponent<Enemy>().StartSlowMoving();
+            }
+            if (effectType == EffectType.FREEZED)
+            {
+                other.GetComponent<Enemy>().StopStopMoving();
+                other.GetComponent<Enemy>().StartStopMoving();
+            }
             Destroy(gameObject);
         }
     }

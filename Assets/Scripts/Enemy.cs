@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.Animations;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class Enemy : MonoBehaviour
 {
     [Header("ќсновные параметры")]
     public float speed;
+    private float slow_speed;
+    private float basic_speed;
     public float hp;
     public float damage;
     public float damage_speed;
@@ -15,23 +18,25 @@ public class Enemy : MonoBehaviour
     private GameObject field;
     private bool isCoroutineRunning = false;
     private Animator anim;
-    private bool isDie = false;
+    public bool isDie = false;
     private bool specialForEater = true;
     public enum EnemyType
     {
         ZOMBIE, // = 0 (по умолчанию нумераци€ с нул€)
         CREEPER, // = 1 
+        ZOMBIE_BOSS, 
     }
 
     public EnemyType enemyType;
     [SerializeField] private LayerMask interactableLayer;
-
     public Line line;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
         anim.speed = speed / 1.25f;
+        basic_speed = speed;
+        slow_speed = speed / 2f;
     }
 
     // Update is called once per frame
@@ -39,6 +44,7 @@ public class Enemy : MonoBehaviour
     {
         if (hp <= 0 && !isDie)
         {
+            StopAllCoroutines();
             isDie = true;
             GetComponent<BoxCollider>().enabled = false;
             line.MinusEnemy();
@@ -51,14 +57,14 @@ public class Enemy : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 10, interactableLayer) && !isDie)
         {
-            if (hit.transform.gameObject.GetComponent<FieldManager>().GetIsFree())
+            field = hit.transform.gameObject;
+            if (hit.transform.gameObject.GetComponent<FieldManager>().GetIsFree() || !field.GetComponent<FieldManager>().isZombieBossFree)
             {
                 transform.Translate(Vector3.left * speed * Time.deltaTime);
             }
             else if (!isCoroutineRunning)
             {
-                field = hit.transform.gameObject;
-                if (!isCoroutineRunning && field.transform.childCount > 0)
+                if (!isCoroutineRunning && field.transform.childCount > 0 && field.GetComponent<FieldManager>().isZombieBossFree)
                 {
                     if (enemyType == EnemyType.ZOMBIE)
                     {
@@ -103,11 +109,47 @@ public class Enemy : MonoBehaviour
         isCoroutineRunning = false;
     }
 
-    IEnumerator Dying()
+    public IEnumerator Dying()
     {
         //print(123123123);
+        speed = basic_speed;
+        anim.speed = 1;
         yield return new WaitForSeconds(4f);
         Destroy(gameObject);
+    }
+
+    IEnumerator SlowMoving()
+    {
+        speed = slow_speed;
+        anim.speed = slow_speed / 1.25f;
+        yield return new WaitForSeconds(5f);
+        speed = basic_speed;
+        anim.speed = basic_speed / 1.25f;
+    }
+    IEnumerator StopMoving()
+    {
+        speed = 0;
+        anim.speed = 0;
+        yield return new WaitForSeconds(5f);
+        speed = basic_speed;
+        anim.speed = basic_speed / 1.25f;
+    }
+    public void StartSlowMoving()
+    {
+        StartCoroutine("SlowMoving");
+    }
+    public void StopSlowMoving()
+    {
+        StopCoroutine("SlowMoving");
+    }
+
+    public void StartStopMoving()
+    {
+        StartCoroutine(StopMoving());
+    }
+    public void StopStopMoving()
+    {
+        StopCoroutine(StopMoving());
     }
 
     public void GetDamage(float num)

@@ -155,7 +155,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &15059498
 MonoBehaviour:
@@ -175,6 +175,7 @@ MonoBehaviour:
   - {fileID: 8198678316964010435, guid: ad11c16eb4041a14e894a096e46a602f, type: 3}
   - {fileID: 8970810608608792840, guid: 9dbc768a9b7eee1469ae40b57cf74664, type: 3}
   - {fileID: 7009497684494844899, guid: 986d8226f6ce3fd4d8628646058581f2, type: 3}
+  - {fileID: 559949255516967883, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
   isAllEnemies: 0
   winWindow: {fileID: 636411605}
   loseWindow: {fileID: 197257313}
@@ -515,6 +516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &23666067
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,6 +750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &59824986
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,7 +1186,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u0413\u043B\u0430\u0432\u043D\u043E\u0435 \u043C\u0435\u043D\u044E"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 64beda833698a4a76a24d1f8f2f46860, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1247,7 +1250,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &84831896
@@ -1812,7 +1815,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u0421\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439 \u0443\u0440\u043E\u0432\u0435\u043D\u044C"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 64beda833698a4a76a24d1f8f2f46860, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1876,7 +1879,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &94678172
@@ -2427,6 +2430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &113994185
 GameObject:
   m_ObjectHideFlags: 0
@@ -3476,6 +3480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &197257313
 GameObject:
   m_ObjectHideFlags: 0
@@ -3938,6 +3943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1001 &225800850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4824,7 +4830,7 @@ Transform:
   - {fileID: 2025017354}
   - {fileID: 2146880564}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!1 &257498909
 GameObject:
@@ -5020,6 +5026,275 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261308952}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &261762965
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 559949255516967880, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 559949255516967880, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 559949255516967880, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 559949255516967880, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 559949255516967880, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 559949255516967880, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 559949255516967880, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 559949255516967880, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 559949255516967880, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 559949255516967880, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 559949255516967880, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 559949255516967882, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: blocks.Array.data[0]
+      value: 
+      objectReference: {fileID: 1096728928}
+    - target: {fileID: 559949255516967882, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: blocks.Array.data[1]
+      value: 
+      objectReference: {fileID: 430001592}
+    - target: {fileID: 559949255516967883, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_Name
+      value: ZombieBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 559949255516967883, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507051990520868252, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507051990520868252, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0031249998
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507051990520868252, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.012499999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507051990520868252, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999736
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507051990520868252, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507051990520868252, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.007270861
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507051990520868252, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507051990520868252, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507051990520868252, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507051990520868252, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147015300240744816, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147015300240744816, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147015300240744816, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147015300240744816, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147015300240744816, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147015300240744816, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147015300240744816, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147015300240744816, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147015300240744816, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147015300240744816, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2318845983719893267, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.003125
+      objectReference: {fileID: 0}
+    - target: {fileID: 2318845983719893267, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01375
+      objectReference: {fileID: 0}
+    - target: {fileID: 2318845983719893267, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99872696
+      objectReference: {fileID: 0}
+    - target: {fileID: 2318845983719893267, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.050442938
+      objectReference: {fileID: 0}
+    - target: {fileID: 2318845983719893267, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2318845983719893267, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2318845983719893267, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2318845983719893267, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2318845983719893267, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565298417566835972, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.003125
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565298417566835972, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01375
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565298417566835972, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9961947
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565298417566835972, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.08715575
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565298417566835972, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565298417566835972, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565298417566835972, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3082724927060659972, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99957937
+      objectReference: {fileID: 0}
+    - target: {fileID: 3082724927060659972, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.029002627
+      objectReference: {fileID: 0}
+    - target: {fileID: 3082724927060659972, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3082724927060659972, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3082724927060659972, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3082724927060659972, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3082724927060659972, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104429391945904872, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999742
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104429391945904872, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.007190017
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104429391945904872, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1.5661645e-21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104429391945904872, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 3.638074e-12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104429391945904872, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104429391945904872, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104429391945904872, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 88d2eee4d704e9e4cbaf2433b0a5509d, type: 3}
 --- !u!1 &270777334
 GameObject:
   m_ObjectHideFlags: 0
@@ -9790,6 +10065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &433273043
 GameObject:
   m_ObjectHideFlags: 0
@@ -9901,6 +10177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &435382830
 GameObject:
   m_ObjectHideFlags: 0
@@ -10122,8 +10399,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 100
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9a4b014c1654ade418ee713c97750d69, type: 2}
-  m_sharedMaterial: {fileID: 5878266399086679550, guid: 9a4b014c1654ade418ee713c97750d69, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 64beda833698a4a76a24d1f8f2f46860, type: 2}
+  m_sharedMaterial: {fileID: 5878266399086679550, guid: 64beda833698a4a76a24d1f8f2f46860, type: 2}
   m_fontSharedMaterials:
   - {fileID: 5878266399086679550, guid: 9a4b014c1654ade418ee713c97750d69, type: 2}
   m_fontMaterial: {fileID: 0}
@@ -10230,6 +10507,7 @@ GameObject:
   - component: {fileID: 462329081}
   - component: {fileID: 462329080}
   - component: {fileID: 462329083}
+  - component: {fileID: 462329084}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -10301,7 +10579,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &462329083
 MonoBehaviour:
@@ -10336,6 +10614,27 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!95 &462329084
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462329079}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ca245bdf1f4b2c44aa19f2ac52d7df30, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &469312515
 GameObject:
   m_ObjectHideFlags: 0
@@ -10702,6 +11001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &494884372
 GameObject:
   m_ObjectHideFlags: 0
@@ -10813,6 +11113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &500614578
 GameObject:
   m_ObjectHideFlags: 0
@@ -10924,6 +11225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &504049455
 GameObject:
   m_ObjectHideFlags: 0
@@ -13596,7 +13898,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u0412\u044B \u043F\u043E\u0431\u0435\u0434\u0438\u043B\u0438!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 64beda833698a4a76a24d1f8f2f46860, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -13660,7 +13962,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &642434292
@@ -14106,6 +14408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &672082663
 GameObject:
   m_ObjectHideFlags: 0
@@ -14185,7 +14488,7 @@ Transform:
   - {fileID: 1417373885}
   - {fileID: 695320498}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &677800942
 GameObject:
@@ -15047,7 +15350,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -180, y: -180, z: 0}
 --- !u!114 &705507996
 MonoBehaviour:
@@ -15180,6 +15483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &708839491
 GameObject:
   m_ObjectHideFlags: 0
@@ -17790,7 +18094,7 @@ Transform:
   - {fileID: 1424677281}
   - {fileID: 141076268}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &816545987
 GameObject:
@@ -17903,6 +18207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &816766759
 GameObject:
   m_ObjectHideFlags: 0
@@ -18918,6 +19223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &902606003
 GameObject:
   m_ObjectHideFlags: 0
@@ -20124,6 +20430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &980889598
 GameObject:
   m_ObjectHideFlags: 0
@@ -20852,6 +21159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &1019906688
 GameObject:
   m_ObjectHideFlags: 0
@@ -22287,6 +22595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &1084794513
 GameObject:
   m_ObjectHideFlags: 0
@@ -22592,6 +22901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1001 &1097327087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23979,7 +24289,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u041D\u0430\u0447\u0430\u0442\u044C \u0437\u0430\u043D\u043E\u0432\u043E"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 64beda833698a4a76a24d1f8f2f46860, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -24043,7 +24353,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1163327765
@@ -25324,7 +25634,7 @@ Transform:
   - {fileID: 433273044}
   - {fileID: 1301759043}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1248901379
 GameObject:
@@ -25470,6 +25780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &1262214203
 GameObject:
   m_ObjectHideFlags: 0
@@ -25756,6 +26067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &1281965941
 GameObject:
   m_ObjectHideFlags: 0
@@ -25964,6 +26276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &1290283861
 GameObject:
   m_ObjectHideFlags: 0
@@ -26172,6 +26485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &1310418760
 GameObject:
   m_ObjectHideFlags: 0
@@ -26380,6 +26694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &1316446162
 GameObject:
   m_ObjectHideFlags: 0
@@ -27082,6 +27397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &1351107247
 GameObject:
   m_ObjectHideFlags: 0
@@ -27193,6 +27509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &1352033110
 GameObject:
   m_ObjectHideFlags: 0
@@ -27304,6 +27621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &1353924036
 GameObject:
   m_ObjectHideFlags: 0
@@ -27415,6 +27733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &1354448257
 GameObject:
   m_ObjectHideFlags: 0
@@ -29273,7 +29592,7 @@ Transform:
   - {fileID: 1619580766}
   - {fileID: 298381746}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1435796069
 PrefabInstance:
@@ -29752,7 +30071,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1457730400
 GameObject:
@@ -30911,7 +31230,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u0413\u043B\u0430\u0432\u043D\u043E\u0435 \u043C\u0435\u043D\u044E"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 64beda833698a4a76a24d1f8f2f46860, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -30975,7 +31294,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1507039432
@@ -31750,6 +32069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1001 &1564049767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32461,7 +32781,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u0412\u044B \u043F\u0440\u043E\u0438\u0433\u0440\u0430\u043B\u0438!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 64beda833698a4a76a24d1f8f2f46860, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -32525,7 +32845,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1611739550
@@ -33512,6 +33832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &1660428839
 GameObject:
   m_ObjectHideFlags: 0
@@ -33804,6 +34125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &1671069175
 GameObject:
   m_ObjectHideFlags: 0
@@ -34790,6 +35112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &1700757385
 GameObject:
   m_ObjectHideFlags: 0
@@ -34901,6 +35224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &1701515091
 GameObject:
   m_ObjectHideFlags: 0
@@ -35206,6 +35530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!4 &1728122993 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 359e6a9a5fd9c1145a8aa303567057dc, type: 3}
@@ -35727,6 +36052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &1745130326
 GameObject:
   m_ObjectHideFlags: 0
@@ -36712,6 +37038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &1801123190
 GameObject:
   m_ObjectHideFlags: 0
@@ -37231,8 +37558,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u0421\u0422\u0410\u0420\u0422"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9a4b014c1654ade418ee713c97750d69, type: 2}
-  m_sharedMaterial: {fileID: 5878266399086679550, guid: 9a4b014c1654ade418ee713c97750d69, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 64beda833698a4a76a24d1f8f2f46860, type: 2}
+  m_sharedMaterial: {fileID: 5878266399086679550, guid: 64beda833698a4a76a24d1f8f2f46860, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -37713,6 +38040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &1842383682
 GameObject:
   m_ObjectHideFlags: 0
@@ -37824,6 +38152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &1856817746
 GameObject:
   m_ObjectHideFlags: 0
@@ -39040,6 +39369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &1918672281
 GameObject:
   m_ObjectHideFlags: 0
@@ -39235,6 +39565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &1930926890
 GameObject:
   m_ObjectHideFlags: 0
@@ -39910,6 +40241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &1962425550
 GameObject:
   m_ObjectHideFlags: 0
@@ -41422,6 +41754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &2069338105
 GameObject:
   m_ObjectHideFlags: 0
@@ -41821,6 +42154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &2091418493
 GameObject:
   m_ObjectHideFlags: 0
@@ -42199,6 +42533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!4 &2095606994 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 359e6a9a5fd9c1145a8aa303567057dc, type: 3}
@@ -42412,6 +42747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &2114949022
 GameObject:
   m_ObjectHideFlags: 0
@@ -42523,6 +42859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFree: 1
+  isZombieBossFree: 1
 --- !u!1 &2117493331
 GameObject:
   m_ObjectHideFlags: 0

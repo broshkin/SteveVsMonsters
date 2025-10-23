@@ -46,7 +46,7 @@ public class HeroButton : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity, interactableLayer) && hit.transform.gameObject.tag == "Field")
                 {
-                    if (hit.transform.gameObject.GetComponent<FieldManager>().GetIsFree())
+                    if (hit.transform.gameObject.GetComponent<FieldManager>().GetIsFree() && hit.transform.gameObject.GetComponent<FieldManager>().isZombieBossFree)
                     {
                         OnField = true;
                         field = hit.transform.gameObject;

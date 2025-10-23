@@ -25,7 +25,7 @@ public class Hero : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if (hp < 0)
+        if (hp <= 0)
         {
             Destroy(gameObject);
         }
@@ -42,6 +42,9 @@ public class Hero : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.tag == "Enemy" && other.TryGetComponent<ZombieBoss>(out ZombieBoss comp1))
+        {
+            GetDamage(150);
+        }
     }
 }
