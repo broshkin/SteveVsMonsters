@@ -8,6 +8,8 @@ using System.Collections;
 
 public class UIControl : MonoBehaviour
 {
+    
+
     [Header("UI Panels")]
     public GameObject menuPanel;
     public GameObject settingsPanel;
@@ -48,6 +50,7 @@ public class UIControl : MonoBehaviour
 
     [Header("Chapter Selection System")]
     public GameObject chooseChapterPanel;
+    public GameObject chooesLevelPanel;
     public RectTransform moon;
     public Button leftButton;
     public Button rightButton;
@@ -56,7 +59,9 @@ public class UIControl : MonoBehaviour
     
     public GameObject firstChapterPanel;
     public GameObject secondChapterPanel;
-    
+
+    public DataStorage storage;
+
     private RectTransform firstChapterRect;
     private RectTransform secondChapterRect;
     
@@ -113,7 +118,6 @@ public class UIControl : MonoBehaviour
         playButton.onClick.AddListener(() => { PlayButtonSound(); OnPlayPressed(); });
         shopButton.onClick.AddListener(() => { PlayButtonSound(); OpenPanel("shop"); });
         settingsButton.onClick.AddListener(() => { PlayButtonSound(); OpenPanel("settings"); });
-        languageButton.onClick.AddListener(() => { PlayButtonSound(); ToggleLanguage(); });
         marcoButton.onClick.AddListener(() => { PlayButtonSound(); OpenMarcoLink(); });
 
         leftButton.onClick.AddListener(() => { PlayButtonSound(); OnLeftButtonPressed(); });
@@ -199,7 +203,7 @@ public class UIControl : MonoBehaviour
         ShowChapterSelection();
     }
 
-    void ShowFakeLoading(System.Action onComplete)
+    public void ShowFakeLoading(System.Action onComplete)
     {
         menuPanel.SetActive(false);
         loadingPanel.SetActive(true);
@@ -214,6 +218,11 @@ public class UIControl : MonoBehaviour
                 loadingPanel.SetActive(false);
                 onComplete?.Invoke();
             });
+    }
+
+    public void StartGame()
+    {
+        ShowFakeLoading(() => SceneManager.LoadScene("MainScene"));
     }
 
     void OpenPanel(string name)
@@ -243,7 +252,7 @@ public class UIControl : MonoBehaviour
             ShowChapterSelection();
         }
 
-        background.DOShakePosition(0.6f, 25f, 50, 90, false, true);
+            background.DOShakePosition(0.6f, 25f, 50, 90, false, true);
         coffin.DOMove(coffinStartPos, 1.2f).SetEase(Ease.InOutSine);
 
         coffinAudioSource.Stop();
@@ -254,7 +263,7 @@ public class UIControl : MonoBehaviour
         coffinIsHidden = false;
     }
 
-    void CloseCurrentPanel()
+    public void CloseCurrentPanel()
     {
         if (currentPanel == "settings") 
         { 
@@ -440,8 +449,14 @@ public class UIControl : MonoBehaviour
         SetInitialNavigationState();
     }
 
-    void HideChapterSelection()
+    void ShowLevelSelection(GameObject chapterPanel)
     {
+        chooesLevelPanel.SetActive(true);
+    }
+
+    public void HideChapterSelection()
+    {
+        chooesLevelPanel.SetActive(false);
         isChapterSelectionActive = false;
         currentPanel = "menu";
         
@@ -500,7 +515,8 @@ public class UIControl : MonoBehaviour
     
     void OnFirstChapterSelected()
     {
-        ShowFakeLoading(() => SceneManager.LoadScene("MainScene"));
+        ShowLevelSelection(firstChapterPanel);
+        //ShowFakeLoading(() => SceneManager.LoadScene("MainScene"));
     }
     
     void OnSecondChapterSelected()
@@ -594,5 +610,16 @@ public class UIControl : MonoBehaviour
         if (shopButtonEffect != null) shopButtonEffect.ResetButtonState();
         if (settingsButtonEffect != null) settingsButtonEffect.ResetButtonState();
         if (marcoButtonEffect != null) marcoButtonEffect.ResetButtonState();
+    }
+
+    public void Test()
+    {
+        storage.countLevelPasses++;
+        storage.Save();
+    }
+    public void ResetTest()
+    {
+        storage.countLevelPasses = 0;
+        storage.Save();
     }
 } 

@@ -3,18 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using System.Xml;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Profiling;
 using UnityEngine.Rendering;
+using YG;
 
 public class SpawnManager : MonoBehaviour
 {
-    public int[] levelId;
     private List<spawnInfo> spawns = new List<spawnInfo>();
     private Vector3[] spawnPositions = {new Vector3(8, 2.05f, -2f), new Vector3(8, 0.75f, -3f), new Vector3(8, -0.55f, -4f), new Vector3(8, -1.85f, -5f), new Vector3(8, -3.15f, -6f), new Vector3(1.9f, -1f, -6f) };
     public GameObject[] enemiesPrefab;
     public bool isAllEnemies = false;
+    public static int[] levelIds = { 1, 1 };
+    public DataStorage storage;
 
     public GameObject winWindow;
     public GameObject loseWindow;
@@ -43,8 +46,10 @@ public class SpawnManager : MonoBehaviour
         GameLoopManager.win = false;
         GameLoopManager.lose = false;
         //Debug.Log(123);
-        levelId = DataStorage.level;
-        string contents = File.ReadAllText($"Assets/TextAssets/level{levelId[0]}_{levelId[1]}.txt");
+        int firstNum = levelIds[0];
+        int secondNum = levelIds[1];
+        Debug.Log(secondNum);
+        string contents = File.ReadAllText($"Assets/TextAssets/level{firstNum}_{secondNum}.txt");
         ParseFile(contents);
         StartCoroutine(Spawner());
     }
@@ -54,14 +59,10 @@ public class SpawnManager : MonoBehaviour
     {
         if (GameLoopManager.win && !winWindow.activeSelf)
         {
-            if (DataStorage.level[1] == 10)
+            if ((levelIds[0] - 1) * 10 + (levelIds[1] - 1) == storage.countLevelPasses)
             {
-                DataStorage.level[1] = 1;
-                DataStorage.level[0] += 1;
-            }
-            else
-            {
-                DataStorage.level[1] += 1;
+                storage.countLevelPasses++;
+                storage.Save();
             }
             winWindow.SetActive(true);
         }

@@ -1,0 +1,12 @@
+{
+  "intExample": 525,
+  "strExample": "",
+  "boolExample": [
+    false,
+    true,
+    true,
+    false
+  ],
+  "countLevelPasses": 0,
+  "idSave": 31
+}

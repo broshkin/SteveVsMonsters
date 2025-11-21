@@ -115,6 +115,8 @@ MonoBehaviour:
   UILayer:
     serializedVersion: 2
     m_Bits: 32
+  ChooseHeroButton: {fileID: 0}
+  currentPosId: 0
 --- !u!1 &610295243762412151
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,8 +185,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9a4b014c1654ade418ee713c97750d69, type: 2}
-  m_sharedMaterial: {fileID: 5878266399086679550, guid: 9a4b014c1654ade418ee713c97750d69, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 64beda833698a4a76a24d1f8f2f46860, type: 2}
+  m_sharedMaterial: {fileID: 5878266399086679550, guid: 64beda833698a4a76a24d1f8f2f46860, type: 2}
   m_fontSharedMaterials:
   - {fileID: 5878266399086679550, guid: 9a4b014c1654ade418ee713c97750d69, type: 2}
   m_fontMaterial: {fileID: 0}
