@@ -4,6 +4,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
+using UnityEngine.ProBuilder.MeshOperations;
 
 public class Levels : MonoBehaviour
 {
@@ -11,6 +13,8 @@ public class Levels : MonoBehaviour
     public int chapter;
     public Sprite openLevelImage;
     public Sprite closeLevelImage;
+    public Sprite unfillStar;
+    public Sprite fillStar;
     public UIControl uiControl;
     public DataStorage storage;
     // Start is called before the first frame update
@@ -24,20 +28,14 @@ public class Levels : MonoBehaviour
         {
             levelButton.GetComponent<Button>().onClick.AddListener(() => SetLevelIds(levelButtons.IndexOf(levelButton) + 1));
             levelButton.GetComponent<Button>().onClick.AddListener(uiControl.StartGame);
-        }
-    }
+            levelButton.GetComponent<Button>().onClick.AddListener(() => StarsCounter.currentLevel = ((chapter - 1) * 10) + levelButtons.IndexOf(levelButton));
+            levelButton.GetComponent<Button>().onClick.AddListener(() => StarsCounter.currentStarCount = levelButton.GetComponent<LevelButton>().starsNum);
 
-    public void SetLevelIds(int levelID)    
-    {
-        Debug.Log(levelID);
-        SpawnManager.levelIds = new int[] { chapter, levelID};
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log(storage.countLevelPasses);
+        }
+
         for (int i = 0; i < levelButtons.Count; i++)
         {
+            levelButtons[i].GetComponent<LevelButton>().num = i;
             if ((chapter - 1) * 10 + i <= storage.countLevelPasses)
             {
                 levelButtons[i].GetComponent<LevelButton>().isOpen = true;
@@ -59,6 +57,22 @@ public class Levels : MonoBehaviour
                 levelButton.GetComponent<Image>().sprite = closeLevelImage;
                 levelButton.GetComponent<Button>().enabled = false;
             }
+
+            levelButton.GetComponent<LevelButton>().Init(((chapter - 1) * 10 + levelButtons.IndexOf(levelButton)) == storage.countLevelPasses);
         }
+    }
+
+    
+
+    public void SetLevelIds(int levelID)    
+    {
+        Debug.Log(levelID);
+        SpawnManager.levelIds = new int[] { chapter, levelID};
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        //Debug.Log(storage.countLevelPasses);
+        
     }
 }

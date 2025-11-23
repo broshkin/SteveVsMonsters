@@ -24,12 +24,36 @@ public class HeroButton : MonoBehaviour
     private float smoothTime = 0.1f;
     private Vector3 velocity = Vector3.zero;
 
+    public StarsCounter starsCounter;
+
     [SerializeField] private LayerMask interactableLayer;
     [SerializeField] private LayerMask UILayer;
 
     [Header("Õ≈ “–Œ√¿“‹!")]
     public ChooseHeroButton ChooseHeroButton;
     public int currentPosId;
+
+    public void Start()
+    {
+        starsCounter = FindInActiveObjectByLayer(LayerMask.NameToLayer("StarsCounter")).GetComponent<StarsCounter>();
+    }
+
+    GameObject FindInActiveObjectByLayer(int layer)
+    {
+
+        Transform[] objs = Resources.FindObjectsOfTypeAll<Transform>() as Transform[];
+        for (int i = 0; i < objs.Length; i++)
+        {
+            if (objs[i].hideFlags == HideFlags.None)
+            {
+                if (objs[i].gameObject.layer == layer)
+                {
+                    return objs[i].gameObject;
+                }
+            }
+        }
+        return null;
+    }
 
     void Update()
     {
@@ -110,7 +134,7 @@ public class HeroButton : MonoBehaviour
                                initialSpeed
                            );
                         }
-                        Debug.Log(hit.transform.name);
+                        //Debug.Log(hit.transform.name);
                     }
                     else
                     {
@@ -179,6 +203,7 @@ public class HeroButton : MonoBehaviour
             {
                 if (field.GetComponent<FieldManager>().GetIsFree())
                 {
+                    starsCounter.currentHeroes++;
                     var heroOnField = Instantiate(heroPrefab, field.transform);
                     heroOnField.transform.localScale = new Vector3(heroOnField.transform.localScale.x / field.transform.lossyScale.x,
                         heroOnField.transform.localScale.y / field.transform.lossyScale.y, heroOnField.transform.localScale.z / field.transform.lossyScale.z);

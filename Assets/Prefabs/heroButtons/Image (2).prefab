@@ -96,6 +96,7 @@ MonoBehaviour:
   hero: {fileID: 0}
   field: {fileID: 0}
   OnField: 0
+  starsCounter: {fileID: 0}
   interactableLayer:
     serializedVersion: 2
     m_Bits: 64

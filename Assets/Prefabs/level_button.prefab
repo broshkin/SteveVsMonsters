@@ -253,6 +253,10 @@ MonoBehaviour:
   starsNum: 0
   isOpen: 0
   zamok: {fileID: 3981044001358743538}
+  stars:
+  - {fileID: 250421463132670858}
+  - {fileID: 832333621698801167}
+  - {fileID: 9019812207019770663}
 --- !u!1 &3981044001358743538
 GameObject:
   m_ObjectHideFlags: 0

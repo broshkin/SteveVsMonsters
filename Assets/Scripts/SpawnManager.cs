@@ -18,6 +18,7 @@ public class SpawnManager : MonoBehaviour
     public bool isAllEnemies = false;
     public static int[] levelIds = { 1, 1 };
     public DataStorage storage;
+    public StarsCounter starsCounter;
 
     public GameObject winWindow;
     public GameObject loseWindow;
@@ -62,8 +63,9 @@ public class SpawnManager : MonoBehaviour
             if ((levelIds[0] - 1) * 10 + (levelIds[1] - 1) == storage.countLevelPasses)
             {
                 storage.countLevelPasses++;
-                storage.Save();
             }
+            starsCounter.CheckInStars();
+            storage.Save();
             winWindow.SetActive(true);
         }
         else if (!GameLoopManager.win)

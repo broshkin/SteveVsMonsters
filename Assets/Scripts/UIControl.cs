@@ -620,6 +620,8 @@ public class UIControl : MonoBehaviour
     public void ResetTest()
     {
         storage.countLevelPasses = 0;
+        storage.starsNums = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
         storage.Save();
+        storage.GetData();
     }
 } 

@@ -1791,6 +1791,8 @@ MonoBehaviour:
   chapter: 1
   openLevelImage: {fileID: 21300000, guid: 74fcc94d3b79341d2b199b5274e8c2ac, type: 3}
   closeLevelImage: {fileID: 21300000, guid: f8a2554c5459e4be7961dd3c1afc31b9, type: 3}
+  unfillStar: {fileID: 21300000, guid: 471344cbcc7fd4b0988835d5c7713cf1, type: 3}
+  fillStar: {fileID: 21300000, guid: 6113b1e14171a408c90985bf5064e378, type: 3}
   uiControl: {fileID: 1117692307}
   storage: {fileID: 1117692312}
 --- !u!1 &367978218
@@ -4879,7 +4881,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &875470371
 RectTransform:
   m_ObjectHideFlags: 0

@@ -8,9 +8,10 @@ public class DataStorage : MonoBehaviour
 {
     // Start is called before the first frame update
     public int countLevelPasses;
+    public int[] starsNums;
     void Start()
     {
-        Debug.Log(countLevelPasses);
+
     }
 
     // Update is called once per frame
@@ -38,11 +39,13 @@ public class DataStorage : MonoBehaviour
     public void SetData()
     {
         YG2.saves.countLevelPasses = countLevelPasses;
+        YG2.saves.starsNums = starsNums;
     }
 
     public void GetData()
     {
         countLevelPasses = YG2.saves.countLevelPasses;
+        starsNums = YG2.saves.starsNums;
     }
 
     public void Save()
